@@ -1,0 +1,108 @@
+/*reset*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+h1,h2,h3,p,figure,ul,ol,section{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+a,button{
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-defaut:#222;
+    --color-primary:#E8F3E8;
+    --color-secondary: #92C591;
+    --color-tertiaire:#559E54;
+    --color-defaut:#305A30;
+    --color-header:#0A3409;
+
+}
+/*theme*/
+header{
+    background-color: var(--color-tertiaire);
+    margin: 0 auto;
+    border-bottom: solid 0.5rem #478346;
+}
+header h1{
+    text-align: center;
+    padding: 2rem;
+}
+header img{
+    max-width: 10rem;
+    vertical-align: middle;
+    padding-right: 3rem;
+}
+main{
+    padding: 2rem 0 2rem 0rem;
+}
+main section{
+    margin: 0 auto;
+    max-width: 100rem;
+    background-color: #fafafa;
+    box-shadow: 0.4rem 0.4rem 1.5rem #222;
+    margin: 3rem auto;
+    border-radius: 0.5rem;
+}
+main section h3{
+    text-align: center;
+    padding: 1rem;
+}
+main section h2{
+    background-color: var(--color-tertiaire);
+    padding: 1rem;
+    margin: 0rem auto;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    border-bottom: solid 0.35rem #458044;
+}
+main section p{
+    font-size: 1.6rem;
+    padding: 2rem;
+}
+main section ul{
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+}
+main section ul li img{
+    transition: 0.7s;
+    max-width: 14rem;
+}
+main section ul li img:hover{
+    transform: translateY(0.4rem) scale(1.2);
+    transition: 0.8s;
+}
+main section ul li{
+    margin: 0 auto;
+}
+
+footer p{
+    text-align: center;
+    color: #fff;
+}
+footer{
+    background-color: #222;
+    padding: 3rem;
+}
+@media screen and (max-width: 70rem) {
+    main section ul{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+}
