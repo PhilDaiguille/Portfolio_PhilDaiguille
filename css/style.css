@@ -1,11 +1,11 @@
 /*reset*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 html{
     font-size: 62.5%;
 }
 body{
     font-size: 1.6rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     font-weight: 300;
     text-transform: capitalize;
@@ -35,12 +35,13 @@ a,button{
 /*theme*/
 header{
     background-color: var(--color-tertiaire);
-    margin: 0 auto;
+    margin-bottom: 5rem;
+    line-height: 6.5rem;
     border-bottom: solid 0.5rem #478346;
 }
 header h1{
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 header img{
     max-width: 10rem;
@@ -53,13 +54,13 @@ main{
 main section{
     margin: 0 auto;
     max-width: 100rem;
-    background-color: #fafafa;
-    box-shadow: 0.4rem 0.4rem 1.5rem #222;
+    background-color: #fffff5;
+    box-shadow: 0.2rem 0.2rem 2rem #222;
     margin: 3rem auto;
     border-radius: 0.5rem;
 }
 main section h3{
-    text-align: center;
+    font-size: 1.6rem;
     padding: 1rem;
 }
 main section h2{
@@ -73,7 +74,7 @@ main section p{
     font-size: 1.6rem;
     padding: 2rem;
 }
-main section ul{
+main section #picture{
     border-radius: 0.5rem;
     padding: 2rem;
     display: grid;
@@ -92,7 +93,7 @@ main section ul li{
     margin: 0 auto;
 }
 
-footer p{
+footer address{
     text-align: center;
     color: #fff;
 }
