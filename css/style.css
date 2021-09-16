@@ -8,6 +8,7 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     font-weight: 300;
+    background-color: #333;
     text-transform: capitalize;
 }
 h1,h2,h3,p,figure,ul,ol,section{
@@ -49,12 +50,13 @@ header img{
     padding-right: 3rem;
 }
 main{
+    
     padding: 2rem 0 2rem 0rem;
 }
 main section{
     margin: 0 auto;
     max-width: 100rem;
-    background-color: #fffff5;
+    background-color: #222;
     box-shadow: 0.2rem 0.2rem 2rem #222;
     margin: 3rem auto;
     border-radius: 0.5rem;
@@ -62,6 +64,7 @@ main section{
 main section h3{
     font-size: 1.6rem;
     padding: 1rem;
+    color: #fff;
 }
 main section h2{
     background-color: var(--color-tertiaire);
@@ -73,6 +76,7 @@ main section h2{
 main section p{
     font-size: 1.6rem;
     padding: 2rem;
+    color: #fff;
 }
 main section #picture{
     border-radius: 0.5rem;
