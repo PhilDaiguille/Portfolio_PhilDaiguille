@@ -96,7 +96,14 @@ main section ul li img:hover{
 main section ul li{
     margin: 0 auto;
 }
-
+span{
+    vertical-align: middle;
+    padding: 1rem;
+    transform: translateY(-0.2rem);
+}
+footer address ul li{
+    padding: 1rem;
+}
 footer address{
     text-align: center;
     color: #fff;
