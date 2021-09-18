@@ -36,7 +36,7 @@ a,button{
 /*theme*/
 header{
     background-color: var(--color-tertiaire);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     line-height: 6.5rem;
     border-bottom: solid 0.5rem #478346;
 }
@@ -50,16 +50,31 @@ header img{
     padding-right: 3rem;
 }
 main{
-    
+    max-width: 100rem;
+    margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
 main section{
-    margin: 0 auto;
-    max-width: 100rem;
     background-color: #222;
     box-shadow: 0.2rem 0.2rem 2rem #222;
     margin: 3rem auto;
     border-radius: 0.5rem;
+}
+.aside{
+    background: url(https://i.pinimg.com/originals/d1/2a/51/d12a516a90067f6c0a16f7572333095e.jpg)no-repeat scroll center center / cover;
+    min-height: 50vh;
+    max-width: 100rem;
+    margin: 0 auto 2rem;
+    box-shadow: 0 0 1.0rem #333 ;
+    display: grid;
+    align-items: center;
+
+}
+.aside h2{
+    text-align: center;
+    font-size: 7rem;
+    color: #fff;
+    text-shadow: 0.25rem 0.25rem 0 #92C591,.5rem .5rem 0 #559E54, 0.75rem 0.75rem 0 #305A30, 1rem 1rem 0 #0A3409;
 }
 main section h3{
     font-size: 1.6rem;
@@ -95,6 +110,8 @@ main section ul li img:hover{
 }
 main section ul li{
     margin: 0 auto;
+    padding: 2rem;
+    color: #fff;
 }
 span{
     vertical-align: middle;
@@ -112,8 +129,13 @@ footer{
     background-color: #222;
     padding: 3rem;
 }
-@media screen and (max-width: 70rem) {
-    main section ul{
+footer .link{
+    height: 4rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+@media screen and (max-width: 60rem) {
+    main section #picture{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
