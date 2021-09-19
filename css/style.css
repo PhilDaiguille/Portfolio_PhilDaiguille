@@ -27,8 +27,8 @@ a,button{
 :root{
     --color-defaut:#222;
     --color-primary:#E8F3E8;
-    --color-secondary: #92C591;
-    --color-tertiaire:#559E54;
+    --color-secondary: #2ecc71;
+    --color-tertiaire:#27ae60;
     --color-defaut:#305A30;
     --color-header:#0A3409;
 
@@ -93,31 +93,37 @@ main section p{
     padding: 2rem;
     color: #fff;
 }
-main section #picture{
-    border-radius: 0.5rem;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-}
-main section ul li img{
-    transition: 0.7s;
-    max-width: 14rem;
-}
-main section ul li img:hover{
-    transform: translateY(0.4rem) scale(1.2);
-    transition: 0.8s;
-}
+
 main section ul li{
-    margin: 0 auto;
     padding: 2rem;
     color: #fff;
 }
-span{
-    vertical-align: middle;
-    padding: 1rem;
-    transform: translateY(-0.2rem);
+
+/*stat*/
+main section .container li{
+    position: relative;
+    margin: 2rem;
+    padding: 2rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    border: solid .3rem #000;
 }
+.container{
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.item { max-width: 90%;height: 14%; background-color: #e74c3c ;border-radius: 1rem;}
+.item-1 { max-width: 80%;height: 14%; background-color: #3498db; border-radius: 1rem;}
+.item-2 { max-width: 50%;height: 14%; background-color: #f1c40f;border-radius: 1rem;}
+.item-3 { max-width: 40%;height: 14%; background-color: #e67e22;border-radius: 1rem;}
+.item-4 { max-width: 30%;height: 14%; background-color: #2980b9;border-radius: 1rem;}
+.item-5 { max-width: 90%;height: 14%; background-color: #3498db;border-radius: 1rem;}
+.item-6 { max-width: 50%;height: 14%; background-color: #e67e22;border-radius: 1rem;}
+  
+.container
+
 footer address ul li{
     padding: 1rem;
 }
