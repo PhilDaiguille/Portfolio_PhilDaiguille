@@ -101,31 +101,35 @@ main section ul li{
 
 /*stat*/
 main section .container li{
-    position: relative;
-    margin: 2rem;
-    padding: 2rem;
-    font-weight: 500;
+    margin: 1rem 2rem 1rem 2rem;
+    padding: 2rem 1rem 2rem 2rem;
     color: rgb(0, 0, 0);
-    border: solid .3rem #000;
+    align-items: center;
+}
+main section h3{
+    font-size: 3rem;
+    padding-left: 2rem;
+    text-shadow: 0.25rem 0.25rem 0 #34495e,.5rem .5rem 0 #2c3e50;
 }
 .container{
     display: flex;
-    height: 50vh;
+    height: 40vh;
     flex-direction: column;
 }
 
-.item { max-width: 90%;height: 14%; background-color: #e74c3c ;border-radius: 1rem;}
-.item-1 { max-width: 80%;height: 14%; background-color: #3498db; border-radius: 1rem;}
-.item-2 { max-width: 50%;height: 14%; background-color: #f1c40f;border-radius: 1rem;}
-.item-3 { max-width: 40%;height: 14%; background-color: #e67e22;border-radius: 1rem;}
-.item-4 { max-width: 30%;height: 14%; background-color: #2980b9;border-radius: 1rem;}
-.item-5 { max-width: 90%;height: 14%; background-color: #3498db;border-radius: 1rem;}
-.item-6 { max-width: 50%;height: 14%; background-color: #e67e22;border-radius: 1rem;}
-  
-.container
+.item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem;}
+.item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem;}
+.item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem;}
+.item-3 { max-width: 40%; background-color: #e67e22;border-radius: 1rem;}
+.item-4 { max-width: 30%; background-color: #2980b9;border-radius: 1rem;}
+.item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem;}
+.item-6 { max-width: 50%; background-color: #e67e22;border-radius: 1rem;}
 
+footer address ul{
+    padding: 2rem;
+}
 footer address ul li{
-    padding: 1rem;
+    padding-top: 1rem;
 }
 footer address{
     text-align: center;
