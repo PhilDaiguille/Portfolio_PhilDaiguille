@@ -104,7 +104,6 @@ main section ul li{
 main section .container li{
     margin: 1rem 2rem 1rem 2rem;
     padding: 1rem 1rem 1rem 1rem;
-    box-shadow: 0.2rem 0.3rem 0.3rem #111;
     color: rgb(0, 0, 0);
     align-items: center;
 }
@@ -120,13 +119,13 @@ main section h3{
     flex-direction: column;
 }
 
-.item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem;}
-.item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem;}
-.item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem;}
-.item-3 { max-width: 40%; background-color: #e67e22;border-radius: 1rem;}
-.item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem;}
-.item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem;}
-.item-6 { max-width: 50%; background-color: #e67e22;border-radius: 1rem;}
+.item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
+.item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
+.item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
+.item-3 { max-width: 40%; background-color: #e67e22;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c46a1c;}
+.item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+.item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
+.item-6 { max-width: 50%; background-color: #e67e22;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c46a1c;}
 
 footer address ul{
     padding: 2rem;
