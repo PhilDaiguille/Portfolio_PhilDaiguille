@@ -56,7 +56,7 @@ main{
 }
 main section{
     background-color: #222;
-    box-shadow: 0.2rem 0.2rem 2rem #222;
+    box-shadow: 0.2rem 0.2rem 2rem #111;
     margin: 3rem auto;
     border-radius: 0.5rem;
 }
@@ -67,6 +67,7 @@ main section{
     margin: 0 auto 2rem;
     box-shadow: 0 0 1.0rem #333 ;
     display: grid;
+    border-radius: 0.5rem;
     align-items: center;
 
 }
@@ -102,18 +103,20 @@ main section ul li{
 /*stat*/
 main section .container li{
     margin: 1rem 2rem 1rem 2rem;
-    padding: 2rem 1rem 2rem 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    box-shadow: 0.2rem 0.3rem 0.3rem #111;
     color: rgb(0, 0, 0);
     align-items: center;
 }
 main section h3{
     font-size: 3rem;
     padding-left: 2rem;
+    padding-top: 1rem;
     text-shadow: 0.25rem 0.25rem 0 #34495e,.5rem .5rem 0 #2c3e50;
 }
 .container{
     display: flex;
-    height: 40vh;
+    padding: 2rem;
     flex-direction: column;
 }
 
@@ -121,15 +124,12 @@ main section h3{
 .item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem;}
 .item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem;}
 .item-3 { max-width: 40%; background-color: #e67e22;border-radius: 1rem;}
-.item-4 { max-width: 30%; background-color: #2980b9;border-radius: 1rem;}
+.item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem;}
 .item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem;}
 .item-6 { max-width: 50%; background-color: #e67e22;border-radius: 1rem;}
 
 footer address ul{
     padding: 2rem;
-}
-footer address ul li{
-    padding-top: 1rem;
 }
 footer address{
     text-align: center;
