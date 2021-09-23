@@ -16,14 +16,26 @@
 </head>
 <body>
     <header>
-        <h1><img src="./asset/beer_drink_icon_146801.png" alt="dessin">Porfolio Développeur Front</h1>
+        <h1><span class="material-icons">
+            table_rows
+        </span>  <img src="./asset/maple_leaf_icon_157514.png" alt="dessin">Porfolio Développeur Front</h1>
     </header>
+    <!-- nav>ul>li*5>a{index $}-->
+    <nav>
+        <ul>
+            <li><a href="#Experience">Expérience</a></li>
+            <li><a href="#Compétences">Compétences</a></li>
+            <li><a href="#Web">Web</a></li>
+            <li><a href="#Formation">Formation</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
     <main>
         <div class="aside" id="aside" role="complementary" aria-labelledby="title">
             <h2 id="title">Bienvenue sur mon site</h2>
         </div>
         <section>
-            <h2>🍺 Expérience</h2>
+            <h2 id="Experiences" class="History"> 🍁 Expérience</h2>
             <ul>
                 <li>Développeur - <time datetime="2018">2021</time> - www.nutri-animale.com – Conseil en alimentation (Autoentrepreneur)<br></li>
                 <li>Assistant Informatique – Stage	<time datetime="2018">2018</time> Taxi G7 – Groupe Rousselet, 93 Clichy (Effectifs : 280)</li>
@@ -32,7 +44,7 @@
             
         </section>
         <section>
-            <h2> 🍺 Compétences</h2>
+            <h2 id="Compétences" class="History"> 🍁 Compétences</h2>
             <h3>Programmation Web</h3>
             <ul class="container">
                 <li class="item">HTML - 90%</li>
@@ -51,7 +63,7 @@
             </ul>
         </section>
         <section>
-            <h2> 🍺 Formation</h2>
+            <h2 id="Formation" class="History"> 🍁 Formation</h2>
             <ul>
                 <li>BTS SIO – Option SLAM ( Solutions Logicielles et Applications Métier ) - 2021 - En cours <br>
                     École ITIC PARIS, Paris 20	</li>
@@ -62,7 +74,7 @@
             </ul>
         </section>
         <section>
-            <h2> 🍺 Loisirs</h2>
+            <h2 id="Loisirs" class="History"> 🍁 Loisirs</h2>
             <p>Arts plastiques / Arts numériques <br>
                 <br>
                 Photographie <br>
@@ -71,7 +83,7 @@
                 </p>
         </section>
     </main>
-    <footer>
+    <footer id="Contact">
         <address>
             <a href="https://github.com/PhilDaiguille" target="blank">
                 <img class="link" src="http://thomas-blondel.fr/img/github-logo.png" alt="github">

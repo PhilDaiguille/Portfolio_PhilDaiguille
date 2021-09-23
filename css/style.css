@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     font-size: 1.6rem;
@@ -27,18 +28,33 @@ a,button{
 :root{
     --color-defaut:#222;
     --color-primary:#E8F3E8;
-    --color-secondary: #2ecc71;
-    --color-tertiaire:#27ae60;
-    --color-defaut:#305A30;
+    --color-secondary: #FDB768;
+    --color-tertiaire:#FB8604;
+    --color-defaut:#975102;
     --color-header:#0A3409;
 
 }
+
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #222 #333;
+}
+*::-webkit-scrollbar {
+    width: .2rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #222;
+    outline: .1rem solid #333;
+}
+
 /*theme*/
 header{
     background-color: var(--color-tertiaire);
     margin-bottom: 2rem;
     line-height: 6.5rem;
-    border-bottom: solid 0.5rem #478346;
+    border-bottom: solid 0.5rem #c96b00;
 }
 header h1{
     text-align: center;
@@ -49,6 +65,43 @@ header img{
     vertical-align: middle;
     padding-right: 3rem;
 }
+header h1 .material-icons{
+    display: none;
+}
+/*navigation*/
+nav ul{
+    max-width: 80rem;
+    margin: 0 auto 2rem;
+    font-size: 0;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 4.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    width: calc(100% /5);
+}
+nav ul li a{
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    color: #fff;
+    
+}
+nav ul li a:hover{
+    background-color: var(--color-tertiaire);
+    box-shadow: 0.2rem 0.2rem .1rem #c96b00;
+    color: #222;
+}
+.History{
+    transition: all 400ms ease-in-out ;
+}
+.History:target{
+    background-color: #eb8b1e;
+}
+
+
+
 main{
     max-width: 100rem;
     margin: 0 auto;
@@ -61,7 +114,7 @@ main section{
     border-radius: 0.5rem;
 }
 .aside{
-    background: url(https://i.pinimg.com/originals/d1/2a/51/d12a516a90067f6c0a16f7572333095e.jpg)no-repeat scroll center center / cover;
+    background: url(https://images6.alphacoders.com/338/thumb-1920-338596.jpg)no-repeat scroll center center / cover;
     min-height: 50vh;
     max-width: 100rem;
     margin: 0 auto 2rem;
@@ -75,7 +128,7 @@ main section{
     text-align: center;
     font-size: 7rem;
     color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #92C591,.5rem .5rem 0 #559E54, 0.75rem 0.75rem 0 #305A30, 1rem 1rem 0 #0A3409;
+    text-shadow: 0.25rem 0.25rem 0 #f1c40f,.5rem .5rem 0 #f39c12, 0.75rem 0.75rem 0 #e67e22, 1rem 1rem 0 #d35400;
 }
 main section h3{
     font-size: 1.6rem;
@@ -87,7 +140,7 @@ main section h2{
     padding: 1rem;
     margin: 0rem auto;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
-    border-bottom: solid 0.35rem #458044;
+    border-bottom: solid 0.35rem #c96b00;
 }
 main section p{
     font-size: 1.6rem;
@@ -122,10 +175,10 @@ main section h3{
 .item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
 .item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
-.item-3 { max-width: 40%; background-color: #e67e22;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c46a1c;}
+.item-3 { max-width: 40%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
 .item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
 .item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
-.item-6 { max-width: 50%; background-color: #e67e22;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c46a1c;}
+.item-6 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
 
 footer address ul{
     padding: 2rem;
@@ -147,5 +200,21 @@ footer .link{
     main section #picture{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
+    }
+    nav ul{
+        width: auto;
+        margin: 0;
+        margin-bottom: .1rem;
+    }
+    nav ul li{
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+    nav ul li a{
+        padding-left: 1rem;
+    }
+    header h1 .material-icons{
+        display: inline-block;
     }
 }
