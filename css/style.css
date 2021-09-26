@@ -59,6 +59,14 @@ header{
 header h1{
     text-align: center;
     padding: 1rem;
+    color: #fff;
+    text-shadow: 0.5rem 0.5rem 0 #202d3a;
+    transition: all 1.5s ease-in-out;
+}
+header h1:hover{
+    letter-spacing: 0.4rem;
+    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
+    
 }
 header img{
     max-width: 9rem;
@@ -71,7 +79,7 @@ header h1 .material-icons{
 }
 /*navigation*/
 nav ul{
-    max-width: 80rem;
+    max-width: 100rem;
     margin: 0 auto 2rem;
     font-size: 0;
 }
@@ -98,7 +106,7 @@ nav ul li a:hover{
     transition: all 400ms ease-in-out ;
 }
 .History:target{
-    background-color: #eb8b1e;
+    background-color: #34495e;
 }
 
 
@@ -115,11 +123,11 @@ main section{
     border-radius: 0.5rem;
 }
 .aside{
-    background: url(https://www.wallpaperuse.com/wallp/8-89206_m.jpg)no-repeat scroll center center / cover;
+    background: url(https://a-static.besthdwallpaper.com/rue-de-paris-fond-d-ecran-3440x1440-6142_15.jpg)no-repeat scroll center center / cover;
     min-height: 50vh;
     max-width: 100rem;
     margin: 0 auto 2rem;
-    box-shadow: 0 0 1.0rem #333 ;
+    box-shadow: 0.2rem 0.2rem 2rem #111;
     display: grid;
     border-radius: 0.5rem;
     align-items: center;
@@ -129,7 +137,7 @@ main section{
     text-align: center;
     font-size: 7rem;
     color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #95a5a6,.5rem .5rem 0 #7f8c8d, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
+    text-shadow: 0.25rem 0.25rem 0 #547697,.5rem .5rem 0 #46627e, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
 }
 main section h3{
     font-size: 1.6rem;
@@ -139,6 +147,7 @@ main section h3{
 main section h2{
     background-color: var(--color-tertiaire);
     padding: 1rem;
+    color: #fff;
     margin: 0rem auto;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     border-bottom: solid 0.35rem #202d3a;
