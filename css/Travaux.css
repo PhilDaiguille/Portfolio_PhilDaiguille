@@ -22,6 +22,9 @@ a,button{
     padding: 0;
     border: 0;
 }
+img{
+    max-width: 100%;
+}
 *{
     box-sizing: border-box;
 }
@@ -109,87 +112,71 @@ nav ul li a:hover{
     background-color: #34495e;
 }
 
-
-
 main{
-    max-width: 100rem;
+    max-width: 110rem;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
-main section{
-    background-color: #222;
-    box-shadow: 0.2rem 0.2rem 2rem #111;
-    margin: 3rem auto;
-    border-radius: 0.5rem;
+main h2{
+    font-size: 8rem;
+    color: #fff;
+    text-shadow: 0.5rem 0.5rem 0 #34495e;
 }
-.aside{
-    background: url(https://www.nawpic.com/media/2020/desktop-backgrounds-nawpic-1.png)no-repeat scroll center center / cover;
-    min-height: 50vh;
-    max-width: 100rem;
-    margin: 0 auto 2rem;
-    box-shadow: 0.2rem 0.2rem 2rem #111;
-    display: grid;
-    border-radius: 0.5rem;
-    align-items: center;
-
-}
-.aside h2{
+main h3{
+    padding: 3rem 3rem;
     text-align: center;
-    font-size: 7rem;
+    font-size: 3rem;
     color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #547697,.5rem .5rem 0 #46627e, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
+    transition: all 1.5s ease-in-out;
 }
-main section h3{
-    font-size: 1.6rem;
-    padding: 1rem;
-    color: #fff;
+main h3:hover{
+    letter-spacing: 0.7rem;
+    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
 }
 main section h2{
-    background-color: var(--color-tertiaire);
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+main a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+}
+main a .f{
+    display: inline-block;
+    transform: rotate(180deg) scale(1.4);
+    padding-left: 1rem;
+    vertical-align: middle;
+    font-size: 2rem;
+    color: #fff;
+}
+main section p a{
+    background-color: #bdc3c7;
+    padding: 0.5rem 4rem;
+    color: #000;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border: solid .3rem #fff;
+}
+main section{
+    padding: 3rem;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 1rem;
+    background-color: #222;
+}
+main section img{
+    margin: 2rem auto;
+    display: flex;
     padding: 1rem;
-    color: #fff;
-    margin: 0rem auto;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-    border-bottom: solid 0.35rem #202d3a;
-}
-main section p{
-    font-size: 1.6rem;
-    padding: 2rem;
-    color: #fff;
-}
-
-main section ul li{
-    padding: 2rem;
-    color: #fff;
-}
-
-/*stat*/
-main section .container li{
-    margin: 1rem 2rem 1rem 2rem;
-    padding: 1rem 1rem 1rem 1rem;
-    color: rgb(0, 0, 0);
+    border-radius: 1.5rem;
+    max-width: 80rem;
     align-items: center;
 }
-main section h3{
-    font-size: 3rem;
-    padding-left: 2rem;
-    padding-top: 1rem;
-    text-shadow: 0.25rem 0.25rem 0 #34495e,.5rem .5rem 0 #2c3e50;
+main section p{
+    text-align: center;
 }
-.container{
-    display: flex;
-    padding: 2rem;
-    flex-direction: column;
-}
-
-.item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
-.item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
-.item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
-.item-3 { max-width: 40%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-.item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
-.item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
-.item-6 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-
 footer address ul{
     padding: 2rem;
 }
@@ -206,7 +193,22 @@ footer .link{
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 75rem) {
+    main{
+        margin: 1rem auto;
+    }
+    main section img{
+        max-width: 100%;
+    }
+    main a{
+        padding-left: 1rem;
+    }
+    main h2{
+        padding-left: 1rem;
+    }
+    main h3{
+        font-size: 2.2rem;
+    }
     main section #picture{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
