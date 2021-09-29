@@ -113,12 +113,12 @@ nav ul li a:hover{
 }
 
 main{
-    max-width: 110rem;
+    max-width: 100rem;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
 main h2{
-    font-size: 8rem;
+    font-size: 6rem;
     color: #fff;
     text-shadow: 0.5rem 0.5rem 0 #34495e;
 }
@@ -127,11 +127,13 @@ main h3{
     text-align: center;
     font-size: 3rem;
     color: #fff;
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
+    
 }
 main h3:hover{
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.3rem;
     text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
+   
 }
 main section h2{
     text-align: center;
