@@ -124,7 +124,7 @@ main section{
 }
 .aside{
     background: url(https://www.nawpic.com/media/2020/desktop-backgrounds-nawpic-1.png)no-repeat scroll center center / cover;
-    min-height: 50vh;
+    min-height: 55vh;
     max-width: 100rem;
     margin: 0 auto 2rem;
     box-shadow: 0.2rem 0.2rem 2rem #111;
@@ -211,6 +211,21 @@ footer .link{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
+    /* menu of */
+    nav{
+        position: relative;
+        z-index: -1;
+        height: 0;
+        margin-bottom: 0rem;
+        transition: all 500ms ease-in-out;
+        
+    }
+    /* menu on */
+    .open-menu{
+        z-index: 1;
+        height: 21rem;
+    }
+    /* nav*/
     nav ul{
         width: auto;
         margin: 0;
@@ -226,5 +241,6 @@ footer .link{
     }
     header h1 .material-icons{
         display: inline-block;
+        padding-right: 2rem;
     }
 }

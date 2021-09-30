@@ -220,6 +220,20 @@ footer .link{
         margin: 0;
         margin-bottom: .1rem;
     }
+    /* menu of */
+    nav{
+        position: relative;
+        z-index: -1;
+        height: 0;
+        margin-bottom: 1rem;
+        transition: all 500ms ease-in-out;
+        
+    }
+    /* menu on */
+    .open-menu{
+        z-index: 1;
+        height: 22.5rem;
+    }
     nav ul li{
         display: block;
         width: auto;
@@ -230,5 +244,6 @@ footer .link{
     }
     header h1 .material-icons{
         display: inline-block;
+        padding-right: 2rem;
     }
 }
