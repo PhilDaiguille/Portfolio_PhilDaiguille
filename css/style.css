@@ -1,5 +1,6 @@
 /*reset*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -34,7 +35,6 @@ a,button{
     --color-header:#0A3409;
 
 }
-
 /* scroll bars */
 *{
     /* For FF and non-webkit browsers */
@@ -80,7 +80,7 @@ header h1 .material-icons{
 /*navigation*/
 nav ul{
     max-width: 100rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
     font-size: 0;
 }
 nav ul li{
@@ -124,7 +124,7 @@ main section{
 }
 .aside{
     background: url(https://www.nawpic.com/media/2020/desktop-backgrounds-nawpic-1.png)no-repeat scroll center center / cover;
-    min-height: 55vh;
+    min-height: 72vh;
     max-width: 100rem;
     margin: 0 auto 2rem;
     box-shadow: 0.2rem 0.2rem 2rem #111;
@@ -138,6 +138,21 @@ main section{
     font-size: 7rem;
     color: #fff;
     text-shadow: 0.25rem 0.25rem 0 #547697,.5rem .5rem 0 #46627e, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
+}
+.aside a img{
+    max-width: 5%;
+    display: block;
+    margin: 0 auto;
+    position: static;
+    cursor: pointer;
+    border-radius: 10rem;
+    background-color: #fff;
+    transform: translateY(4rem);
+    border: solid 1rem #fff;
+    transition: 1s ease-in-out;
+}
+.aside a img:hover{
+    transform: translateY(2.3rem) scale(1.1);
 }
 main section h3{
     font-size: 1.6rem;
@@ -211,6 +226,15 @@ footer .link{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
+    .aside a img{
+        max-width: 10%;
+    }
+    header{
+        margin-bottom: 1rem;
+    }
+    main{
+        padding-top: 1rem;
+    }
     /* menu of */
     nav{
         position: relative;
@@ -225,6 +249,9 @@ footer .link{
         z-index: 1;
         height: 21rem;
     }
+    .rotate{
+        transform: rotate(45deg);
+    }
     /* nav*/
     nav ul{
         width: auto;
@@ -235,9 +262,6 @@ footer .link{
         display: block;
         width: auto;
         text-align: center;
-    }
-    nav ul li a{
-        padding-left: 1rem;
     }
     header h1 .material-icons{
         display: inline-block;
