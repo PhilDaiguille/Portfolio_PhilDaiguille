@@ -220,13 +220,14 @@ footer .link{
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 70rem) {
     main section #picture{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
     .aside a img{
         max-width: 10%;
+        margin: 2rem auto;
     }
     header{
         margin-bottom: 1rem;
@@ -265,5 +266,11 @@ footer .link{
     header h1 .material-icons{
         display: inline-block;
         padding-right: 2rem;
+    }
+    @media screen and (orientation: landscape){
+        .aside a img{
+            max-width: 5%;
+        }
+        
     }
 }
