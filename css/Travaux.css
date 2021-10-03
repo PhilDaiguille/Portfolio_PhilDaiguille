@@ -55,7 +55,6 @@ img{
 /*theme*/
 header{
     background-color: var(--color-tertiaire);
-    margin-bottom: 2rem;
     line-height: 6.5rem;
     border-bottom: solid 0.5rem #202d3a;
 }
@@ -143,6 +142,7 @@ main section h2{
 main a{
     color: #fff;
     font-weight: 700;
+    padding-bottom: 2rem;
     font-size: 2rem;
 }
 main a .f{
@@ -197,19 +197,36 @@ footer .link{
 }
 @media screen and (max-width: 75rem) {
     main{
-        margin: 1rem auto;
+        margin: 0rem auto;
     }
     main section img{
         max-width: 100%;
     }
     main a{
         padding-left: 1rem;
+        padding-bottom: 2rem;
     }
     main h2{
+        padding-top: 2rem;
         padding-left: 1rem;
     }
+    main section h2{
+        padding-top: 0;
+        padding-left: 0;
+    }
+    
     main h3{
         font-size: 2.2rem;
+    }
+    main h3:hover{
+        letter-spacing: 0;
+        text-shadow: 0;
+       
+    }
+    header h1:hover{
+        letter-spacing: 0;
+        text-shadow: 0;
+       
     }
     main section #picture{
         grid-template-columns: repeat(1, 1fr);
