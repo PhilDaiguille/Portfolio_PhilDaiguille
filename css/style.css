@@ -69,10 +69,9 @@ header h1:hover{
     
 }
 header img{
-    max-width: 9rem;
+    max-width: 7rem;
     vertical-align: middle;
-    padding-right: 3rem;
-    transform: translateY(-0.4rem)translateX(0.4rem);
+    padding-right: 1rem;
 }
 header h1 .material-icons{
     display: none;
