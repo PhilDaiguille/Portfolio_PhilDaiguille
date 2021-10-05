@@ -215,17 +215,6 @@ footer{
     background-color: #222;
     padding: 3rem;
 }
-footer #fl{
-    position: absolute;
-    z-index: 2;
-    transform: rotate(180deg) translateX(-140rem) translateY(7rem);
-    background-color: rgb(224, 224, 224);
-    border-radius: 2rem;
-    max-width: 4%;
-    padding: 2rem;
-    filter: invert(100%);
-    color: #fff;
-}
 footer .link{
     height: 4rem;
     cursor: pointer;
