@@ -166,6 +166,7 @@ main section h2{
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     border-bottom: solid 0.35rem #202d3a;
 }
+
 main section p{
     font-size: 1.6rem;
     padding: 2rem;
@@ -195,7 +196,29 @@ main section h3{
     padding: 2rem;
     flex-direction: column;
 }
+.container li img{
+    max-width: 2.2rem;
+    transform: translateY(.4rem);
+    justify-content: center;
+}
 
+/*test grid display block*/
+section .grid-logo{
+    width: auto;
+    display: grid;
+    background-color: #547697;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+}
+section .grid-logo li img{
+    max-width: 20rem;
+}
+.container li{
+    font-weight: 500;
+}
 .item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
 .item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
@@ -203,6 +226,7 @@ main section h3{
 .item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
 .item-5 { max-width: 90%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-6 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
+.item-7 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
 
 footer address ul{
     padding: 2rem;
