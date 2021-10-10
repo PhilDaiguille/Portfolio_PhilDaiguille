@@ -1,0 +1,266 @@
+/*reset*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    background-color: #333;
+    text-transform: capitalize;
+}
+h1,h2,h3,p,figure,ul,ol,section{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+a,button{
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+}
+img{
+    max-width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-defaut:#222;
+    --color-primary:#E8F3E8;
+    --color-secondary: #34495e;
+    --color-tertiaire:#2c3e50;
+    --color-defaut:#975102;
+    --color-header:#0A3409;
+
+}
+
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #222 #333;
+}
+*::-webkit-scrollbar {
+    width: .2rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #222;
+    outline: .1rem solid #333;
+}
+
+/*theme*/
+header{
+    background-color: var(--color-tertiaire);
+    line-height: 6.5rem;
+    border-bottom: solid 0.5rem #202d3a;
+}
+header h1{
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-shadow: 0.5rem 0.5rem 0 #202d3a;
+    transition: all 1.5s ease-in-out;
+}
+header h1:hover{
+    letter-spacing: 0.4rem;
+    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
+    
+}
+header img{
+    max-width: 9rem;
+    vertical-align: middle;
+    padding-right: 3rem;
+    transform: translateY(-0.4rem)translateX(0.4rem);
+}
+header h1 .material-icons{
+    display: none;
+}
+/*navigation*/
+nav ul{
+    max-width: 100rem;
+    margin: 0 auto 2rem;
+    font-size: 0;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 4.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    width: calc(100% /5);
+}
+nav ul li a{
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    color: #fff;
+    
+}
+nav ul li a:hover{
+    background-color: var(--color-tertiaire);
+    box-shadow: 0.2rem 0.2rem .1rem #202d3a;
+    color: #fff;
+}
+.History{
+    transition: all 400ms ease-in-out ;
+}
+.History:target{
+    background-color: #34495e;
+}
+
+main{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 2rem 0 2rem 0rem;
+}
+main h2{
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: 0.5rem 0.5rem 0 #34495e;
+}
+main h3{
+    padding: 3rem 3rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    transition: all 1s ease-in-out;
+    
+}
+main h3:hover{
+    letter-spacing: 0.3rem;
+    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
+   
+}
+main section h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+main a{
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+main a .f{
+    display: inline-block;
+    transform: rotate(180deg) scale(1.4);
+    padding-left: 1rem;
+    vertical-align: middle;
+    font-size: 2rem;
+    color: #fff;
+}
+main section p a{
+    background-color: #bdc3c7;
+    padding: 0.5rem 4rem;
+    color: #000;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border: solid .3rem #fff;
+}
+main section{
+    padding: 3rem;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 1rem;
+    background-color: #222;
+}
+main section img{
+    margin: 2rem auto;
+    display: flex;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    max-width: 80rem;
+    align-items: center;
+}
+main section p{
+    text-align: center;
+}
+footer address ul{
+    padding: 2rem;
+}
+footer address{
+    text-align: center;
+    color: #fff;
+}
+footer{
+    background-color: #222;
+    padding: 3rem;
+}
+footer .link{
+    height: 4rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+@media screen and (max-width: 75rem) {
+    main{
+        margin: 0rem auto;
+    }
+    main section img{
+        max-width: 100%;
+    }
+    main a{
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+    }
+    main h2{
+        padding-top: 2rem;
+        padding-left: 1rem;
+    }
+    main section h2{
+        padding-top: 0;
+        padding-left: 0;
+    }
+    
+    main h3{
+        font-size: 2.2rem;
+    }
+    main h3:hover{
+        letter-spacing: 0;
+        text-shadow: 0;
+       
+    }
+    header h1:hover{
+        letter-spacing: 0;
+        text-shadow: 0;
+       
+    }
+    main section #picture{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+    nav ul{
+        width: auto;
+        margin: 0;
+        margin-bottom: .1rem;
+    }
+    /* menu of */
+    nav{
+        position: relative;
+        z-index: -1;
+        height: 0;
+        margin-bottom: 1rem;
+        transition: all 500ms ease-in-out;
+        
+    }
+    /* menu on */
+    .open-menu{
+        z-index: 1;
+        height: 22.5rem;
+    }
+    nav ul li{
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+    nav ul li a{
+        padding-left: 1rem;
+    }
+    header h1 .material-icons{
+        display: inline-block;
+        padding-right: 2rem;
+    }
+}

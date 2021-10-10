@@ -1,5 +1,4 @@
 /*reset*/
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 html{
     font-size: 62.5%;
@@ -7,7 +6,7 @@ html{
 }
 body{
     font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     margin: 0;
     font-weight: 300;
     background-color: #333;
@@ -111,7 +110,7 @@ nav ul li a:hover{
 
 
 main{
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
@@ -124,7 +123,7 @@ main section{
 .aside{
     background: url(https://www.nawpic.com/media/2020/desktop-backgrounds-nawpic-1.png)no-repeat scroll center center / cover;
     min-height: 72vh;
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto 2rem;
     box-shadow: 0.2rem 0.2rem 2rem #111;
     display: grid;
@@ -177,6 +176,52 @@ main section ul li{
     padding: 2rem;
     color: #fff;
 }
+/*Expérience*/
+main .experience figure{
+    display: grid;
+    padding: 2rem;
+    width: auto;
+    grid-template-columns: repeat(3,1fr);
+}
+main .experience figure ul, main .loisir figure ul{
+    border-radius: 0.5rem;
+    margin: 2rem;
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    transition: all 0.5s ease-in-out;
+}
+main .experience figure ul:hover{
+    transform: translateY(-1rem) scale(1.15);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(92, 92, 92, 0.726);
+}
+main .experience ul li h2, main .loisir ul li h2{
+    background-color: rgb(54, 54, 54);
+    font-size: 1.8rem;
+    border-bottom: none;
+    border-radius: 1rem;
+    text-align: center;
+}
+main .experience ul li, main .loisir ul li{
+    text-align: center;
+}
+main .experience ul li img, main .loisir ul li img{
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+}
+/*loisir*/
+main .loisir figure{
+    display: grid;
+    padding: 2rem;
+    width: auto;
+    grid-template-columns: repeat(2,1fr);
+}
+main .loisir figure ul:hover{
+    transform: translateY(-1rem) scale(1.1);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(92, 92, 92, 0.726);
+}
+
+
 
 /*stat*/
 main section .container li{
@@ -200,6 +245,9 @@ main section h3{
     max-width: 2.2rem;
     transform: translateY(.4rem);
     justify-content: center;
+}
+.container li img{
+    font-weight: bolder;
 }
 
 /*test grid display block*/
@@ -253,11 +301,22 @@ footer .link{
         max-width: 10%;
         margin: 2rem auto;
     }
+    .aside h2{
+        padding: 2rem;
+    }
     header{
         margin-bottom: 1rem;
     }
     main{
         padding-top: 1rem;
+        max-width: 100%;
+    }
+    .container li{
+        font-size: 1.4rem;
+    }
+    main .experience figure, main .loisir figure{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
     /* menu of */
     nav{
