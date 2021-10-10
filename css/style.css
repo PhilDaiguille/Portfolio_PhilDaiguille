@@ -133,7 +133,7 @@ main section{
 }
 .aside h2{
     text-align: center;
-    font-size: 7rem;
+    font-size: 6rem;
     color: #fff;
     text-shadow: 0.25rem 0.25rem 0 #547697,.5rem .5rem 0 #46627e, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
 }
@@ -306,14 +306,18 @@ footer .link{
     }
     main{
         padding-top: 1rem;
-        max-width: 100%;
     }
     .container li{
         font-size: 1.4rem;
     }
     main .experience figure, main .loisir figure{
         display: grid;
+        padding: 0;
         grid-template-columns: repeat(1,1fr);
+    }
+    main .experience figure ul:hover, main .loisir figure ul:hover{
+        transform: none;
+        box-shadow: none;
     }
     /* menu of */
     nav{
