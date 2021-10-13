@@ -173,8 +173,9 @@ main section img{
     display: flex;
     padding: 1rem;
     border-radius: 1.5rem;
-    max-width: 80rem;
+    width: 50%;
     align-items: center;
+    box-shadow: 0rem 0rem 3rem rgb(0, 0, 0);
 }
 main section p{
     text-align: center;
