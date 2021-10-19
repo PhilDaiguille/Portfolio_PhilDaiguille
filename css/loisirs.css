@@ -153,7 +153,7 @@ main a .f{
     font-size: 2rem;
     color: #fff;
 }
-main section p a{
+main figure p a{
     background-color: #bdc3c7;
     padding: 0.5rem 4rem;
     color: #000;
@@ -161,14 +161,14 @@ main section p a{
     border-radius: 1.5rem;
     border: solid .3rem #fff;
 }
-main section{
+main figure{
     padding: 3rem;
     margin: 1rem auto;
     display: block;
     border-radius: 1rem;
     background-color: #222;
 }
-main section img{
+main figure img{
     margin: 2rem auto;
     display: flex;
     padding: 1rem;
@@ -180,19 +180,69 @@ main section img{
 main section p{
     text-align: center;
 }
-footer address ul{
-    padding: 2rem;
+/*Footer */
+
+.caté{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
 }
-footer address{
+.caté section{
+    justify-items: center;
+}
+.caté img{
+    width: 25%;
+    margin: auto auto;
+}
+.caté h2{
+    font-weight: 800;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+.caté section ul{
+    width: 100%;
+    margin: 0 auto;
+}
+.caté section ul li{
+    padding-bottom: 1rem;
+}
+.caté section ul li a{
+    color: rgba(255, 255, 255, 0.699);
+    padding-bottom: 1rem;
+    font-style: italic;
+}
+footer ul{
+    padding: 1rem;
+}
+footer ul li{
+    margin: 0 auto;
+}
+footer  .ico{
+    display: flex;
+}
+footer{
     text-align: center;
     color: #fff;
 }
+footer p{
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-align: start;
+}
 footer{
     background-color: #222;
-    padding: 3rem;
+    padding: 2rem;
+    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
 }
 footer .link{
-    height: 4rem;
+    margin: auto 1rem;
+    max-width: 6rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+footer .linkg{
+    margin: auto 1rem;
+    filter: invert(100%);
+    max-width: 6rem;
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
@@ -200,7 +250,7 @@ footer .link{
     main{
         margin: 0rem auto;
     }
-    main section img{
+    main img{
         max-width: 100%;
     }
     main a{
@@ -237,6 +287,9 @@ footer .link{
         width: auto;
         margin: 0;
         margin-bottom: .1rem;
+    }
+    .caté{
+        grid-template-columns: repeat(1, 1fr);
     }
     /* menu of */
     nav{

@@ -28,8 +28,8 @@ a,button{
 :root{
     --color-defaut:#222;
     --color-primary:#E8F3E8;
-    --color-secondary: #34495e;
-    --color-tertiaire:#2c3e50;
+    --color-secondary: #274664;
+    --color-tertiaire:#193755;
     --color-defaut:#975102;
     --color-header:#0A3409;
 
@@ -50,13 +50,14 @@ a,button{
 
 /*theme*/
 header{
-    background-color: var(--color-tertiaire);
     margin-bottom: 2rem;
-    line-height: 6.5rem;
-    border-bottom: solid 0.5rem #202d3a;
+    line-height: 5rem;
+    
 }
 header h1{
+    background-color: var(--color-tertiaire);
     text-align: center;
+    border-bottom: solid 0.5rem #202d3a;
     padding: 1rem;
     color: #fff;
     text-shadow: 0.5rem 0.5rem 0 #202d3a;
@@ -64,57 +65,59 @@ header h1{
 }
 header h1:hover{
     letter-spacing: 0.4rem;
-    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
-    
+    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;   
 }
 header img{
-    max-width: 7rem;
+    max-width: 4rem;
     vertical-align: middle;
-    padding-right: 1rem;
+    margin: auto 1rem;
 }
 header h1 .material-icons{
     display: none;
 }
 /*navigation*/
 nav ul{
-    max-width: 120rem;
+    padding-top: 1rem;
+    max-width: 110rem;
     margin: 0 auto 1rem;
     display: flex;
     font-size: 0;
     justify-content: space-between;
 }
 nav ul li{
-    line-height: 4.5rem;
-    font-size: 1.8rem;
+    line-height: 3.5rem;
+    font-size: 1.6rem;
     padding: 0 2rem;
     text-align: center;
     width: calc(100% /6);
 }
 nav ul li a{
     display: block;
-    border-radius: 0.7rem;
+    border-radius: 0.6rem;
     width: 100%;
     color: #fff;
+    transition: all .5s ease-in-out;
     
 }
 
 nav ul li a:hover{
     background-color: var(--color-tertiaire);
-    box-shadow: 0.2rem 0.2rem .1rem #202d3a;
+    box-shadow: 0.2rem 0.2rem .2rem #202d3a;
+    transform: scale(1.1);
 }
 .History{
     transition: all 400ms ease-in-out ;
 }
 .History:target{
-    background-color: #34495e;
+    background-color: #294868;
 }
 
 
 
 main{
-    max-width: 120rem;
+    max-width: 100rem;
     margin: 0 auto;
-    padding: 2rem 0 2rem 0rem;
+    padding: 0rem 0 2rem 0rem;
 }
 main section{
     background-color: #222;
@@ -123,8 +126,8 @@ main section{
     border-radius: 0.5rem;
 }
 .aside{
-    background: url(https://www.nawpic.com/media/2020/desktop-backgrounds-nawpic-1.png)no-repeat scroll center center / cover;
-    min-height: 72vh;
+    background: url(https://i.pinimg.com/originals/b8/40/32/b84032568fad367059a28d149ccbeed5.png)no-repeat scroll center center / cover;
+    min-height: 80vh;
     max-width: 120rem;
     margin: 0 auto 2rem;
     box-shadow: 0.2rem 0.2rem 2rem #111;
@@ -140,14 +143,14 @@ main section{
     text-shadow: 0.25rem 0.25rem 0 #547697,.5rem .5rem 0 #46627e, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
 }
 .aside a img{
-    max-width: 5%;
+    max-width: 4.5%;
     display: block;
     margin: 0 auto;
     position: static;
     cursor: pointer;
     border-radius: 10rem;
     background-color: #fff;
-    transform: translateY(4rem);
+    transform: translateY(9rem);
     border: solid 1rem #fff;
     transition: 1s ease-in-out;
 }
@@ -274,7 +277,7 @@ section .grid-logo li img{
 .container li{
     font-weight: 500;
 }
-.item { max-width: 90%; background-color: #e74c3c ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
+.item { max-width: 90%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
 .item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
 .item-3 { max-width: 40%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
@@ -285,32 +288,67 @@ section .grid-logo li img{
 
 /*Footer */
 
-
-footer address ul{
-    padding: 2rem;
+.caté{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
 }
-footer address ul li{
+.caté section{
+    justify-items: center;
+}
+.caté img{
+    width: 25%;
+    margin: auto auto;
+}
+.caté h2{
+    font-weight: 800;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+.caté section ul{
+    width: 100%;
     margin: 0 auto;
 }
-footer address .ico{
+.caté section ul li{
+    padding-bottom: 1rem;
+}
+.caté section ul li a{
+    color: rgba(255, 255, 255, 0.699);
+    padding-bottom: 1rem;
+    font-style: italic;
+}
+footer ul{
+    padding: 1rem;
+}
+footer ul li{
+    margin: 0 auto;
+}
+footer  .ico{
     display: flex;
 }
-footer address{
+footer{
     text-align: center;
     color: #fff;
 }
-footer address p{
+footer p{
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
 footer{
     background-color: #222;
-    padding: 3rem;
+    padding: 2rem;
+    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
 }
 footer .link{
-    padding: 0rem;
-    max-width: 5rem;
+    margin: auto 1rem;
+    max-width: 6rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+footer .linkg{
+    margin: auto 1rem;
+    filter: invert(100%);
+    max-width: 6rem;
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
@@ -377,6 +415,10 @@ footer .link{
         display: inline-block;
         padding-right: 2rem;
     }
+    .caté{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     @media screen and (orientation: landscape){
         .aside a img{
             max-width: 5%;
