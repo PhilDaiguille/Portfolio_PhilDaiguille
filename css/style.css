@@ -29,7 +29,7 @@ a,button{
     --color-defaut:#222;
     --color-primary:#E8F3E8;
     --color-secondary: #274664;
-    --color-tertiaire:#193755;
+    --color-tertiaire:#27415a;
     --color-defaut:#975102;
     --color-header:#0A3409;
 
@@ -50,9 +50,8 @@ a,button{
 
 /*theme*/
 header{
-    margin-bottom: 2rem;
+    margin: 0 auto;
     line-height: 5rem;
-    
 }
 header h1{
     background-color: var(--color-tertiaire);
@@ -79,7 +78,7 @@ header h1 .material-icons{
 nav ul{
     padding-top: 1rem;
     max-width: 110rem;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
     display: flex;
     font-size: 0;
     justify-content: space-between;
@@ -115,11 +114,12 @@ nav ul li a:hover{
 
 
 main{
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 0rem 0 2rem 0rem;
 }
 main section{
+    max-width: 110rem;
     background-color: #222;
     box-shadow: 0.2rem 0.2rem 2rem #111;
     margin: 3rem auto;
@@ -127,7 +127,7 @@ main section{
 }
 .aside{
     background: url(https://i.pinimg.com/originals/b8/40/32/b84032568fad367059a28d149ccbeed5.png)no-repeat scroll center center / cover;
-    min-height: 80vh;
+    min-height: 81vh;
     max-width: 120rem;
     margin: 0 auto 2rem;
     box-shadow: 0.2rem 0.2rem 2rem #111;
@@ -139,8 +139,8 @@ main section{
 .aside h2{
     text-align: center;
     font-size: 6rem;
-    color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #547697,.5rem .5rem 0 #46627e, 0.75rem 0.75rem 0 #34495e, 1rem 1rem 0 #2c3e50;
+    color: #222;
+    text-shadow: 0.3rem 0.3rem 0 rgba(60, 86, 143, 0.685);
 }
 .aside a img{
     max-width: 4.5%;
@@ -150,17 +150,21 @@ main section{
     cursor: pointer;
     border-radius: 10rem;
     background-color: #fff;
-    transform: translateY(9rem);
+    transform: translateY(10rem);
     border: solid 1rem #fff;
     transition: 1s ease-in-out;
 }
 .aside a img:hover{
-    transform: translateY(2.3rem) scale(1.1);
+    transform: translateY(8rem) scale(1.1);
 }
 main section h3{
     font-size: 1.6rem;
     padding: 1rem;
     color: #fff;
+}
+main section figure figcaption{
+    text-align: center;
+    display: none;
 }
 main section h2{
     background-color: var(--color-tertiaire);
@@ -196,7 +200,7 @@ main .experience figure ul, main .loisir figure ul{
     transition: all 0.5s ease-in-out;
 }
 main .experience figure ul:hover{
-    transform: translateY(-1rem) scale(1.15);
+    transform: translateY(-1rem) scale(1.1);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(73, 73, 73, 0.726);
 }
 main .experience ul li h2, main .loisir ul li h2{
@@ -229,7 +233,6 @@ main .loisir figure ul:hover{
     transform: translateY(-1rem) scale(1.1);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(73, 73, 73, 0.726);
 }
-
 
 /*stat*/
 main section .container li{
@@ -287,35 +290,6 @@ section .grid-logo li img{
 .item-7 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
 
 /*Footer */
-
-.caté{
-    display: grid;
-    grid-template-columns: repeat(3 ,1fr);
-}
-.caté section{
-    justify-items: center;
-}
-.caté img{
-    width: 25%;
-    margin: auto auto;
-}
-.caté h2{
-    font-weight: 800;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-}
-.caté section ul{
-    width: 100%;
-    margin: 0 auto;
-}
-.caté section ul li{
-    padding-bottom: 1rem;
-}
-.caté section ul li a{
-    color: rgba(255, 255, 255, 0.699);
-    padding-bottom: 1rem;
-    font-style: italic;
-}
 footer ul{
     padding: 1rem;
 }
@@ -326,24 +300,40 @@ footer  .ico{
     display: flex;
 }
 footer{
-    text-align: center;
     color: #fff;
+    background-color: #222;
+    padding: 2rem;
+    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+}
+footer h2{
+    text-align: center;
 }
 footer p{
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
-footer{
-    background-color: #222;
-    padding: 2rem;
-    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+footer section{
+    margin: 0 auto;
 }
 footer .link{
     margin: auto 1rem;
     max-width: 6rem;
     cursor: pointer;
     transition: ease-in-out 0.2s;
+}
+footer .contact{
+    max-width: 30rem;
+    margin: 0 auto;
+}
+footer .contact li a{
+    color: #fff;
+}
+footer .contact img{
+    max-width: 4rem;
+    margin: auto 1rem;
+    filter: invert(100%);
+    transform: translateY(1rem);
 }
 footer .linkg{
     margin: auto 1rem;
@@ -352,10 +342,14 @@ footer .linkg{
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
+footer .orga{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
 
 
-@media screen and (max-width: 70rem) {
+@media screen and (max-width: 60rem) {
     main section #picture{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
