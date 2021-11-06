@@ -201,11 +201,23 @@ main .experience figure ul, main .loisir figure ul{
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
 }
-main .experience figure ul:hover{
+main .travaux figure{
+    padding: 1rem;
+}
+main .travaux figure ul{
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    max-width: 50rem;
+    border: solid .2rem rgba(202, 202, 202, 0.726);
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    transition: all 0.5s ease-in-out;
+}
+main .experience figure ul:hover, main .travaux figure ul:hover{
     transform: translateY(-1rem) scale(1.1);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(73, 73, 73, 0.726);
 }
-main .experience ul li h2, main .loisir ul li h2{
+main .experience ul li h2, main .loisir ul li h2, main .travaux ul li h2{
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
     text-shadow: 0.25rem 0.25rem 0 #4a6785,.5rem .5rem 0 #3e566e;
@@ -224,6 +236,11 @@ main .experience ul li img{
 main .loisir ul li img{
     width: 20%;
 }
+main .travaux ul li img{
+    display: block;
+    margin: 1rem auto;
+    width: 20%;
+}
 /*loisir*/
 main .loisir figure{
     display: grid;
@@ -238,10 +255,9 @@ main .loisir figure ul:hover{
 
 /*stat*/
 main section .container li{
-    margin: 1rem;
-    padding: 0.8rem;
-    color: rgb(0, 0, 0);
-    align-items: center;
+    margin: 0.6rem;
+    padding: 0.7rem;
+    color: #000;
 }
 main section h3{
     font-size: 3rem;
@@ -250,7 +266,7 @@ main section h3{
     text-shadow: 0.25rem 0.25rem 0 #34495e,.5rem .5rem 0 #2c3e50;
 }
 .container{
-    display: flex;
+    display: flex; 
     padding: 1rem 2rem;
     flex-direction: column;
 }
@@ -259,9 +275,6 @@ main section h3{
     max-width: 2.2rem;
     transform: translateY(.4rem);
     justify-content: center;
-}
-.container li img{
-    font-weight: bolder;
 }
 
 /*test grid display block

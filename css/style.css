@@ -279,6 +279,7 @@ section .grid-logo li img{
 */
 .container li{
     font-weight: 500;
+    margin: 0rem;
 }
 .item { max-width: 90%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
 .item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}

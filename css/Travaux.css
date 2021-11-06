@@ -181,35 +181,6 @@ main section p{
 }
 
 /*Footer */
-
-.caté{
-    display: grid;
-    grid-template-columns: repeat(3 ,1fr);
-}
-.caté section{
-    justify-items: center;
-}
-.caté img{
-    width: 25%;
-    margin: auto auto;
-}
-.caté h2{
-    font-weight: 800;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-}
-.caté section ul{
-    width: 100%;
-    margin: 0 auto;
-}
-.caté section ul li{
-    padding-bottom: 1rem;
-}
-.caté section ul li a{
-    color: rgba(255, 255, 255, 0.699);
-    padding-bottom: 1rem;
-    font-style: italic;
-}
 footer ul{
     padding: 1rem;
 }
@@ -220,18 +191,21 @@ footer  .ico{
     display: flex;
 }
 footer{
-    text-align: center;
     color: #fff;
+    background-color: #222;
+    padding: 2rem;
+    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+}
+footer h2{
+    text-align: center;
 }
 footer p{
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
-footer{
-    background-color: #222;
-    padding: 2rem;
-    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+footer section{
+    margin: 0 auto;
 }
 footer .link{
     margin: auto 1rem;
@@ -239,12 +213,29 @@ footer .link{
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
+footer .contact{
+    max-width: 30rem;
+    margin: 0 auto;
+}
+footer .contact li a{
+    color: #fff;
+}
+footer .contact img{
+    max-width: 4rem;
+    margin: auto 1rem;
+    filter: invert(100%);
+    transform: translateY(1rem);
+}
 footer .linkg{
     margin: auto 1rem;
     filter: invert(100%);
     max-width: 6rem;
     cursor: pointer;
     transition: ease-in-out 0.2s;
+}
+footer .orga{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 @media screen and (max-width: 75rem) {
     main{
