@@ -282,6 +282,9 @@ footer .orga{
     .caté{
         grid-template-columns: repeat(1, 1fr);
     }
+    footer .link{
+        max-width: 5rem;
+    }
     /* menu of */
     nav{
         position: relative;
