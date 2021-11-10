@@ -52,24 +52,23 @@ a,button{
 header{
     margin: 0 auto;
     line-height: 5rem;
+    border-bottom: solid .5rem #2c2d3a;
+    background: url(../asset/wp5422512.jpg)no-repeat scroll center center / cover;
+    height: 100vh;
 }
+
 header h1{
-    background-color: var(--color-tertiaire);
-    text-align: center;
-    border-bottom: solid 0.5rem #202d3a;
+    background-color: transparent;
     padding: 1rem;
+    display: flex;
     color: #fff;
-    text-shadow: 0.5rem 0.5rem 0 #202d3a;
-    transition: all 1.5s ease-in-out;
+    width: 40rem;
+    text-shadow: 0.3rem 0.3rem 0 #507091;
 }
-header h1:hover{
-    letter-spacing: 0.4rem;
-    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;   
-}
-header img{
-    max-width: 4rem;
-    vertical-align: middle;
-    margin: auto 1rem;
+#title{
+    text-align: center;
+    padding-bottom: 4rem;
+    font-size: 4rem;
 }
 header h1 .material-icons{
     display: none;
@@ -80,18 +79,20 @@ nav ul{
     max-width: 110rem;
     margin: 0 auto 1.5rem;
     display: flex;
+    
     font-size: 0;
     justify-content: space-between;
 }
 nav ul li{
     line-height: 3.5rem;
     font-size: 1.6rem;
-    padding: 0 2rem;
+    border-radius: 0.4rem;
     text-align: center;
     width: calc(100% /6);
 }
 nav ul li a{
     display: block;
+    background-color: #222;
     border-radius: 0.6rem;
     width: 100%;
     color: #fff;
@@ -100,7 +101,6 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    background-color: var(--color-tertiaire);
     box-shadow: 0.2rem 0.2rem .2rem #202d3a;
     transform: scale(1.1);
 }
@@ -113,39 +113,21 @@ nav ul li a:hover{
 
 
 
-
 .aside{
-    background: url(https://i.pinimg.com/originals/b8/40/32/b84032568fad367059a28d149ccbeed5.png)no-repeat scroll center center / cover;
-    min-height: 81vh;
-    max-width: 120rem;
-    margin: 0 auto 2rem;
-    box-shadow: 0.2rem 0.2rem 2rem #111;
-    display: grid;
-    border-radius: 0.5rem;
-    align-items: center;
-
-}
-.aside h2{
-    text-align: center;
-    font-size: 6rem;
-    color: #222;
-    text-shadow: 0.3rem 0.3rem 0 rgba(60, 86, 143, 0.685);
+    padding-top: 30rem;
 }
 .aside a img{
-    max-width: 4.5%;
+    max-width: 5rem;
     display: block;
     margin: 0 auto;
     position: static;
     cursor: pointer;
     border-radius: 10rem;
     background-color: #fff;
-    transform: translateY(6.5rem);
     border: solid 1rem #fff;
     transition: 1s ease-in-out;
 }
-.aside a img:hover{
-    transform: translateY(8rem) scale(1.1);
-}
+
 main{
     max-width: 120rem;
     margin: 0 auto;
@@ -368,6 +350,9 @@ footer .orga{
     main section #picture{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
+    }
+    header h1{
+        font-size: 1.7em;
     }
     .aside a img{
         max-width: 10%;
