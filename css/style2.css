@@ -354,6 +354,10 @@ footer .orga{
     header h1{
         font-size: 1.7em;
     }
+    header h1 .material-icons{
+        padding-top: 1.2rem;
+        padding-left: 1rem;
+    }
     .aside a img{
         max-width: 10%;
         margin: 2rem auto;
@@ -395,7 +399,8 @@ footer .orga{
     /* menu on */
     .open-menu{
         z-index: 1;
-        height: 40rem;
+        height: 1rem;
+        
     }
     .rotate{
         transform: rotate(45deg);
