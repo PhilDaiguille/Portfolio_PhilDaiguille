@@ -1,4 +1,4 @@
-# Exercice_Portfolio
+# Portfolio PhilDaiguille
 
-[Voir la page](https://phildaiguille.github.io/Exercice_Portfolio/)
+[Voir la page](https://phildaiguille.github.io/Portfolio_PhilDaiguille/)
 
