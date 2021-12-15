@@ -56,10 +56,7 @@ img{
 header{
     background-color: var(--color-tertiaire);
     line-height: 6.5rem;
-    border-bottom: solid 0.5rem #122325;
-}
-header img{
-    filter: invert(1);
+    border-bottom: solid 0.5rem #132427;
 }
 header h1{
     text-align: center;
@@ -75,6 +72,7 @@ header h1:hover{
 }
 header img{
     max-width: 9rem;
+    filter: invert(1);
     vertical-align: middle;
     padding-right: 3rem;
     transform: translateY(-0.4rem)translateX(0.4rem);
@@ -97,7 +95,7 @@ nav ul li{
 }
 nav ul li a{
     display: block;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     width: 100%;
     color: #fff;
     
@@ -124,20 +122,12 @@ main h2{
     color: #fff;
     text-shadow: 0.5rem 0.5rem 0 #34495e;
 }
-main h3{
-    padding: 3rem 3rem;
-    text-align: center;
-    font-size: 3rem;
+main h2 span{
+    font-size: 1.6rem;
     color: #fff;
-    transition: all 1s ease-in-out;
-    
+    text-shadow: 0.5rem 0.5rem 0 #34495e;
 }
-main h3:hover{
-    letter-spacing: 0.3rem;
-    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
-   
-}
-main section h2{
+main figure h2{
     text-align: center;
     font-size: 3rem;
     color: #fff;
@@ -156,38 +146,34 @@ main a .f{
     font-size: 2rem;
     color: #fff;
 }
-main section p a{
-    background-color: #bdc3c7;
-    padding: 0.5rem 4rem;
-    color: #000;
-    font-size: 2rem;
-    border-radius: 0.7rem;
-    border: solid .3rem #fff;
-}
-main section{
+main figure{
     padding: 3rem;
     margin: 1rem auto;
-    display: block;
-    border-radius: 1rem;
+    display: flex;
+    border-radius: 0.6rem;
     background-color: #222;
 }
-main section ul{
-    padding: 2rem;
-}
-main section ul li{
+main figure figcaption h2{
+    padding: 1rem;
+    text-align: left;
     color: #fff;
 }
-main section img{
+main figure figcaption ul{
+    padding: 2rem;
+}
+main figure figcaption ul li{
+    color: #fff;
+    padding: 1rem 0rem;
+}
+main figure img{
     margin: 2rem auto;
     display: flex;
     padding: 1rem;
     border-radius: 1.5rem;
-    max-width: 80rem;
+    max-width: 32.5rem;
     align-items: center;
 }
-main section p{
-    text-align: center;
-}
+
 
 /*Footer */
 footer ul{
@@ -279,9 +265,8 @@ footer .orga{
         text-shadow: 0;
        
     }
-    main section #picture{
-        grid-template-columns: repeat(1, 1fr);
-        margin: 0 auto;
+    main figure{
+        flex-direction: column;
     }
     nav ul{
         width: auto;
@@ -299,22 +284,5 @@ footer .orga{
         margin-bottom: 1rem;
         transition: all 500ms ease-in-out;
         
-    }
-    /* menu on */
-    .open-menu{
-        z-index: 1;
-        height: 22.5rem;
-    }
-    nav ul li{
-        display: block;
-        width: auto;
-        text-align: center;
-    }
-    nav ul li a{
-        padding-left: 1rem;
-    }
-    header h1 .material-icons{
-        display: inline-block;
-        padding-right: 2rem;
     }
 }

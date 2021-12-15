@@ -1,5 +1,5 @@
 /*reset*/
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -34,6 +34,11 @@ a,button{
     --color-header:#0A3409;
 
 }
+
+.material-icons{
+    display: block;
+    color: #fff;
+}
 /* scroll bars */
 *{
     /* For FF and non-webkit browsers */
@@ -52,21 +57,23 @@ a,button{
 header{
     margin: 0 auto;
     line-height: 5rem;
-    border-bottom: solid .5rem #2c2d3a;
-    background: url(../asset/wp5422512.jpg)no-repeat scroll center center / cover;
+    border-bottom: solid .5rem #112124;
+    background: url(https://static.vecteezy.com/ti/vecteur-libre/p3/2036201-foret-de-pins-sombres-montagnes-et-gris-ciel-gris-soir-paysage-vectoriel.jpg)no-repeat scroll center center / cover;
     height: 100vh;
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 header h1{
-    background-color: transparent;
-    padding: 1rem;
-    display: flex;
     color: #fff;
-    width: 40rem;
-    text-shadow: 0.3rem 0.3rem 0 #507091;
+    text-shadow: 0.3rem 0.3rem 0 #222, 0.5rem 0.5rem 0 #555;
 }
 #title{
     text-align: center;
+    color: #fff;
     padding-bottom: 4rem;
     font-size: 4rem;
 }
@@ -74,6 +81,10 @@ header h1 .material-icons{
     display: none;
 }
 /*navigation*/
+nav{
+    display: flex;
+    max-width: 90rem;
+}
 nav ul{
     padding-top: 1rem;
     max-width: 110rem;
@@ -86,22 +97,24 @@ nav ul{
 nav ul li{
     line-height: 3.5rem;
     font-size: 1.6rem;
-    border-radius: 0.4rem;
+    border: solid .2rem rgba(202, 202, 202, 0.726);
+    background-color: rgb(54, 54, 54);
+    margin: 1rem;
+    border-radius: 0.6rem;
     text-align: center;
-    width: calc(100% /6);
 }
 nav ul li a{
     display: block;
     background-color: #222;
     border-radius: 0.6rem;
+    padding: 1rem 3rem;
     width: 100%;
     color: #fff;
     transition: all .5s ease-in-out;
     
 }
-
 nav ul li a:hover{
-    box-shadow: 0.2rem 0.2rem .2rem #202d3a;
+    box-shadow: 0.2rem 0.2rem 0.1rem rgba(49, 49, 49, 0.726);
     transform: scale(1.1);
 }
 .History{
@@ -145,19 +158,25 @@ main section h3{
     padding: 1rem;
     color: #fff;
 }
-main section figure figcaption{
+main section figure figcaption{ 
     text-align: center;
     display: none;
 }
 main section h2{
-    background-color: #2c3e50;
+    background-color: #1a3236;
     padding: 1rem;
     color: #fff;
     margin: 0rem auto;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
-    border-bottom: solid 0.35rem #202d3a;
+    border-bottom: solid 0.35rem #101b1d;
 }
-
+main section.experience figure ul li a{
+    display: block;
+    font-weight: 700;
+    padding: 1rem;
+    color: #fff;
+    margin: 0rem auto;
+}
 main section p{
     font-size: 1.6rem;
     padding: 2rem;
@@ -174,6 +193,10 @@ main .experience figure{
     padding: 2rem;
     width: auto;
     grid-template-columns: repeat(3,1fr);
+}
+
+main .experience figure ul li a{
+    color: #fff; 
 }
 main .experience figure ul, main .loisir figure ul{
     border-radius: 0.5rem;
@@ -202,7 +225,7 @@ main .experience figure ul:hover, main .travaux figure ul:hover{
 main .experience ul li h2, main .loisir ul li h2, main .travaux ul li h2{
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
-    text-shadow: 0.25rem 0.25rem 0 #4a6785,.5rem .5rem 0 #3e566e;
+    text-shadow: 0.25rem 0.25rem 0 #234449,.5rem .5rem 0 #2b5057;
     border-bottom: none;
     border-radius: 0.5rem;
     text-align: center;
@@ -284,7 +307,8 @@ section .grid-logo li img{
 .item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
 .item-5 { max-width: 70%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-6 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-.item-7 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+.item-7 { max-width: 35%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+.item-8 { max-width: 45%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
 
 /*Footer */
 footer ul{
@@ -351,6 +375,17 @@ footer .orga{
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
+    header .nav{
+        flex-direction: column;
+    }
+    header .nav ul li{
+        margin: 1rem auto;
+        width: 100%;
+    }
+    header .nav{
+        font-size: 1.5rem;
+        width: 100%;
+    }
     header h1{
         font-size: 1.7em;
     }
@@ -380,6 +415,7 @@ footer .orga{
         transform: none;
         box-shadow: none;
     }
+    .item-7 { max-width: 45%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
     footer .orga{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
