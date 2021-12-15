@@ -5,7 +5,7 @@
 ####Étudiant BTS SIO 2ème Année chez ITIC Paris
 <p> Je suis actuellement en 2ème Année de BTS option Services Informatique aux Organisations. </p>
 
-![Portfolio](./asset/readme.png "Portfolio")
+![Portfolio](./asset/readme.png)
 
 
 [Voir le portfolio](https://phildaiguille.github.io/Portfolio_PhilDaiguille/)
