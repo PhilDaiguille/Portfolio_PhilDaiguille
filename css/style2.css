@@ -1,14 +1,12 @@
 /*reset*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 body{
-    font-size: 1.6rem;
-    font-family: 'Helvetica', sans-serif;
+    font: 1.6rem 'Encode Sans', sans-serif;
     margin: 0;
-    font-weight: 300;
     background-color: #333;
     text-transform: capitalize;
 }
@@ -35,10 +33,6 @@ a,button{
 
 }
 
-.material-icons{
-    display: block;
-    color: #fff;
-}
 /* scroll bars */
 *{
     /* For FF and non-webkit browsers */
@@ -57,8 +51,8 @@ a,button{
 header{
     margin: 0 auto;
     line-height: 5rem;
-    border-bottom: solid .5rem #112124;
-    background: url(https://static.vecteezy.com/ti/vecteur-libre/p3/2036201-foret-de-pins-sombres-montagnes-et-gris-ciel-gris-soir-paysage-vectoriel.jpg)no-repeat scroll center center / cover;
+    border-bottom: solid .5rem #141414;
+    background: url(https://wallpaperaccess.com/full/1189379.png)no-repeat scroll center center / cover;
     height: 100vh;
 }
 .nav{
@@ -66,18 +60,38 @@ header{
     justify-content: space-evenly;
     align-items: center;
 }
-
+.burger{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 3rem;
+    cursor: pointer;
+    z-index: 5;
+}
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
 header h1{
     color: #fff;
-    text-shadow: 0.3rem 0.3rem 0 #222, 0.5rem 0.5rem 0 #555;
-}
-#title{
+    text-shadow: 0.3rem 0.3rem 0 #333, 0.5rem 0.5rem 0 #444;
     text-align: center;
-    color: #fff;
-    padding-bottom: 4rem;
-    font-size: 4rem;
+    letter-spacing: .5rem;
+    padding-top: 24rem;
+    font-size: 5rem;
+    position: sticky;
 }
-header h1 .material-icons{
+header h2{
+    color: #fff;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+    position: sticky;
+}
+
+header .burger{
     display: none;
 }
 /*navigation*/
@@ -106,34 +120,31 @@ nav ul li{
 nav ul li a{
     display: block;
     background-color: #222;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
     padding: 1rem 3rem;
     width: 100%;
     color: #fff;
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
     
 }
 nav ul li a:hover{
-    box-shadow: 0.2rem 0.2rem 0.1rem rgba(49, 49, 49, 0.726);
     transform: scale(1.1);
 }
 .History{
     transition: all 400ms ease-in-out ;
 }
 .History:target{
-    background-color: #294868;
+    font-size: 5rem;
 }
-
-
-
 .aside{
-    padding-top: 30rem;
+    position: sticky;
+    display: block;
 }
 .aside a img{
     max-width: 5rem;
+    margin: 3rem auto;
+    position: sticky;
     display: block;
-    margin: 0 auto;
-    position: static;
     cursor: pointer;
     border-radius: 10rem;
     background-color: #fff;
@@ -142,12 +153,13 @@ nav ul li a:hover{
 }
 
 main{
-    max-width: 120rem;
+    z-index: 5;
+    max-width: 140rem;
     margin: 0 auto;
     padding: 0rem 0 2rem 0rem;
 }
 main section{
-    max-width: 120rem;
+    max-width: 140rem;
     background-color: #222;
     box-shadow: 0.2rem 0.2rem 2rem #111;
     margin: 3rem auto;
@@ -162,13 +174,11 @@ main section figure figcaption{
     text-align: center;
     display: none;
 }
-main section h2{
-    background-color: #1a3236;
-    padding: 1rem;
+main section .History{
+    font-size: 4.5rem;
+    font-weight: 800;
+    padding: 2rem 0rem 0rem 2rem;
     color: #fff;
-    margin: 0rem auto;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-    border-bottom: solid 0.35rem #101b1d;
 }
 main section.experience figure ul li a{
     display: block;
@@ -187,33 +197,41 @@ main section ul li{
     padding: 2rem;
     color: #fff;
 }
-/*Expérience*/
-main .experience figure{
-    display: grid;
-    padding: 2rem;
-    width: auto;
-    grid-template-columns: repeat(3,1fr);
-}
 
-main .experience figure ul li a{
+/*Expérience*/
+main .experience figure, main .formation figure{
+    display: grid;
+    padding: 1.5rem;
+    width: auto;
+    grid-template-columns: repeat(4,1fr);
+}
+main .experience h2, main .experience figure ul li h2{
+    text-shadow: 0.25rem 0.25rem 0 #c0392b,.5rem .5rem 0 #e74c3c;
+}
+main .experience figure ul li a, main .formation figure ul li a{
     color: #fff; 
 }
-main .experience figure ul, main .loisir figure ul{
+main .experience figure ul, main .loisir figure ul, main .formation figure ul{
     border-radius: 0.5rem;
     margin: 2rem;
-    border: solid .2rem rgba(202, 202, 202, 0.726);
+    
     background-color: rgb(54, 54, 54);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
 }
 main .travaux figure{
     padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+main .travaux figure img{
+    margin: 1rem auto;
+    max-width: 30rem;
 }
 main .travaux figure ul{
     border-radius: 0.5rem;
     margin: 2rem auto;
     max-width: 50rem;
-    border: solid .2rem rgba(202, 202, 202, 0.726);
     background-color: rgb(54, 54, 54);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
@@ -230,13 +248,25 @@ main .experience ul li h2, main .loisir ul li h2, main .travaux ul li h2{
     border-radius: 0.5rem;
     text-align: center;
 }
-main .experience ul li, main .loisir ul li{
+main .experience ul li, main .loisir ul li, main .formation ul li, main .travaux ul li{
     text-align: center;
 }
-main .experience ul li img{
+main .experience ul li img, main .formation ul li img{
     display: block;
-    margin: 1rem auto;
-    width: 25%;
+    margin: 0rem auto;
+    max-width: 30%;
+}
+main .compet h2{
+    text-shadow: 0.25rem 0.25rem 0 #f39c12,.5rem .5rem 0 #f1c40f;
+}
+main .loisir h2, main .loisir figure ul li h2{
+    text-shadow: 0.25rem 0.25rem 0 #12816b,.5rem .5rem 0 #15967c;
+}
+main .formation h2, main .formation figure ul li h2{
+    text-shadow: 0.25rem 0.25rem 0 #2980b9,.5rem .5rem 0 #3498db;
+}
+main .travaux h2, main .travaux figure ul li h2{
+    text-shadow: 0.25rem 0.25rem 0 #27ae60,.5rem .5rem 0 #2ecc71;
 }
 main .loisir ul li img{
     width: 20%;
@@ -253,7 +283,7 @@ main .loisir figure{
     width: auto;
     grid-template-columns: repeat(2,1fr);
 }
-main .loisir figure ul:hover{
+main .loisir figure ul:hover, main .formation figure ul:hover{
     transform: translateY(-1rem) scale(1.1);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(73, 73, 73, 0.726);
 }
@@ -266,13 +296,12 @@ main section .container li{
 }
 main section h3{
     font-size: 3rem;
-    padding-left: 2rem;
-    padding: 1rem 2rem;
-    text-shadow: 0.25rem 0.25rem 0 #34495e,.5rem .5rem 0 #2c3e50;
+    padding: 1rem 4rem;
+    text-shadow: 0.25rem 0.25rem 0 #F79F1F,.5rem .5rem 0 #FFC312;
 }
 .container{
     display: flex; 
-    padding: 1rem 2rem;
+    padding: 1rem 5rem;
     flex-direction: column;
 }
 
@@ -281,23 +310,8 @@ main section h3{
     transform: translateY(.4rem);
     justify-content: center;
 }
-
-/*test grid display block
-section .grid-logo{
-    width: auto;
-    display: grid;
-    background-color: #547697;
-    padding: 1rem;
-    border-radius: 0 0 0.5rem 0.5rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 1rem;
-    grid-auto-flow: dense;
-}
-section .grid-logo li img{
-    max-width: 20rem;
-}
-*/
 .container li{
+    text-transform: capitalize;
     font-weight: 500;
 }
 .item { max-width: 90%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
@@ -309,6 +323,19 @@ section .grid-logo li img{
 .item-6 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
 .item-7 { max-width: 35%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
 .item-8 { max-width: 45%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
+
+/*up*/
+main .up{
+    display: block;
+    max-width: 5rem;
+    padding: 0.5rem;
+    margin: 0 auto;
+    border: solid .4rem #1c1c1c;
+    border-radius: 0rem 0rem 2rem 2rem;
+    transform: rotate(180deg) translateY(-2.5rem);
+    background-color: #c2c2c2;
+    transition: all 0.5s ease-in-out;
+}
 
 /*Footer */
 footer ul{
@@ -389,9 +416,10 @@ footer .orga{
     header h1{
         font-size: 1.7em;
     }
-    header h1 .material-icons{
+    header .burger{
         padding-top: 1.2rem;
         padding-left: 1rem;
+        display: block;
     }
     .aside a img{
         max-width: 10%;
@@ -403,10 +431,16 @@ footer .orga{
     main{
         padding-top: 1rem;
     }
+    .container{
+        padding: 1rem;
+    }
+    h3, h2{
+        text-align: center;
+    }
     .container li{
         font-size: 1.4rem;
     }
-    main .experience figure, main .loisir figure{
+    main .experience figure, main .loisir figure, main .formation figure, main .travaux figure{
         display: grid;
         padding: 0;
         grid-template-columns: repeat(1,1fr);
@@ -422,6 +456,10 @@ footer .orga{
     }
     footer .link{
         max-width: 5rem;
+    }
+    footer p{
+        font-size: 1.4rem;
+        text-align: center;
     }
     /* menu of */
     nav{

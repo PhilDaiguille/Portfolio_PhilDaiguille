@@ -31,8 +31,8 @@ img{
 :root{
     --color-defaut:#222;
     --color-primary:#E8F3E8;
-    --color-secondary: #34495e;
-    --color-tertiaire:#1a3236;
+    --color-secondary: #e74c3c;
+    --color-tertiaire:#c0392b;
     --color-defaut:#975102;
     --color-header:#0A3409;
 
@@ -54,21 +54,16 @@ img{
 
 /*theme*/
 header{
-    background-color: var(--color-tertiaire);
+    background-color: #222;
     line-height: 6.5rem;
-    border-bottom: solid 0.5rem #132427;
+    border-bottom: solid 0.5rem #111;
 }
 header h1{
     text-align: center;
     padding: 1rem;
     color: #fff;
-    text-shadow: 0.5rem 0.5rem 0 #202d3a;
+    text-shadow: 0.3rem 0.3rem 0 #c0392b, 0.5rem 0.5rem 0 #e74c3c;
     transition: all 1.5s ease-in-out;
-}
-header h1:hover{
-    letter-spacing: 0.4rem;
-    text-shadow: 0.3rem 0.3rem 0 #202d3a, 0.5rem 0.5rem 0 #18212b;
-    
 }
 header img{
     max-width: 9rem;
@@ -120,12 +115,12 @@ main{
 main h2{
     font-size: 6rem;
     color: #fff;
-    text-shadow: 0.5rem 0.5rem 0 #34495e;
+    text-shadow: 0.3rem 0.3rem 0 #c0392b, 0.5rem 0.5rem 0 #e74c3c;
 }
 main h2 span{
     font-size: 1.6rem;
     color: #fff;
-    text-shadow: 0.5rem 0.5rem 0 #34495e;
+    text-shadow: 0.3rem 0.3rem 0 #c0392b, 0.5rem 0.5rem 0 #e74c3c;
 }
 main figure h2{
     text-align: center;
@@ -152,6 +147,7 @@ main figure{
     display: flex;
     border-radius: 0.6rem;
     background-color: #222;
+    border: #fafafaad solid 0.1rem;
 }
 main figure figcaption h2{
     padding: 1rem;
@@ -172,6 +168,18 @@ main figure img{
     border-radius: 1.5rem;
     max-width: 32.5rem;
     align-items: center;
+}
+/*up*/
+main .up{
+    display: block;
+    max-width: 5rem;
+    padding: 0.5rem;
+    margin: 0 auto;
+    border: solid .4rem #1c1c1c;
+    border-radius: 0rem 0rem 2rem 2rem;
+    transform: rotate(180deg) translateY(-2.5rem);
+    background-color: #c2c2c2;
+    transition: all 0.5s ease-in-out;
 }
 
 
