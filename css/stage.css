@@ -12,18 +12,15 @@ body{
     background-color: #333;
     text-transform: capitalize;
 }
-h1,h2,h3,p,figure,ul,ol,section{
+h1,h2,p,figure,ul,section{
     margin: 0;
     padding: 0;
     list-style: none; 
 }
-a,button{
+a{
     text-decoration: none;
     padding: 0;
     border: 0;
-}
-img{
-    max-width: 100%;
 }
 *{
     box-sizing: border-box;
@@ -36,6 +33,12 @@ img{
     --color-defaut:#975102;
     --color-header:#0A3409;
 
+}
+img{
+	display: inline-block;
+	width: 100%;
+	object-fit: cover;
+	vertical-align: middle;
 }
 
 /* scroll bars */
@@ -55,57 +58,23 @@ img{
 /*theme*/
 header{
     background-color: #222;
-    line-height: 6.5rem;
     border-bottom: solid 0.5rem #111;
 }
 header h1{
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     color: #fff;
-    text-shadow: 0.3rem 0.3rem 0 #c0392b, 0.5rem 0.5rem 0 #e74c3c;
-    transition: all 1.5s ease-in-out;
+    font-weight: bold;
+    font-size: 5rem;
 }
 header img{
-    max-width: 9rem;
+    max-width: 10rem;
     filter: invert(1);
     vertical-align: middle;
     padding-right: 3rem;
     transform: translateY(-0.4rem)translateX(0.4rem);
 }
-header h1 .material-icons{
-    display: none;
-}
 /*navigation*/
-nav ul{
-    max-width: 100rem;
-    margin: 0 auto 2rem;
-    font-size: 0;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 4.5rem;
-    font-size: 1.6rem;
-    text-align: center;
-    width: calc(100% /5);
-}
-nav ul li a{
-    display: block;
-    border-radius: 1rem;
-    width: 100%;
-    color: #fff;
-    
-}
-nav ul li a:hover{
-    background-color: var(--color-tertiaire);
-    box-shadow: 0.2rem 0.2rem .1rem #202d3a;
-    color: #fff;
-}
-.History{
-    transition: all 400ms ease-in-out ;
-}
-.History:target{
-    background-color: #34495e;
-}
 
 main{
     max-width: 100rem;
@@ -115,12 +84,10 @@ main{
 main h2{
     font-size: 6rem;
     color: #fff;
-    text-shadow: 0.3rem 0.3rem 0 #c0392b, 0.5rem 0.5rem 0 #e74c3c;
 }
 main h2 span{
     font-size: 1.6rem;
     color: #fff;
-    text-shadow: 0.3rem 0.3rem 0 #c0392b, 0.5rem 0.5rem 0 #e74c3c;
 }
 main figure h2{
     text-align: center;
@@ -142,12 +109,12 @@ main a .f{
     color: #fff;
 }
 main figure{
-    padding: 3rem;
-    margin: 1rem auto;
-    display: flex;
-    border-radius: 0.6rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 0.5rem;
     background-color: #222;
-    border: #fafafaad solid 0.1rem;
 }
 main figure figcaption h2{
     padding: 1rem;
@@ -159,14 +126,14 @@ main figure figcaption ul{
 }
 main figure figcaption ul li{
     color: #fff;
+    line-height: 1.5em;
     padding: 1rem 0rem;
 }
 main figure img{
     margin: 2rem auto;
     display: flex;
-    padding: 1rem;
+    padding: 5rem;
     border-radius: 1.5rem;
-    max-width: 32.5rem;
     align-items: center;
 }
 /*up*/
@@ -240,57 +207,27 @@ footer .orga{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 65rem) {
+    header h1{
+        font-size: 3.5rem;
+    }
     main{
-        margin: 0rem auto;
+        margin: 1rem auto;
+        padding: 1rem;
     }
-    main section img{
-        max-width: 100%;
-    }
-    main a{
-        padding-left: 1rem;
-        padding-bottom: 2rem;
-    }
-    main h2{
-        padding-top: 2rem;
-        padding-left: 1rem;
-    }
-    main section h2{
-        padding-top: 0;
-        padding-left: 0;
-    }
-    
-    main h3{
-        font-size: 2.2rem;
-    }
-    main h3:hover{
-        letter-spacing: 0;
-        text-shadow: 0;
-       
-    }
-    header h1:hover{
-        letter-spacing: 0;
-        text-shadow: 0;
-       
+    main figure figcaption h2{
+        font-size: 3rem;
+        text-align: center;
     }
     main figure{
-        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
     }
-    nav ul{
-        width: auto;
-        margin: 0;
-        margin-bottom: .1rem;
-    }
-    footer .link{
+    footer .link, footer .linkg{
+        margin: 1rem auto;
         max-width: 5rem;
     }
-    /* menu of */
-    nav{
-        position: relative;
-        z-index: -1;
-        height: 0;
-        margin-bottom: 1rem;
-        transition: all 500ms ease-in-out;
-        
+    footer{
+        font-size: 1.2rem;
     }
+    /* menu of */
 }

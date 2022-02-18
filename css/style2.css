@@ -20,6 +20,13 @@ a,button{
     padding: 0;
     border: 0;
 }
+img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+}
 *{
     box-sizing: border-box;
 }
@@ -64,8 +71,11 @@ header{
     position: absolute;
     top: 1rem;
     right: 2rem;
-    width: 3rem;
+    max-width: 7rem;
     cursor: pointer;
+    object-fit: inherit;
+    height: inherit;
+    width: inherit;
     z-index: 5;
 }
 header{
@@ -166,10 +176,12 @@ main section{
     border-radius: 0.5rem;
 }
 main section h3{
-    font-size: 1.6rem;
-    padding: 1rem;
+    font-size: 3rem;
+    padding: 1rem 4rem;
     color: #fff;
+    text-shadow: none;
 }
+    
 main section figure figcaption{ 
     text-align: center;
     display: none;
@@ -182,7 +194,7 @@ main section .History{
 }
 main section.experience figure ul li a{
     display: block;
-    font-weight: 700;
+    font-weight: bold;
     padding: 1rem;
     color: #fff;
     margin: 0rem auto;
@@ -205,8 +217,11 @@ main .experience figure, main .formation figure{
     width: auto;
     grid-template-columns: repeat(4,1fr);
 }
-main .experience h2, main .experience figure ul li h2{
+main .experience h2{
     text-shadow: 0.25rem 0.25rem 0 #c0392b,.5rem .5rem 0 #e74c3c;
+}
+main .experience figure ul li h2{
+    text-shadow: none;
 }
 main .experience figure ul li a, main .formation figure ul li a{
     color: #fff; 
@@ -220,13 +235,10 @@ main .experience figure ul, main .loisir figure ul, main .formation figure ul{
     transition: all 0.5s ease-in-out;
 }
 main .travaux figure{
-    padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-main .travaux figure img{
-    margin: 1rem auto;
-    max-width: 30rem;
+    padding: 2rem;
+    width: auto;
+    grid-template-columns: repeat(2,1fr);
 }
 main .travaux figure ul{
     border-radius: 0.5rem;
@@ -243,7 +255,6 @@ main .experience figure ul:hover, main .travaux figure ul:hover{
 main .experience ul li h2, main .loisir ul li h2, main .travaux ul li h2{
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
-    text-shadow: 0.25rem 0.25rem 0 #234449,.5rem .5rem 0 #2b5057;
     border-bottom: none;
     border-radius: 0.5rem;
     text-align: center;
@@ -253,27 +264,30 @@ main .experience ul li, main .loisir ul li, main .formation ul li, main .travaux
 }
 main .experience ul li img, main .formation ul li img{
     display: block;
-    margin: 0rem auto;
-    max-width: 30%;
+    margin: 1rem auto;
+    max-width: 10rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+main .loisir ul li h2, main .formation ul li h2, main .travaux ul li h2{
+    text-shadow: none;
 }
 main .compet h2{
-    text-shadow: 0.25rem 0.25rem 0 #f39c12,.5rem .5rem 0 #f1c40f;
+    text-shadow: 0.25rem 0.25rem 0 #d35400,.5rem .5rem 0 #e67e22;
 }
-main .loisir h2, main .loisir figure ul li h2{
+main .loisir h2{
     text-shadow: 0.25rem 0.25rem 0 #12816b,.5rem .5rem 0 #15967c;
 }
-main .formation h2, main .formation figure ul li h2{
+main .formation h2{
     text-shadow: 0.25rem 0.25rem 0 #2980b9,.5rem .5rem 0 #3498db;
 }
-main .travaux h2, main .travaux figure ul li h2{
+main .travaux h2{
     text-shadow: 0.25rem 0.25rem 0 #27ae60,.5rem .5rem 0 #2ecc71;
 }
 main .loisir ul li img{
     width: 20%;
 }
 main .travaux ul li img{
-    display: block;
-    margin: 1rem auto;
     width: 20%;
 }
 /*loisir*/
@@ -290,39 +304,35 @@ main .loisir figure ul:hover, main .formation figure ul:hover{
 
 /*stat*/
 main section .container li{
-    margin: 0.6rem;
-    padding: 0.7rem;
+    margin: 0.5rem;
+    padding: 1rem;
     color: #000;
 }
-main section h3{
-    font-size: 3rem;
-    padding: 1rem 4rem;
-    text-shadow: 0.25rem 0.25rem 0 #F79F1F,.5rem .5rem 0 #FFC312;
-}
+
 .container{
     display: flex; 
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     flex-direction: column;
 }
 
 .container li img{
-    max-width: 2.2rem;
-    transform: translateY(.4rem);
+    max-width: 2.5rem;
     justify-content: center;
 }
 .container li{
     text-transform: capitalize;
     font-weight: 500;
+    align-items: center;
 }
-.item { max-width: 90%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
-.item-1 { max-width: 80%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
+.item { max-width: 50%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
+.item-1 { max-width: 50%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
-.item-3 { max-width: 40%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-.item-4 { max-width: 40%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
-.item-5 { max-width: 70%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
-.item-6 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-.item-7 { max-width: 35%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
-.item-8 { max-width: 45%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
+.item-3 { max-width: 25%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
+.item-4 { max-width: 50%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+.item-5 { max-width: 75%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
+.item-6 { max-width: 75%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
+.item-7 { max-width: 25%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+.item-8 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
 
 /*up*/
 main .up{
