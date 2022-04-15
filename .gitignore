@@ -3,3 +3,4 @@ src
 package-lock.json
 package.json
 PurgeCSS
+.vscode

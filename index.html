@@ -1,188 +1,315 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio">
-    <meta name="theme-color" content="#333333"/>
-    <title>Porfolio</title>
-    <link rel="stylesheet" href="./css/style2.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./asset/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./asset/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./asset/favicon-16x16.png">
-    <link rel="manifest" href="./asset/site.webmanifest">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Portfolio" />
+	<meta name="theme-color" content="#333333" />
+	<title>Porfolio</title>
+	<link rel="stylesheet" href="./css/style2.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./asset/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="./asset/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="./asset/favicon-16x16.png" />
+	<link rel="manifest" href="./asset/site.webmanifest" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
-<body class="">
-    <header>
-        <div class="nav">
-            <!-- nav>ul>li*5>a{index $}-->
-            <nav>
-                <ul>
-                    <li><a href="#Experience">Expérience</a></li>
-                    <li><a href="#Compétences">Compétences</a></li>
-                    <li><a href="#Formation">Formation</a></li>
-                    <li><a href="#Loisirs">Loisirs</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="aside" id="aside" role="complementary" aria-labelledby="title">
-            <h1>Philippe DELENTE</h1>
-            <h2>Développeur Front-End</h2>
-            <img src="./asset/burger.png" alt="menu" class="burger">
-            <a href="#Experience"><img src="./asset/angle-arrow-down_icon-icons.com_73683.png" alt="flèches"></a>
-        </div>
-    </header>
-    <main>
-        <!--Experience-->
-        <section class="experience">
-            <h2 id="Experience" class="History">Expérience</h2>
-            <figure>
-                <ul>
-                    <li><h2>Developpeur <br> Stage <time datetime="2021">2021</time></h2></li>
-                    <li><a href="https://www.parisestmarnebois.fr/"><img src="https://upload.wikimedia.org/wikipedia/fr/1/19/Logo_Paris_Est_Marne_Bois.svg" alt="PEMB" ></a></li>
-                    <li> Paris Marne Est & Bois </li>
-                    <li><a href="./Stage.html#PEMB">En savoir plus</a></li>
-                </ul>
-                <ul>
-                    <li><h2>Développeur - Stage <time datetime="2021">2021</time></h2><br></li>
-                    <li><a href="https://phildaiguille.github.io/Nutrition_Animale_Conseil_en_alimentation/site.html"><img src="./assetexp/nutri.png" alt="nutri-animale"></a></li>
-                    <li> www.nutri-animale.com – Conseil en alimentation (Autoentrepreneur) </li>
-                    <li><a href="./Stage.html#Nutri">En savoir plus</a></li>
-                </ul>
-            
-                <ul>
-                    <li><h2>Assistant Informatique - Stage <time datetime="2018">2018</time></h2><br></li>
-                    <li><a href="https://www.g7.fr/"><img src="./assetexp/G7.png" alt="g7"></a></li>
-                    <li> Taxi G7 – Groupe Rousselet, 92 Clichy (Effectifs : 280) </li>
-                    <li><a href="./Stage.html#G7">En savoir plus</a></li>
-                </ul>
-            
-                <ul>
-                    <li><h2>Assistant Technicien Informatique - Stage <time datetime="2017">2017</time></h2></li>
-                    <li><a href="https://www.charenton.fr/"><img src="./assetexp/Mairie.png" alt="Mairie"></a></li>
-                    <li> Mairie de Charenton, 94 Charenton-le-Pont (Effectifs service : 5) </li>
-                    <li><a href="./Stage.html#Mairie">En savoir plus</a></li>
-                </ul>
 
-                <figcaption>index</figcaption>
-            </figure>
-        </section>
-        <section class="compet">
-            <h2 id="Compétences" class="History">Compétences</h2>
-            <h3>Programmation Web</h3>
-            <ul class="container">
-                <li class="item"><img src="./asset/html-5_icon-icons.com_70943.png" alt="HTML5">&nbsp;&nbsp;HTML - 2 ANS</li>
-                <li class="item-1"><img src="./asset/css3-02_icon-icons.com_50917.png" alt="CSS3">&nbsp;&nbsp;CSS - 2 ANS</li>
-                <li class="item-2"><img src="./asset/prog-js01_icon-icons.com_50789.png" alt="JS">&nbsp;&nbsp;Javascript - 2 ANS</li>
-                <li class="item-7"><img src="./asset/prog-php01_icon-icons.com_50777.png" alt="PHP">&nbsp;&nbsp;PHP - 1 AN</li>
-            </ul>
-            <h3>Programmation</h3>
-            <ul class="container">
-                <li class="item-8"><img src="./asset/coffeecuplogoJava_5406.png" alt="Java">&nbsp;&nbsp;Java - 2 ANS</li>
-                <li class="item-4"><img src="./asset/Python_icon-icons.com_68975.png" alt="Python">&nbsp;&nbsp;Python - 2 ANS</li>
-                <li class="item-8"><img src="./asset/sql-document_icon-icons.com_57634.png" alt="SQL">&nbsp;&nbsp;SQL - 2 ANS</li>
-            </ul>
-            <h3>Logiciels illustration</h3>
-            <ul class="container">
-                <li class="item-5"><img src="./asset/adb-photoshop_icon-icons.com_50960.png" alt="Photoshop">&nbsp;&nbsp;Photoshop - 3 ANS</li>
-                <li class="item-6"><img src="./asset/adb-illustrator_icon-icons.com_50964.png" alt="Illustrator">&nbsp;&nbsp;Illustrator - 3 ANS</li>
-                <li class="item-7"><img src="./asset/adb-lightroom_icon-icons.com_50962.png" alt="Lightroom">&nbsp;&nbsp;Lightroom - 1 AN</li>
-            </ul>
-        </section>
-        <section class="formation">
-            <h2 id="Formation" class="History">Formation</h2>
-            <figure>
-                <ul>
-                    <li><h2>A venir ...</h2></li>
-                </ul>    
-                <ul>
-                    <li><h2>BTS SIO – Option SLAM ( Solutions Logicielles et Applications Métier )</h2></li>
-                    <li><img src="./assetexp/hat.png" alt="chapeau"></li>
-                    <li>2021 - En cours <br> École ITIC PARIS, Paris 20	</li>
-                </ul>          
-                <ul>
-                    <li><h2>Baccalauréat Scientifique <br> 2020</h2><br></li>
-                    <li><img src="./assetexp/college_icon_180696.png" alt="chapeau"></li>
-                    <li>Lycée des Petits Champs, Paris 19</li>
-                </ul>
-                <ul>
-                    <li><h2>Brevet des Collèges <br> 2017 </h2><br></li>
-                    <li><img src="./assetexp/hat.png" alt="chapeau"></li>
-                    <li>Lycée de Notre-Dame-des-Missions, Charenton-le-Pont</li>
-                </ul>
-                <figcaption>index</figcaption>
-            </figure>
-        </section>
-        <section class="travaux">
-            <h2 class="History">Travaux</h2>
-            <figure>
-                <ul>
-                    <li><h2>Travaux indépendant</h2></li>
-                    <li><a href="#"><img src="./asset/Code_512.png" alt="WEB"></a></li>
-                </ul>
-                <ul>
-                    <li><h2>Travaux WEB Ecole</h2></li>
-                    <li><a href="./Travaux.html"><img src="./asset/Code_512.png" alt="WEB"></a></li>
-                </ul>
-            </figure>
-            
-        </section>
-        <section class="loisir">
-            <h2 id="Loisirs" class="History"> Loisirs</h2>
-            <figure>
-                <ul>
-                    <li><h2>Arts plastiques / Arts numériques</h2></li>
-                    <li><a href="./Dessin.html"><img src="./assetexp/design.png" alt="dessin"></a></li>
-                </ul>          
-                <ul>
-                    <li><h2>Photographie</h2></li>
-                    <li><a href="./Photographie.html"><img src="./assetexp/photo.png" alt="photo"></a></li>
-                </ul>
-                <figcaption>index</figcaption>
-            </figure>
-        </section>
-        <a href="#"><img src="./asset/arrow.png" class="up" alt="up"></a>
-        <!--Contact-->
-    </main>
-    
-    <footer id="Contact">
-                    <div class="orga">
-                        <section>
-                            <h2>Réseaux</h2>
-                            <ul class="ico">
-                                <li>
-                                    <address>
-                                    <a href="https://github.com/PhilDaiguille" target="blank">
-                                        <img class="linkg" src="./asset/github-logo_icon-icons.com_73546.png" alt="github">
-                                    </a>
-                                    <a href="https://twitter.com/Phildattente" target="blank">
-                                        <img class="link" src="./asset/twitter_socialnetwork_20007.png" alt="twitter">
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/philippe-delente-7117a6203/" target="blank">
-                                        <img class="link" src="./asset/linkedin_socialnetwork_17441.png" alt="linkedin">
-                                    </a>
-                                    <a href="https://www.instagram.com/phil_d_aiguille/?hl=fr" target="blank">
-                                        <img class="link" src="./asset/Instagram_icon-icons.com_66804.png" alt="instagram">
-                                    </a>
-                                    </address>
-                                </li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h2>Contact</h2>
-                            <ul class="contact">
-                                <li><img src="./asset/telephone_icon-icons.com_65394.png" alt="tel"><a href="tel:07 83 54 45 39">07 83 54 45 39</a></li>
-                                <li><a href="mailto:philippe.delente@gmail.com"><img src="./asset/1904660-email-envelope-letter-mail-message-post-send_122510.png" alt="tel">Philippe.delente@gmail.com</a></li>
-                            </ul>
-                        </section>
-                    </div>   
-                <hr>
-            <p>Copyright &copy; <span></span> - Philippe DELENTE </p>
-    </footer>
-<script src="./js/app.js"></script>
+<body class="">
+	<header>
+		<h1>Philippe DELENTE</h1>
+		<h2>Développeur Front-End</h2>
+		<span class="burger">☰</span>
+		<div class="close-menu">
+			<nav>
+				<ul>
+					<li><a href="#Experience">Expérience</a></li>
+					<li><a href="#Compétences">Compétences</a></li>
+					<li><a href="#Formation">Formation</a></li>
+					<li><a href="#travaux">Travaux</a></li>
+					<li><a href="#Loisirs">Loisirs</a></li>
+					<li><a href="#Contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		
+
+		<!--Experience-->
+		<section class="experience">
+			<h2 id="Experience" class="History">Expérience</h2>
+			<figure>
+				<ul>
+					<li>
+						<h2>
+							Developpeur <br />
+							Stage <time datetime="2021">2021</time>
+						</h2>
+					</li>
+					<li>
+						<a href="https://www.parisestmarnebois.fr/"><img
+								src="https://upload.wikimedia.org/wikipedia/fr/1/19/Logo_Paris_Est_Marne_Bois.svg"
+								alt="PEMB" /></a>
+					</li>
+					<li>Paris Marne Est & Bois</li>
+					<li><a href="./Stage.html#PEMB">En savoir plus</a></li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Développeur - Stage <time datetime="2021">2021</time></h2>
+						<br />
+					</li>
+					<li>
+						<a href="https://phildaiguille.github.io/Nutrition_Animale_Conseil_en_alimentation/site.html"><img
+								src="./assetexp/nutri.png" alt="nutri-animale" /></a>
+					</li>
+					<li>
+						www.nutri-animale.com – Conseil en alimentation
+						(Autoentrepreneur)
+					</li>
+					<li><a href="./Stage.html#Nutri">En savoir plus</a></li>
+				</ul>
+
+				<ul>
+					<li>
+						<h2>
+							Assistant Informatique - Stage
+							<time datetime="2018">2018</time>
+						</h2>
+						<br />
+					</li>
+					<li>
+						<a href="https://www.g7.fr/"><img src="./assetexp/G7.png" alt="g7" /></a>
+					</li>
+					<li>Taxi G7 – Groupe Rousselet, 92 Clichy (Effectifs : 280)</li>
+					<li><a href="./Stage.html#G7">En savoir plus</a></li>
+				</ul>
+
+				<ul>
+					<li>
+						<h2>
+							Assistant Technicien Informatique - Stage
+							<time datetime="2017">2017</time>
+						</h2>
+					</li>
+					<li>
+						<a href="https://www.charenton.fr/"><img src="./assetexp/Mairie.png" alt="Mairie" /></a>
+					</li>
+					<li>
+						Mairie de Charenton, 94 Charenton-le-Pont (Effectifs service :
+						5)
+					</li>
+					<li><a href="./Stage.html#Mairie">En savoir plus</a></li>
+				</ul>
+
+				<figcaption>index</figcaption>
+			</figure>
+		</section>
+		<section class="compet">
+			<h2 id="Compétences" class="History">Compétences</h2>
+			<h3>Programmation Web</h3>
+			<ul class="container">
+				<li class="item">
+					<img src="./asset/html-5_icon-icons.com_70943.png" alt="HTML5" />&nbsp;&nbsp;HTML - 2 ANS
+				</li>
+				<li class="item-1">
+					<img src="./asset/css3-02_icon-icons.com_50917.png" alt="CSS3" />&nbsp;&nbsp;CSS - 2 ANS
+				</li>
+				<li class="item-2">
+					<img src="./asset/prog-js01_icon-icons.com_50789.png" alt="JS" />&nbsp;&nbsp;Javascript - 2 ANS
+				</li>
+				<li class="item-7">
+					<img src="./asset/prog-php01_icon-icons.com_50777.png" alt="PHP" />&nbsp;&nbsp;PHP - 1 AN
+				</li>
+			</ul>
+			<h3>Programmation</h3>
+			<ul class="container">
+				<li class="item-8">
+					<img src="./asset/coffeecuplogoJava_5406.png" alt="Java" />&nbsp;&nbsp;Java - 2 ANS
+				</li>
+				<li class="item-4">
+					<img src="./asset/Python_icon-icons.com_68975.png" alt="Python" />&nbsp;&nbsp;Python - 2 ANS
+				</li>
+				<li class="item-8">
+					<img src="./asset/sql-document_icon-icons.com_57634.png" alt="SQL" />&nbsp;&nbsp;SQL - 2 ANS
+				</li>
+			</ul>
+			<h3>Logiciels illustration</h3>
+			<ul class="container">
+				<li class="item-5">
+					<img src="./asset/adb-photoshop_icon-icons.com_50960.png" alt="Photoshop" />&nbsp;&nbsp;Photoshop -
+					3 ANS
+				</li>
+				<li class="item-6">
+					<img src="./asset/adb-illustrator_icon-icons.com_50964.png"
+						alt="Illustrator" />&nbsp;&nbsp;Illustrator - 3 ANS
+				</li>
+				<li class="item-7">
+					<img src="./asset/adb-lightroom_icon-icons.com_50962.png" alt="Lightroom" />&nbsp;&nbsp;Lightroom -
+					1 AN
+				</li>
+			</ul>
+		</section>
+		<section class="formation">
+			<h2 id="Formation" class="History">Formation</h2>
+			<figure>
+				<ul>
+					<li>
+						<h2>A venir ...</h2>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>
+							BTS SIO – Option SLAM ( Solutions Logicielles et
+							Applications Métier )
+						</h2>
+					</li>
+					<li><img src="./assetexp/hat.png" alt="chapeau" /></li>
+					<li>
+						2021 - En cours <br />
+						École ITIC PARIS, Paris 20
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>
+							Baccalauréat Scientifique <br />
+							2020
+						</h2>
+						<br />
+					</li>
+					<li>
+						<img src="./assetexp/college_icon_180696.png" alt="chapeau" />
+					</li>
+					<li>Lycée des Petits Champs, Paris 19</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>
+							Brevet des Collèges <br />
+							2017
+						</h2>
+						<br />
+					</li>
+					<li><img src="./assetexp/hat.png" alt="chapeau" /></li>
+					<li>Lycée de Notre-Dame-des-Missions, Charenton-le-Pont</li>
+				</ul>
+				<figcaption>index</figcaption>
+			</figure>
+		</section>
+		<section class="travaux">
+			<h2 class="History" id="travaux">Travaux</h2>
+			<figure>
+				<ul>
+					<li>
+						<h2>Travaux indépendant</h2>
+					</li>
+					<li>
+						<a href="./TravauxInde.html"><img
+								src="./assetexp/web_development_coding_code_browse_browser_icon-icons.com_59980.png"
+								alt="IndeWeb" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Travaux WEB Ecole</h2>
+					</li>
+					<li>
+						<a href="./Travaux.html"><img
+								src="./assetexp/3709742-board-forum-information-text-web_108094.png" alt="WEB" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Travaux PPE JAVA - BTS</h2>
+					</li>
+					<li>
+						<a href="./PPE_JAVA.html"><img
+								src="./assetexp/3709742-board-forum-information-text-web_108094.png" alt="WEB" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Travaux PPE WEB - BTS</h2>
+					</li>
+					<li>
+						<a href="./PPE_WEB.html"><img
+								src="./assetexp/3709742-board-forum-information-text-web_108094.png" alt="WEB" /></a>
+					</li>
+				</ul>
+			</figure>
+		</section>
+		<section class="loisir">
+			<h2 id="Loisirs" class="History">Loisirs</h2>
+			<figure>
+				<ul>
+					<li>
+						<h2>Arts plastiques / Arts numériques</h2>
+					</li>
+					<li>
+						<a href="./Dessin.html"><img src="./assetexp/design.png" alt="dessin" /></a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Photographie</h2>
+					</li>
+					<li>
+						<a href="./Photographie.html"><img src="./assetexp/photo.png" alt="photo" /></a>
+					</li>
+				</ul>
+				<figcaption>index</figcaption>
+			</figure>
+		</section>
+		<a href="#"><img src="./asset/arrow.png" class="up" alt="up" /></a>
+		<!-- Contact -->
+	</main>
+
+	<footer id="Contact">
+		<div class="orga">
+			<section>
+				<h2>Réseaux</h2>
+				<ul class="ico">
+					<li>
+						<address class="link">
+							<a href="https://github.com/PhilDaiguille" target="blank">
+								<img src="./asset/github-logo_icon-icons.com_73546.png" alt="github" />
+							</a>
+							<a href="https://twitter.com/Phildattente" target="blank">
+								<img src="./asset/twitter_socialnetwork_20007.png" alt="twitter" />
+							</a>
+							<a href="https://www.linkedin.com/in/philippe-delente-7117a6203/" target="blank">
+								<img src="./asset/linkedin_socialnetwork_17441.png" alt="linkedin" />
+							</a>
+							<a href="https://www.instagram.com/phil_d_aiguille/?hl=fr" target="blank">
+								<img src="./asset/Instagram_icon-icons.com_66804.png" alt="instagram" />
+							</a>
+						</address>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Contact</h2>
+				<ul class="contact">
+					<li>
+						<img src="./asset/telephone_icon-icons.com_65394.png" alt="tel" /><a
+							href="tel:07 83 54 45 39">07 83 54 45 39</a>
+					</li>
+					<li>
+						<a href="mailto:philippe.delente@gmail.com"><img
+								src="./asset/1904660-email-envelope-letter-mail-message-post-send_122510.png"
+								alt="tel" />Philippe.delente@gmail.com</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<hr />
+		<p>Copyright &copy; <span></span> - Philippe DELENTE</p>
+	</footer>
+	<script src="./js/app.js"></script>
 </body>
+
 </html>

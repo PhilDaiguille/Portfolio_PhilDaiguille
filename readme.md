@@ -1,13 +1,20 @@
 # Portfolio PhilDaiguille
 
-
 ## Philippe Delente
 
-#### Étudiant BTS SIO 2ème Année chez ITIC Paris
+### Étudiant BTS SIO 2ème Année chez ITIC Paris
 
-<p> Je suis actuellement en 2ème Année de BTS option Services Informatique aux Organisations. </p>
+<p> Je suis actuellement en 2ème Année de BTS option SIO ( Services Informatique aux Organisations ) . </p>
 
-![Portfolio](./asset/Readme.png "Portfolio")
+<p align="center">
+	<img src="./asset/Readme.png" width="900">
+</p>
+
+* Pour voir le portfolio en question : **[PhilDaiguille](https://phildaiguille.github.io/Portfolio_PhilDaiguille/)**.
+
+# Credits
+
+* [**Philippe DELENTE**](https://github.com/PhilDaiguille) : Développeur front-end.
 
 
-[Voir le portfolio](https://phildaiguille.github.io/Portfolio_PhilDaiguille/)
+
