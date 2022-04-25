@@ -104,7 +104,7 @@ nav ul li a:hover{
 }
 /*MAIN*/
 main{
-    max-width: 140rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
@@ -112,6 +112,29 @@ main h2{
     font-size: 6rem;
     text-align: center;
     color: #fff;
+}
+main section {
+    max-width: 110rem;
+    margin: 2rem auto;
+    background-color: #444;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    color: #fff;
+}
+main section img{
+    display: block;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+main section h2{
+    padding-bottom: 1rem;
+}
+main section ul li{
+    padding: 1rem;
+}
+main section ul li:nth-child(2n + 1){
+    background-color: #555;
+    border-radius: 1rem;
 }
 
 

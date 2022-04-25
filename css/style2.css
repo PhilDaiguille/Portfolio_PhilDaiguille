@@ -289,9 +289,12 @@ main .loisir figure{
 main section .container li{
     margin: 0.5rem;
     padding: 1rem;
+    display: inline-block;
+    vertical-align: middle;
     color: #000;
+    text-transform: capitalize;
+    font-weight: 500;
 }
-
 .container{
     display: flex; 
     padding: 3rem 5rem;
@@ -300,13 +303,10 @@ main section .container li{
 
 .container li img{
     max-width: 2.5rem;
-    justify-content: center;
+    display: inline-block;
+    vertical-align: middle;
 }
-.container li{
-    text-transform: capitalize;
-    font-weight: 500;
-    align-items: center;
-}
+
 .item { max-width: 50%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
 .item-1 { max-width: 50%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
 .item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
