@@ -81,7 +81,7 @@ header h2{
     font-size: 3rem;
 }
 .burger{
-    position: absolute;
+    position: fixed;
     top: 2rem;
     left: 2rem;
     cursor: pointer;
@@ -93,16 +93,17 @@ header h2{
 /*navigation*/
 header nav{
     display: none;
+    position: fixed;
 }
 .open-menu{
-    position: absolute;
+    position: fixed;
     display: block;
     height: 100vh;
     z-index: 2;
     max-width: 100%;
     top: 0;
     left: 0;
-    transition: all .3s ease-in-out;
+    transition: all .6s ease-in-out;
     visibility: visible;
     background-color: #1e201fe1;
 
@@ -129,7 +130,7 @@ header nav{
     border-radius: 0.5rem;
     padding: 1rem 3rem;
     color: #fff;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -137,13 +138,15 @@ header nav{
 
 main{
     z-index: 5;
-    max-width: 140rem;
+    max-width: 125rem;
     margin: 0 auto;
     padding: 0rem 0 2rem 0rem;
 }
 main section{
-    background-color: #222;
-    box-shadow: 0.2rem 0.2rem 2rem #111;
+    max-width: 120rem;
+    background: #222;
+    box-shadow:  8px 8px 21px #0e0e0e,
+             -8px -8px 21px #363636;
     margin: 3rem auto;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -194,6 +197,9 @@ main .experience figure ul li a, main .formation figure ul li a{
 main .experience figure ul{
     border-radius: 0.5rem;
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: solid .2rem #c0392b;
     background-color: rgb(54, 54, 54);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
@@ -202,6 +208,9 @@ main .experience figure ul{
 main .formation figure ul{
     border-radius: 0.5rem;
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: solid .2rem #3498db;
     background-color: rgb(54, 54, 54);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
@@ -216,12 +225,14 @@ main .travaux figure{
 main .travaux figure ul{
     border-radius: 0.5rem;
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgb(54, 54, 54);
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
 }
 main .experience ul li h2,main .loisir ul li h2,main .travaux ul li h2{
-    background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
     border-bottom: none;
     border-radius: 0.5rem;
@@ -230,6 +241,9 @@ main .experience ul li h2,main .loisir ul li h2,main .travaux ul li h2{
 main .travaux ul{
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-bottom: none;
     border-radius: 0.5rem;
     text-align: center;
@@ -245,17 +259,19 @@ main .loisir ul{
     text-align: center;
     border: solid .2rem #12846dc7;
 }
-main .experience ul li, main .loisir ul li, main .formation ul li, main .travaux ul li{
+
+main .experience ul li, main .loisir ul li, main .formation ul li, main .travaux ul li, main .veille ul li{
     text-align: center;
 }
 main .experience ul li img, main .formation ul li img{
     display: block;
-    margin: 1rem auto;
+    margin: 0rem auto;
+    padding: 0.5rem;
+    max-height: 10rem;
     max-width: 10rem;
-    border-radius: 1rem;
-    padding: 2rem;
+    object-fit: cover;
 }
-main .loisir ul li h2, main .formation ul li h2, main .travaux ul li h2{
+main .loisir ul li h2, main .formation ul li h2, main .travaux ul li h2,main .veille ul li h2{
     text-shadow: none;
 }
 main .compet h2{
@@ -270,12 +286,15 @@ main .formation h2{
 main .travaux h2{
     text-shadow: 0.25rem 0.25rem 0 #27ae60,.5rem .5rem 0 #2ecc71;
 }
-main .loisir ul li img{
-    width: 20%;
+main .veille h2{
+    text-shadow: 0.25rem 0.25rem 0 #8e44ad,.5rem .5rem 0 #9b59b6;
 }
-main .travaux ul li img{
-    width: 20%;
+main .loisir ul li img,main .travaux ul li img{
+    max-height: 10rem;
+    max-width: 10rem;
+    object-fit: cover;
 }
+
 /*loisir*/
 main .loisir figure{
     display: grid;
@@ -284,6 +303,34 @@ main .loisir figure{
     grid-template-columns: repeat(2,1fr);
 }
 
+/* veille */
+main .veille figure{
+    display: block;
+    padding: 3rem 5rem;
+    width: auto;
+    margin: 0 auto;
+}
+main .veille ul li img{
+    max-height: 15rem;
+    max-width: 15rem;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    filter: invert(1);
+}
+main .veille{
+    display: block;
+}
+main .veille ul{
+    background-color: rgb(54, 54, 54);
+    font-size: 2.3rem;
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    margin: 2rem;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: solid .2rem #8e44ad;
+}
 
 /*stat*/
 main section .container li{
@@ -299,6 +346,7 @@ main section .container li{
     display: flex; 
     padding: 3rem 5rem;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .container li img{
@@ -319,15 +367,16 @@ main section .container li{
 
 /*up*/
 main .up{
-    display: block;
-    max-width: 5rem;
-    padding: 0.5rem;
-    margin: 0 auto;
-    border: solid .4rem #1c1c1c;
-    border-radius: 0rem 0rem 2rem 2rem;
-    transform: rotate(180deg) translateY(-2.5rem);
-    background-color: #c2c2c2;
-    transition: all 0.5s ease-in-out;
+    position: fixed;
+    max-width: 4rem;
+    padding: 1rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #fafafa;
+    border-radius: .5rem;
+    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+    border: solid .2rem #111;
+    transform: rotate(180deg);
 }
 
 /*Footer */

@@ -1,12 +1,12 @@
 /*reset*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 body{
     font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Encode Sans', sans-serif;
     margin: 0;
     font-weight: 300;
     background-color: #333;
@@ -57,8 +57,9 @@ img{
 
 /*theme*/
 header{
-    background-color: #222;
-    border-bottom: solid 0.5rem #111;
+    background-color: #e74c3c;
+
+    border-bottom: solid 0.5rem #c0392b;
 }
 header h1{
     text-align: center;
@@ -66,6 +67,7 @@ header h1{
     color: #fff;
     font-weight: bold;
     font-size: 5rem;
+    text-shadow: 0.25rem 0.25rem 0 #90271b,.5rem .5rem 0 #a5372a;
 }
 header img{
     max-width: 10rem;
@@ -115,6 +117,13 @@ main figure{
     grid-template-columns: repeat(2, 1fr);
     border-radius: 0.5rem;
     background-color: #222;
+    border: solid .2rem #c0392b;
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+}
+main figure figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 main figure figcaption h2{
     padding: 1rem;
@@ -123,6 +132,7 @@ main figure figcaption h2{
 }
 main figure figcaption ul{
     padding: 2rem;
+    
 }
 main figure figcaption ul li{
     color: #fff;
@@ -132,23 +142,25 @@ main figure figcaption ul li{
 main figure img{
     margin: 2rem auto;
     display: flex;
-    padding: 5rem;
+    padding: 3rem;
+    justify-content: space-between;
+    max-width: 30rem;
     border-radius: 1.5rem;
     align-items: center;
 }
 /*up*/
 main .up{
-    display: block;
-    max-width: 5rem;
-    padding: 0.5rem;
-    margin: 0 auto;
-    border: solid .4rem #1c1c1c;
-    border-radius: 0rem 0rem 2rem 2rem;
-    transform: rotate(180deg) translateY(-2.5rem);
-    background-color: #c2c2c2;
-    transition: all 0.5s ease-in-out;
+    position: fixed;
+    max-width: 4rem;
+    padding: 1rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #fafafa;
+    border-radius: .5rem;
+    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+    border: solid .2rem #111;
+    transform: rotate(180deg);
 }
-
 
 /*Footer */
 footer ul{

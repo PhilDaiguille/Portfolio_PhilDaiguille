@@ -208,7 +208,19 @@ main section img{
 main section p{
     text-align: center;
 }
-
+/*up*/
+main .up{
+    position: fixed;
+    max-width: 4rem;
+    padding: 1rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #fafafa;
+    border-radius: .5rem;
+    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+    border: solid .2rem #111;
+    transform: rotate(180deg);
+}
 /*Footer */
 footer ul{
     padding: 1rem;

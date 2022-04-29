@@ -57,21 +57,22 @@ img{
 
 /*theme*/
 header{
-    background-color: #27ae60;
+    background-color: #9b59b6;
     line-height: 6.5rem;
-    border-bottom: solid 0.5rem #1b7e44;
+    border-bottom: solid 0.5rem #8e44ad;
 }
 header h1{
     text-align: center;
     padding: 1rem;
     color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #0b483c,.5rem .5rem 0 #08372d;
+    text-shadow: 0.25rem 0.25rem 0 #7a3299,.5rem .5rem 0 #64237f;
 }
 header img{
-    max-width: 9rem;
+    display: inline-block;
+    max-width: 10rem;
     vertical-align: middle;
     padding-right: 3rem;
-    transform: translateY(-0.4rem), translateX(0.4rem);
+    filter: invert(1);
 }
 header h1 .material-icons{
     display: none;
@@ -89,15 +90,7 @@ nav ul li{
     margin: 0 auto;
     padding: 2rem;
 }
-main ul li a{
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: .5rem;
-    border: solid .2rem rgba(17, 17, 17, 0.474);
-    background-color: #444;
-    font-weight: 300;
-    text-transform: capitalize;
-}
+
 /*MAIN*/
 main{
     max-width: 120rem;
@@ -112,42 +105,79 @@ main h2{
 main section {
     max-width: 110rem;
     margin: 1rem auto;
-    border: solid .2rem #12846dc7;
+    border: solid .2rem #8e44ad;
     background-color: #222;
     padding: 2rem;
     border-radius: 1.5rem;
     
     color: #fff;
 }
-main section p{
-    font-size: 1.6rem;
-    margin: 2rem auto;
+main .def ul li:last-child{
+    font-size: 1.8rem;
     text-align: justify;
+}
+main .def figure ul{
+    font-size: 2.3rem;
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    margin: 2rem;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid .2rem #8e44ad;
 }
 main section img{
     display: block;
-    max-width: 50rem;
+    max-width: 40rem;
     margin: 0 auto;
+    object-fit: cover;
+}
+main section figure li img{
+    display: inline-block;
+    max-width: 20rem;
+    vertical-align: middle;
+    object-fit: cover;
+}
+main .def figure ul li{
+    
+    align-items: center;
+    justify-content: center;
+}
+main .def figure ul li a{
+    display: block;
+    position: relative;
+}
+main section figure figcaption{
+    display: none;
 }
 main section h2{
+    font-size: 3rem;
     padding-bottom: 1rem;
-    text-shadow: 0.25rem 0.25rem 0 #12816b,.5rem .5rem 0 #15967c;
+    text-shadow: 0.25rem 0.25rem 0 #8e44ad,.5rem .5rem 0 #9b59b6;
 }
-html body main section#It1 ul li:nth-child(2) img{
-    max-width: 30rem;
-    margin: 0 auto;
+main .def figure{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
-main section ul li{
+
+main .source ul li{
     padding: 1rem;
     margin: 1rem auto;
+    text-align: center;
 }
-main section ul li{
+main .source ul li a{
+    color: #fff;
+}
+main .source ul li{
     background-color: #444;
     border-radius: 1rem;
 }
-main section ul li:nth-child(2n + 1){
+main .source ul li:nth-child(2n + 1){
     background-color: #333;
     border-radius: 1rem;
 }
