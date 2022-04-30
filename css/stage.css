@@ -84,31 +84,25 @@ main{
     padding: 2rem 0 2rem 0rem;
 }
 main h2{
-    font-size: 6rem;
+    font-size: 2.5rem;
     color: #fff;
 }
 main h2 span{
     font-size: 1.6rem;
     color: #fff;
 }
-main figure h2{
-    text-align: center;
-    font-size: 3rem;
+main figure figcaption h3{
+    font-size: 1.5rem;
     color: #fff;
 }
-main a{
-    color: #fff;
-    font-weight: 700;
-    padding-bottom: 2rem;
-    font-size: 2rem;
+main figure a{
+    display: flex;
+    align-items: center;
 }
-main a .f{
-    display: inline-block;
-    transform: rotate(180deg) scale(1.4);
-    padding-left: 1rem;
-    vertical-align: middle;
-    font-size: 2rem;
-    color: #fff;
+main time{
+    color: #e74c3c;
+    padding-top: 2rem;
+    font-size: 1.6rem;
 }
 main figure{
     padding: 2rem;
@@ -118,7 +112,8 @@ main figure{
     border-radius: 0.5rem;
     background-color: #222;
     border: solid .2rem #c0392b;
-    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    box-shadow:  8px 8px 31px #0e0e0e,
+             -8px -8px 31px #363636;
 }
 main figure figcaption{
     display: flex;
@@ -126,7 +121,6 @@ main figure figcaption{
     justify-content: space-around;
 }
 main figure figcaption h2{
-    padding: 1rem;
     text-align: left;
     color: #fff;
 }
@@ -136,8 +130,7 @@ main figure figcaption ul{
 }
 main figure figcaption ul li{
     color: #fff;
-    line-height: 1.5em;
-    padding: 1rem 0rem;
+    padding: 0.5rem 0rem;
 }
 main figure img{
     margin: 2rem auto;
@@ -151,8 +144,9 @@ main figure img{
 /*up*/
 main .up{
     position: fixed;
-    max-width: 4rem;
+    max-width: 6rem;
     padding: 1rem;
+    max-height: 6rem;
     bottom: 2rem;
     right: 2rem;
     background-color: #fafafa;
@@ -163,14 +157,10 @@ main .up{
 }
 
 /*Footer */
-footer ul{
+footer .contact{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     padding: 1rem;
-}
-footer ul li{
-    margin: 0 auto;
-}
-footer  .ico{
-    display: flex;
 }
 footer{
     color: #fff;
@@ -178,46 +168,40 @@ footer{
     padding: 2rem;
     border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
 }
-footer h2{
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .tel img, footer .mail img{
+    filter: invert(1);
+}
+footer ul:first-child{
+    border-right: solid 0.3rem rgb(255, 255, 255);
+}
+footer ul:last-child{
+    border-left: solid 0.3rem rgb(255, 255, 255);
+}
+footer ul li{
+    align-items: center;
+    
+}
+footer ul li a img{
+    display: inline-block;
+    max-width: 5rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+footer ul li a{
+    color: #fff;
+    font-size: 2rem;
     text-align: center;
 }
+
 footer p{
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
-}
-footer section{
-    margin: 0 auto;
-}
-footer .link{
-    margin: auto 1rem;
-    max-width: 6rem;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-}
-footer .contact{
-    max-width: 30rem;
-    margin: 0 auto;
-}
-footer .contact li a{
-    color: #fff;
-}
-footer .contact img{
-    max-width: 4rem;
-    margin: auto 1rem;
-    filter: invert(100%);
-    transform: translateY(1rem);
-}
-footer .linkg{
-    margin: auto 1rem;
-    filter: invert(100%);
-    max-width: 6rem;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-}
-footer .orga{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 @media screen and (max-width: 65rem) {
     header h1{
@@ -234,12 +218,44 @@ footer .orga{
     main figure{
         grid-template-columns: repeat(1, 1fr);
     }
-    footer .link, footer .linkg{
-        margin: 1rem auto;
-        max-width: 5rem;
+    footer .contact{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
-    footer{
-        font-size: 1.2rem;
+    footer ul li a img{
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 3.5rem;
+    }
+    footer ul{
+        padding: 1rem;
+    }
+    footer .ico{
+        margin: 1rem;
+    }
+    footer ul:first-child{
+        
+        border-right: none;
+    }
+    footer ul:last-child{
+        border-left: none;
+    }
+    footer ul li a{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    main .up{
+        position: fixed;
+        max-width: 4rem;
+        padding: 1rem;
+        max-height: 4rem;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: #fafafa;
+        border-radius: .5rem;
+        box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+        border: solid .2rem #111;
+        transform: rotate(180deg);
     }
     /* menu of */
 }

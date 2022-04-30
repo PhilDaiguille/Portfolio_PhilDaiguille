@@ -18,23 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	let dates = new Date();
 	date.innerHTML = `Copyright © ${dates.getFullYear()} - Philippe DELENTE | Tous droits réservés`;
 
-	const sections = document.querySelectorAll("main section");
-	let options = {
-		rootMargin: "-10% 0px",
-		threshold: 0.4,
-	};
-	function handleIntersect(entries) {
-		console.log(entries);
+	const sr = ScrollReveal();
 
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.style.opacity = 1;
-			}
-		});
-	}
-	const observer = new IntersectionObserver(handleIntersect, options);
+	sr.reveal("header h1, header h2", {
+		duration: 1000,
+		origin: "top",
+		distance: "10rem",
+		delay: 100,
+	});
 
-	sections.forEach((section) => {
-		observer.observe(section);
+	sr.reveal("main section", {
+		duration: 1000,
+		origin: "top",
+		distance: "5rem",
+		delay: 1,
 	});
 });

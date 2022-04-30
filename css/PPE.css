@@ -154,10 +154,10 @@ main section ul li:nth-child(2n + 1){
 /*up*/
 main .up{
     position: fixed;
-    max-width: 4rem;
+    max-width: 6rem;
     padding: 1rem;
+    max-height: 6rem;
     bottom: 2rem;
-    max-height: 4rem;
     right: 2rem;
     background-color: #fafafa;
     border-radius: .5rem;
@@ -167,14 +167,10 @@ main .up{
 }
 
 /*Footer */
-footer ul{
+footer .contact{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     padding: 1rem;
-}
-footer ul li{
-    margin: 0 auto;
-}
-footer  .ico{
-    display: flex;
 }
 footer{
     color: #fff;
@@ -182,56 +178,83 @@ footer{
     padding: 2rem;
     border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
 }
-footer h2{
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .tel img, footer .mail img{
+    filter: invert(1);
+}
+footer ul:first-child{
+    border-right: solid 0.3rem rgb(255, 255, 255);
+}
+footer ul:last-child{
+    border-left: solid 0.3rem rgb(255, 255, 255);
+}
+footer ul li{
+    align-items: center;
+    
+}
+footer ul li a img{
+    display: inline-block;
+    max-width: 5rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+footer ul li a{
+    color: #fff;
+    font-size: 2rem;
     text-align: center;
 }
+
 footer p{
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
-footer section{
-    margin: 0 auto;
-}
-footer .link{
-    margin: auto 1rem;
-    max-width: 6rem;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-}
-footer .contact{
-    max-width: 30rem;
-    margin: 0 auto;
-}
-footer .contact li a{
-    color: #fff;
-}
-footer .contact img{
-    max-width: 4rem;
-    margin: auto 1rem;
-    filter: invert(100%);
-    transform: translateY(1rem);
-}
-footer .linkg{
-    margin: auto 1rem;
-    filter: invert(100%);
-    max-width: 6rem;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-}
-footer .orga{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 @media screen and (max-width: 75rem) {
     main{
         padding: 1rem;
     }
-    footer .orga{
-        grid-template-columns: repeat(1, 1fr);
+    footer .contact{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
-    footer .link{
-        max-width: 5rem;
+    footer ul li a img{
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 3.5rem;
+    }
+    footer ul{
+        padding: 1rem;
+    }
+    footer .ico{
+        margin: 1rem;
+    }
+    footer ul:first-child{
+        
+        border-right: none;
+    }
+    footer ul:last-child{
+        border-left: none;
+    }
+    footer ul li a{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    main .up{
+        position: fixed;
+        max-width: 4rem;
+        padding: 1rem;
+        max-height: 4rem;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: #fafafa;
+        border-radius: .5rem;
+        box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+        border: solid .2rem #111;
+        transform: rotate(180deg);
     }
    
 }
