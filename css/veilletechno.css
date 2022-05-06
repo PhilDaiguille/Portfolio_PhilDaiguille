@@ -94,7 +94,7 @@ nav ul li{
 /*MAIN*/
 main{
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 2rem auto;
 }
 main h2{
@@ -108,6 +108,8 @@ main section {
     border: solid .2rem #8e44ad;
     background-color: #222;
     padding: 2rem;
+    box-shadow:  8px 8px 31px #0e0e0e,
+             -8px -8px 31px #363636;
     border-radius: 1.5rem;
     
     color: #fff;
@@ -115,6 +117,9 @@ main section {
 main .def ul li:last-child{
     font-size: 1.8rem;
     text-align: justify;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #444;
 }
 main .def figure ul{
     font-size: 2.3rem;
@@ -162,11 +167,21 @@ main .def figure{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
+main .def h3{
+    text-align: center;
+}
 main .info h2{
     text-align: start;
     text-shadow: 0.25rem 0.25rem 0 #8a3cac;
     font-size: 4rem;
+}
+main .info p{
+    text-align: justify;
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #444;
 }
 
 main .source ul li{

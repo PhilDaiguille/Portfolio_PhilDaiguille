@@ -119,6 +119,13 @@ main section {
     
     color: #fff;
 }
+main section img{
+    border: #fff solid 0.2rem;
+    border-radius: 1rem;
+}
+main section .maquette{
+    display: flex;
+}
 main section p{
     font-size: 1.6rem;
     margin: 2rem auto;
@@ -126,7 +133,7 @@ main section p{
 }
 main section img{
     display: block;
-    max-width: 50rem;
+    max-width: 30rem;
     margin: 0 auto;
 }
 main section h2{

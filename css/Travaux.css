@@ -188,6 +188,8 @@ main section p a{
 main section{
     padding: 5rem;
     margin: 1rem auto;
+    box-shadow:  8px 8px 31px #0e0e0e,
+             -8px -8px 31px #363636;
     display: block;
     border-radius: 1rem;
     background-color: #222;

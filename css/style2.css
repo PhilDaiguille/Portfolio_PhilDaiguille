@@ -389,7 +389,7 @@ main .up{
 /*Footer */
 footer .contact{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     padding: 1rem;
 }
 footer{
@@ -403,10 +403,10 @@ footer ul{
     align-items: center;
     justify-content: space-around;
 }
-footer .tel img, footer .mail img{
+footer .tel img, footer .mail img, footer .cv img{
     filter: invert(1);
 }
-footer ul:first-child{
+footer ul:first-child, footer ul:nth-child(2){
     border-right: solid 0.3rem rgb(255, 255, 255);
 }
 footer ul:last-child{
