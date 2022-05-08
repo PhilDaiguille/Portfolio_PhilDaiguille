@@ -79,7 +79,7 @@ header img{
 
 
 main{
-    max-width: 120rem;
+    max-width: 140rem;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
@@ -120,7 +120,7 @@ main figure img{
     margin: 0rem auto;
     display: block;
     padding: 1rem;
-    max-width: 50rem;
+    max-width: 60rem;
     border: solid .2rem #555;
     align-items: center;
     box-shadow: 0rem 0rem 3rem rgb(0, 0, 0);
@@ -139,13 +139,15 @@ main figure figcaption{
 }
 main ul{
     display: grid;
-    background-color: #fafafa;
     border-radius: 0.5rem;
     width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
 }
-main ul li{
-    padding: 0.3rem;
+
+main ul li img{
+    border: .5rem solid rgb(255, 255, 255);
+    border-radius: 1rem;
 }
 
 main section p{
