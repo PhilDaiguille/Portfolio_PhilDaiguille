@@ -158,6 +158,9 @@ main .def figure ul li a{
 main section figure figcaption{
     display: none;
 }
+main img{
+    border-radius: 1rem;
+}
 main section h2{
     font-size: 3rem;
     padding-bottom: 1rem;
@@ -166,6 +169,18 @@ main section h2{
 main .def figure{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+main .info a{
+    display: block;
+    max-width: 15rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #111;
+    border: solid .2rem #8e44ad;
+    margin: 1rem auto;
+    color: #fff;
+
 }
 main .def h3{
     text-align: center;
@@ -181,9 +196,19 @@ main .info p{
     margin: 1rem auto;
     padding: 1rem;
     border-radius: .5rem;
-    background-color: #444;
+    background-color: #34343481;
 }
-
+main .constrast{
+    display: flex;
+    margin: 1rem auto;
+    justify-content: space-around;
+}
+main .UX{
+    max-width: 70rem;
+}
+main .constrast li img{
+    max-width: 50rem;
+}
 main .source ul li{
     padding: 1rem;
     margin: 1rem auto;
