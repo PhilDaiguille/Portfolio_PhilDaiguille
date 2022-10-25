@@ -1,63 +1,85 @@
 /*reset*/
+
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font: 1.6rem 'Encode Sans', sans-serif;
     margin: 0;
     background-color: #333;
     text-transform: capitalize;
 }
-h1,h2,h3,p,figure,ul,ol,section{
+
+h1,
+h2,
+h3,
+p,
+figure,
+ul,
+ol,
+section {
     margin: 0;
     padding: 0;
-    list-style: none; 
+    list-style: none;
 }
-a,button{
+
+a,
+button {
     text-decoration: none;
     padding: 0;
     border: 0;
 }
-img{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	vertical-align: middle;
+
+img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-:root{
-    --color-defaut:#222;
-    --color-primary:#E8F3E8;
-    --color-secondary: #274664;
-    --color-tertiaire:#2c3e50;
-    --color-defaut:#975102;
-    --color-header:#0A3409;
 
+:root {
+    --color-defaut: #222;
+    --color-primary: #E8F3E8;
+    --color-secondary: #274664;
+    --color-tertiaire: #2c3e50;
+    --color-defaut: #975102;
+    --color-header: #0A3409;
 }
+
+
 /* scroll bars */
-*{
+
+* {
     /* For FF and non-webkit browsers */
     scrollbar-width: thin;
     scrollbar-color: #222 #333;
 }
+
 *::-webkit-scrollbar {
     width: .2rem;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: #222;
     outline: .1rem solid #333;
 }
 
+
 /*theme*/
-header{
+
+header {
     line-height: 5.5rem;
     text-align: center;
-    background: url(../asset/Background.jpeg) no-repeat scroll center center / cover;;
+    background: url(../asset/Background.jpeg) no-repeat scroll center center / cover;
+    ;
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center center;
@@ -66,7 +88,8 @@ header{
     height: 100vh;
     top: 0;
 }
-header h1{
+
+header h1 {
     color: rgb(0, 0, 0);
     display: block;
     padding-top: 25rem;
@@ -76,7 +99,8 @@ header h1{
     margin: 0 auto;
     font-weight: 900;
 }
-header h2{
+
+header h2 {
     color: rgb(0, 0, 0);
     text-align: center;
     margin: 0 auto;
@@ -85,7 +109,8 @@ header h2{
     padding-top: 1rem;
     font-size: 3rem;
 }
-.burger{
+
+.burger {
     position: fixed;
     top: 2rem;
     left: 2rem;
@@ -95,12 +120,16 @@ header h2{
     color: #fafafa;
     font-size: 5rem;
 }
+
+
 /*navigation*/
-header nav{
+
+header nav {
     display: none;
     position: fixed;
 }
-.open-menu{
+
+.open-menu {
     position: fixed;
     display: block;
     height: 100vh;
@@ -111,25 +140,27 @@ header nav{
     transition: all .6s ease-in-out;
     visibility: visible;
     background-color: #1e201fe1;
-
 }
-.open-menu nav{
+
+.open-menu nav {
     position: static;
     display: block;
     padding: 1rem;
     margin-top: 7rem;
     width: 40rem;
 }
-.open-menu nav ul{
+
+.open-menu nav ul {
     width: 100%;
-    
 }
-.open-menu ul li{
+
+.open-menu ul li {
     border-radius: 0.6rem;
     margin: 1rem auto;
     border: solid .1rem rgb(255, 255, 255);
 }
-.open-menu ul li a{
+
+.open-menu ul li a {
     display: block;
     background-color: #222;
     border-radius: 0.5rem;
@@ -141,65 +172,96 @@ header nav{
 
 /*main*/
 
-main{
+main {
     z-index: 5;
     max-width: 125rem;
     margin: 0 auto;
     padding: 0rem 0 2rem 0rem;
 }
-main section{
+
+main section {
     max-width: 120rem;
     background: #222;
-    box-shadow:  8px 8px 21px #0e0e0e,
-             -8px -8px 21px #363636;
+    box-shadow: 8px 8px 21px #0e0e0e, -8px -8px 21px #363636;
     margin: 3rem auto;
     padding: 1rem;
     border-radius: 0.5rem;
 }
-main section h3{
+
+main section h3 {
     font-size: 3rem;
     padding: 1rem 4rem;
     color: #fff;
     text-shadow: none;
 }
-    
-main section figure figcaption{ 
+
+main section figure figcaption {
     text-align: center;
     display: none;
 }
-main section .History{
+
+main section .History {
     font-size: 4.5rem;
     font-weight: 800;
     padding: 2rem 0rem 0rem 2rem;
     color: #fff;
 }
-main section p{
+
+main section p {
     font-size: 1.6rem;
     padding: 2rem;
     color: #fff;
 }
-main section ul li{
+
+main section ul li {
     padding: 2rem;
     color: #fff;
 }
 
+
+/*Information*/
+
+main .information h2 {
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 800;
+    padding: 2rem 0rem 0rem 2rem;
+    color: #fff;
+    text-shadow: 0.25rem 0.25rem 0 #2c3e50, .5rem .5rem 0 #34495e;
+}
+
+main .information p {
+    text-transform: initial;
+    text-align: justify;
+    line-height: 1.6rem;
+}
+
+
 /*Expérience*/
-main .experience figure, main .formation figure{
+
+main .experience figure,
+main .formation figure,
+main .information figure {
     display: grid;
     padding: 3rem 5rem;
     width: auto;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
-main .experience h2{
-    text-shadow: 0.25rem 0.25rem 0 #c0392b,.5rem .5rem 0 #e74c3c;
+
+main .experience h2 {
+    text-shadow: 0.25rem 0.25rem 0 #c0392b, .5rem .5rem 0 #e74c3c;
 }
-main .experience figure ul li h2{
+
+main .experience figure ul li h2 {
     text-shadow: none;
 }
-main .experience figure ul li a, main .formation figure ul li a{
-    color: #fff; 
+
+main .experience figure ul li a,
+main .formation figure ul li a {
+    color: #fff;
 }
-main .experience figure ul{
+
+main .experience figure ul {
     border-radius: 0.5rem;
     margin: 2rem;
     display: flex;
@@ -210,7 +272,8 @@ main .experience figure ul{
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
 }
-main .formation figure ul{
+
+main .formation figure ul {
     border-radius: 0.5rem;
     margin: 2rem;
     display: flex;
@@ -221,13 +284,15 @@ main .formation figure ul{
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
 }
-main .travaux figure{
+
+main .travaux figure {
     display: grid;
     padding: 3rem 5rem;
     width: auto;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
-main .travaux figure ul{
+
+main .travaux figure ul {
     border-radius: 0.5rem;
     margin: 2rem;
     display: flex;
@@ -237,13 +302,17 @@ main .travaux figure ul{
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
     transition: all 0.5s ease-in-out;
 }
-main .experience ul li h2,main .loisir ul li h2,main .travaux ul li h2{
+
+main .experience ul li h2,
+main .loisir ul li h2,
+main .travaux ul li h2 {
     font-size: 2.3rem;
     border-bottom: none;
     border-radius: 0.5rem;
     text-align: center;
 }
-main .travaux ul{
+
+main .travaux ul {
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
     display: flex;
@@ -254,7 +323,8 @@ main .travaux ul{
     text-align: center;
     border: solid .2rem #27ae60;
 }
-main .loisir ul{
+
+main .loisir ul {
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
@@ -265,10 +335,16 @@ main .loisir ul{
     border: solid .2rem #12846dc7;
 }
 
-main .experience ul li, main .loisir ul li, main .formation ul li, main .travaux ul li, main .veille ul li{
+main .experience ul li,
+main .loisir ul li,
+main .formation ul li,
+main .travaux ul li,
+main .veille ul li {
     text-align: center;
 }
-main .experience ul li img, main .formation ul li img{
+
+main .experience ul li img,
+main .formation ul li img {
     display: block;
     margin: 0rem auto;
     padding: 0.5rem;
@@ -276,46 +352,62 @@ main .experience ul li img, main .formation ul li img{
     max-width: 10rem;
     object-fit: cover;
 }
-main .loisir ul li h2, main .formation ul li h2, main .travaux ul li h2,main .veille ul li h2{
+
+main .loisir ul li h2,
+main .formation ul li h2,
+main .travaux ul li h2,
+main .veille ul li h2 {
     text-shadow: none;
 }
-main .compet h2{
-    text-shadow: 0.25rem 0.25rem 0 #d35400,.5rem .5rem 0 #e67e22;
+
+main .compet h2 {
+    text-shadow: 0.25rem 0.25rem 0 #d35400, .5rem .5rem 0 #e67e22;
 }
-main .loisir h2{
-    text-shadow: 0.25rem 0.25rem 0 #12816b,.5rem .5rem 0 #15967c;
+
+main .loisir h2 {
+    text-shadow: 0.25rem 0.25rem 0 #12816b, .5rem .5rem 0 #15967c;
 }
-main .formation h2{
-    text-shadow: 0.25rem 0.25rem 0 #2980b9,.5rem .5rem 0 #3498db;
+
+main .formation h2 {
+    text-shadow: 0.25rem 0.25rem 0 #2980b9, .5rem .5rem 0 #3498db;
 }
-main .travaux h2{
-    text-shadow: 0.25rem 0.25rem 0 #27ae60,.5rem .5rem 0 #2ecc71;
+
+main .travaux h2 {
+    text-shadow: 0.25rem 0.25rem 0 #27ae60, .5rem .5rem 0 #2ecc71;
 }
-main .veille h2{
-    text-shadow: 0.25rem 0.25rem 0 #8e44ad,.5rem .5rem 0 #9b59b6;
+
+main .veille h2 {
+    text-shadow: 0.25rem 0.25rem 0 #8e44ad, .5rem .5rem 0 #9b59b6;
 }
-main .loisir ul li img,main .travaux ul li img{
+
+main .loisir ul li img,
+main .travaux ul li img {
     max-height: 10rem;
     max-width: 10rem;
     object-fit: cover;
 }
 
+
 /*loisir*/
-main .loisir figure{
+
+main .loisir figure {
     display: grid;
     padding: 3rem 5rem;
     width: auto;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
+
 /* veille */
-main .veille figure{
+
+main .veille figure {
     display: block;
     padding: 3rem 5rem;
     width: auto;
     margin: 0 auto;
 }
-main .veille ul li img{
+
+main .veille ul li img {
     max-height: 15rem;
     max-width: 15rem;
     display: block;
@@ -323,10 +415,12 @@ main .veille ul li img{
     object-fit: cover;
     filter: invert(1);
 }
-main .veille{
+
+main .veille {
     display: block;
 }
-main .veille ul{
+
+main .veille ul {
     background-color: rgb(54, 54, 54);
     font-size: 2.3rem;
     box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
@@ -337,8 +431,10 @@ main .veille ul{
     border: solid .2rem #8e44ad;
 }
 
+
 /*stat*/
-main section .container li{
+
+main section .container li {
     margin: 0.5rem;
     padding: 1rem;
     display: inline-block;
@@ -347,32 +443,88 @@ main section .container li{
     text-transform: capitalize;
     font-weight: 500;
 }
-.container{
-    display: flex; 
+
+.container {
+    display: flex;
     padding: 3rem 5rem;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.container li img{
+.container li img {
     max-width: 2.5rem;
     max-height: 2.5rem;
     display: inline-block;
     vertical-align: middle;
 }
 
-.item { max-width: 50%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
-.item-1 { max-width: 50%; background-color: #3498db; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
-.item-2 { max-width: 50%; background-color: #f1c40f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #dbb20d;}
-.item-3 { max-width: 25%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-.item-4 { max-width: 50%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
-.item-5 { max-width: 75%; background-color: #3498db;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #2980b9;}
-.item-6 { max-width: 75%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
-.item-7 { max-width: 25%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
-.item-8 { max-width: 50%; background-color: #FB8604;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #db7500;}
+.item {
+    max-width: 50%;
+    background-color: #e7422f;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #c0392b;
+}
+
+.item-1 {
+    max-width: 50%;
+    background-color: #3498db;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #2980b9;
+}
+
+.item-2 {
+    max-width: 50%;
+    background-color: #f1c40f;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #dbb20d;
+}
+
+.item-3 {
+    max-width: 25%;
+    background-color: #FB8604;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #db7500;
+}
+
+.item-4 {
+    max-width: 50%;
+    background-color: #2980b9;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #236ea0;
+}
+
+.item-5 {
+    max-width: 75%;
+    background-color: #3498db;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #2980b9;
+}
+
+.item-6 {
+    max-width: 75%;
+    background-color: #FB8604;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #db7500;
+}
+
+.item-7 {
+    max-width: 25%;
+    background-color: #2980b9;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #236ea0;
+}
+
+.item-8 {
+    max-width: 50%;
+    background-color: #FB8604;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0rem #db7500;
+}
+
 
 /*up*/
-main .up{
+
+main .up {
     position: fixed;
     max-width: 6rem;
     padding: 1rem;
@@ -386,80 +538,89 @@ main .up{
     transform: rotate(180deg);
 }
 
+
 /*Footer */
-footer .contact{
+
+footer .contact {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 1rem;
 }
-footer{
+
+footer {
     color: #fff;
     background-color: #222;
     padding: 2rem;
     border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
 }
-footer ul{
+
+footer ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-footer .tel img, footer .mail img, footer .cv img, footer .link a:nth-child(1) img{
+
+footer .tel img,
+footer .mail img,
+footer .cv img,
+footer .link a:nth-child(1) img {
     filter: invert(1);
 }
 
-footer ul:first-child, footer ul:nth-child(2){
+footer ul:first-child,
+footer ul:nth-child(2) {
     border-right: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul:last-child{
+
+footer ul:last-child {
     border-left: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul li{
+
+footer ul li {
     align-items: center;
-    
 }
-footer ul li a img{
+
+footer ul li a img {
     display: inline-block;
     max-width: 5rem;
     vertical-align: middle;
     margin-right: 1rem;
 }
-footer ul li a{
+
+footer ul li a {
     color: #fff;
     font-size: 2rem;
     text-align: center;
 }
 
-footer p{
+footer p {
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
 
-
-
-
 @media screen and (max-width: 60rem) {
-    main section #picture{
+    main section #picture {
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
-    header .nav{
+    header .nav {
         flex-direction: column;
     }
-    header .nav ul li{
+    header .nav ul li {
         margin: 1rem auto;
         width: 100%;
     }
-    header .nav{
+    header .nav {
         font-size: 1.5rem;
         width: 100%;
     }
-    header .burger{
+    header .burger {
         padding-top: 1.2rem;
         padding-left: 1rem;
         display: block;
     }
-    header{
+    header {
         padding: 1rem;
         text-align: center;
         background: url(../asset/BackgroundM.jpeg) no-repeat scroll center center / cover;
@@ -469,7 +630,7 @@ footer p{
         margin-bottom: 1rem;
         top: 0;
     }
-    .open-menu{
+    .open-menu {
         position: fixed;
         height: 100vh;
         z-index: 2;
@@ -480,80 +641,88 @@ footer p{
         visibility: visible;
         background-color: #1e201f;
     }
-    .open-menu nav{
+    .open-menu nav {
         position: static;
         display: block;
         padding: 1rem;
         margin-top: 10rem;
         width: 100%;
     }
-    .open-menu ul li a{
+    .open-menu ul li a {
         padding: 0;
     }
-    header h1{
+    header h1 {
         font-size: 2.5rem;
     }
-    header h2{
+    header h2 {
         font-size: 2rem;
     }
-    main{
+    main {
         padding-top: 1rem;
     }
-    .container{
+    .container {
         padding: 1rem;
     }
-    h3, h2{
+    h3,
+    h2 {
         text-align: center;
     }
-    .container li{
+    .container li {
         font-size: 1.4rem;
     }
-    main .experience figure, main .loisir figure, main .formation figure, main .travaux figure, main .veille figure{
+    main .experience figure,
+    main .loisir figure,
+    main .formation figure,
+    main .travaux figure,
+    main .veille figure {
         display: grid;
         padding: 0;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    main .experience figure ul:hover, main .loisir figure ul:hover{
+    main .experience figure ul:hover,
+    main .loisir figure ul:hover {
         transform: none;
         box-shadow: none;
     }
-    .item-7 { max-width: 45%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
-    
-    footer .contact{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+    .item-7 {
+        max-width: 45%;
+        background-color: #2980b9;
+        border-radius: 1rem;
+        box-shadow: 0.3rem 0.3rem 0rem #236ea0;
     }
-    footer ul li a img{
+    footer .contact {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer ul li a img {
         display: inline-block;
         vertical-align: middle;
         max-width: 3.5rem;
     }
-    footer ul{
+    footer ul {
         padding: 1rem;
     }
-    footer .ico{
+    footer .ico {
         margin: 1rem;
     }
-    footer ul:first-child{
-        
+    footer ul:first-child {
         border-right: none;
     }
-    footer ul:last-child{
+    footer ul:last-child {
         border-left: none;
     }
-    footer ul li a{
+    footer ul li a {
         display: inline-block;
         vertical-align: middle;
     }
-    header h1 .material-icons{
+    header h1 .material-icons {
         display: inline-block;
         padding-right: 2rem;
     }
-    main section .History{
+    main section .History {
         padding: 0;
     }
-   
-    main .up{
+    main .up {
         position: fixed;
         max-width: 4rem;
         padding: 1rem;
@@ -566,11 +735,9 @@ footer p{
         border: solid .2rem #111;
         transform: rotate(180deg);
     }
-
-    @media screen and (orientation: landscape){
-        .aside a img{
+    @media screen and (orientation: landscape) {
+        .aside a img {
             max-width: 5%;
         }
-        
     }
 }
