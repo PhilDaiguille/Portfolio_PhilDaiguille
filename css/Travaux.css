@@ -1,10 +1,12 @@
 /*reset*/
+
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-size: 1.6rem;
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
@@ -12,137 +14,176 @@ body{
     background-color: #333;
     text-transform: capitalize;
 }
-h1,h2,h3,p,figure,ul,ol,section{
+
+h1,
+h2,
+h3,
+p,
+figure,
+ul,
+ol,
+section {
     margin: 0;
     padding: 0;
-    list-style: none; 
+    list-style: none;
 }
-a,button{
+
+a,
+button {
     text-decoration: none;
     padding: 0;
     border: 0;
 }
-img{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;
+
+img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-:root{
-    --color-defaut:#222;
-    --color-primary:#E8F3E8;
-    --color-secondary: #34495e;
-    --color-tertiaire:#1a3236;
-    --color-defaut:#975102;
-    --color-header:#0A3409;
 
+:root {
+    --color-defaut: #222;
+    --color-primary: #E8F3E8;
+    --color-secondary: #34495e;
+    --color-tertiaire: #1a3236;
+    --color-defaut: #975102;
+    --color-header: #0A3409;
 }
 
+
 /* scroll bars */
-*{
+
+* {
     /* For FF and non-webkit browsers */
     scrollbar-width: thin;
     scrollbar-color: #222 #333;
 }
+
 *::-webkit-scrollbar {
     width: .2rem;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: #222;
     outline: .1rem solid #333;
 }
 
+
 /*theme*/
-header{
+
+header {
     background-color: #27ae60;
     line-height: 6.5rem;
     border-bottom: solid 0.5rem #1b7e44;
 }
-header h1{
+
+header h1 {
     text-align: center;
     padding: 1rem;
     color: #fff;
     text-shadow: 0.5rem 0.5rem 0 #202d3a;
 }
-header img{
+
+header img {
     max-width: 9rem;
     vertical-align: middle;
     padding-right: 3rem;
     transform: translateY(-0.4rem), translateX(0.4rem);
 }
-header h1 .material-icons{
+
+header h1 .material-icons {
     display: none;
 }
+
+
 /*navigation*/
-nav ul{
+
+nav ul {
     max-width: 100rem;
     margin: 0 auto 2rem;
     font-size: 0;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 4.5rem;
     font-size: 1.6rem;
     text-align: center;
     width: calc(100% /5);
 }
-nav ul li a{
+
+nav ul li a {
     display: block;
     border-radius: 0.5rem;
     width: 100%;
     color: #fff;
-    
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     background-color: var(--color-tertiaire);
     box-shadow: 0.2rem 0.2rem .1rem #202d3a;
     color: #fff;
 }
-.History{
-    transition: all 400ms ease-in-out ;
+
+.History {
+    transition: all 400ms ease-in-out;
 }
-.History:target{
+
+.History:target {
     background-color: #34495e;
 }
+
+
 /*slide*/
-.slide{
+
+.slide {
     overflow: hidden;
     margin: 1rem;
     padding: 1rem;
     position: relative;
     transition: all 400ms ease-in-out;
 }
-.slide section.active{
+
+.slide section.active {
     display: block;
 }
-.slide section{
+
+.slide section {
     display: none;
 }
-.slide ul{
+
+.slide ul {
     margin: 0 auto;
     justify-content: center;
     display: flex;
     align-items: center;
 }
-.suivant, .precedent {
+
+.suivant,
+.precedent {
     color: #fff;
     margin: auto 5rem;
     font-size: 4rem;
     cursor: pointer;
 }
-main{
+
+main {
     max-width: 140rem;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
 }
-main h2{
+
+main h2 {
     font-size: 6rem;
     color: #fff;
 }
-main h3{
+
+main h3 {
     text-align: center;
     font-size: 3rem;
     color: #fff;
@@ -152,31 +193,35 @@ main h3{
     transform: translateY(2.5rem);
     border-radius: 1rem;
 }
-main hr{
+
+main hr {
     border: 0.1rem solid #fff;
     width: 100%;
     z-index: -1;
 }
-main section h2{
+
+main section h2 {
     text-align: center;
     font-size: 3rem;
     color: #fff;
     text-transform: capitalize;
 }
-main a{
+
+main a {
     color: #fff;
     font-weight: 700;
     padding-bottom: 2rem;
     font-size: 2rem;
 }
-main .page{
+
+main .page {
     text-align: center;
     color: #fff;
     font-weight: bold;
     font-size: 2rem;
 }
 
-main section p a{
+main section p a {
     background-color: #fafafa;
     padding: 0.5rem 4rem;
     color: #000;
@@ -184,34 +229,43 @@ main section p a{
     border-radius: 0.7rem;
     border: solid .3rem #fff;
 }
-main section{
+
+main section {
     padding: 5rem;
     margin: 1rem auto;
-    box-shadow:  8px 8px 31px #0e0e0e,
-             -8px -8px 31px #363636;
+    box-shadow: 8px 8px 31px #0e0e0e, -8px -8px 31px #363636;
     display: block;
     border-radius: 1rem;
     background-color: #222;
 }
-main section ul{
+
+main section ul {
     padding: 2rem;
 }
-main section ul li{
+
+main section ul li {
     color: #fff;
 }
-main section img{
+
+main section img {
     margin: 2rem auto;
     display: block;
-    max-width: 85rem;
-    height: 60vh;
+    object-fit: contain;
+    max-width: 80rem;
+    height: 56vh;
+    background-color: #1b7e44;
     border-radius: 1rem;
     border: solid .1rem #fff;
 }
-main section p{
+
+main section p {
     text-align: center;
 }
+
+
 /*up*/
-main .up{
+
+main .up {
     position: fixed;
     max-width: 6rem;
     padding: 1rem;
@@ -224,84 +278,95 @@ main .up{
     border: solid .2rem #111;
     transform: rotate(180deg);
 }
+
+
 /*Footer */
-footer .contact{
+
+footer .contact {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
 }
-footer{
+
+footer {
     color: #fff;
     background-color: #222;
     padding: 2rem;
     border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
 }
-footer ul{
+
+footer ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-footer .tel img, footer .mail img{
+
+footer .tel img,
+footer .mail img {
     filter: invert(1);
 }
-footer ul:first-child{
+
+footer ul:first-child {
     border-right: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul:last-child{
+
+footer ul:last-child {
     border-left: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul li{
+
+footer ul li {
     align-items: center;
-    
 }
-footer ul li a img{
+
+footer ul li a img {
     display: inline-block;
     max-width: 5rem;
     vertical-align: middle;
     margin-right: 1rem;
 }
-footer ul li a{
+
+footer ul li a {
     color: #fff;
     font-size: 2rem;
     text-align: center;
 }
 
-footer p{
+footer p {
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
+
 @media screen and (max-width: 75rem) {
-    main{
+    main {
         padding: 1rem;
     }
-    footer .contact{
+    footer .contact {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    footer ul li a img{
+    footer ul li a img {
         display: inline-block;
         vertical-align: middle;
         max-width: 3.5rem;
     }
-    footer ul{
+    footer ul {
         padding: 1rem;
     }
-    footer .ico{
+    footer .ico {
         margin: 1rem;
     }
-    footer ul:first-child{
-        
+    footer ul:first-child {
         border-right: none;
     }
-    footer ul:last-child{
+    footer ul:last-child {
         border-left: none;
     }
-    footer ul li a{
+    footer ul li a {
         display: inline-block;
         vertical-align: middle;
     }
-    main .up{
+    main .up {
         position: fixed;
         max-width: 4rem;
         padding: 1rem;
@@ -314,5 +379,4 @@ footer p{
         border: solid .2rem #111;
         transform: rotate(180deg);
     }
-   
 }
