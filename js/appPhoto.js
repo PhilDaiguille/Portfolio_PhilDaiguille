@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("loaded");
-    let el, modal, closed, open_modal, closed_all;
+	console.log("loaded");
+	let el, modal, closed, open_modal, closed_all;
 
 	el = document.querySelectorAll(".grid-picture-large li");
 	modal = document.querySelector(".parent-modale");

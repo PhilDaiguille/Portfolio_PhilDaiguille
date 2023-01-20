@@ -9,7 +9,7 @@ body{
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
     font-weight: 300;
-    background-color: #333;
+    background-color: #191c1f;
     text-transform: capitalize;
 }
 h1,h2,h3,p,figure,ul,ol,section{
@@ -58,15 +58,18 @@ img{
 
 /*theme*/
 header{
-    background-color: var(--color-tertiaire);
-    line-height: 6.5rem;
-    border-bottom: solid 0.5rem #0e6352;
+    padding: 1rem;
+    margin: 1rem auto;
+    color: #FFFFFF;
+    
 }
 header h1{
     text-align: center;
-    padding: 1rem;
+    font-size: 5rem;
     color: #fff;
-    text-shadow: 0.3rem 0.3rem 0rem #084538;
+    text-shadow: #FFF 0px 0px 2px, #FFF 0px 0px 6px, #FFF 0px 0px 10px, var(--color-tertiaire) 0px 0px 20px, var(--color-tertiaire) 0px 0px 30px, var(--color-tertiaire) 0px 0px 40px, var(--color-tertiaire) 0px 0px 50px, var(--color-tertiaire) 0px 0px 75px;
+/*     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px var(--color-tertiaire), 0 0 30px var(--color-tertiaire), 0 0 40px var(--color-tertiaire), 0 0 55px var(--color-tertiaire), 0 0 75px var(--color-tertiaire);
+ */    color: #FFFFFF;
 }
 
 header img{
@@ -79,9 +82,10 @@ header img{
 
 
 main{
-    max-width: 140rem;
+    display: flex;
     margin: 0 auto;
     padding: 2rem 0 2rem 0rem;
+    align-items: flex-start;
 }
 main h3{
     padding: 3rem 3rem;
@@ -112,42 +116,48 @@ main figure p a{
 main figure{
     padding: 2rem;
     margin: 1rem auto;
-    display: block;
+    display: flex;
+
+    justify-content: space-around;
     border-radius: 1rem;
-    background-color: #222;
+}
+main figure figcaption{
+    display: none;
+}
+main figure img:hover figcaption{
+    display: block;
+    background-color: #fff;
 }
 main figure img{
     margin: 0rem auto;
     display: block;
-    padding: 1rem;
-    max-width: 60rem;
-    border: solid .2rem #555;
+    max-width: 50rem;
+    object-fit:contain;
+    border-radius: .75rem;
     align-items: center;
     box-shadow: 0rem 0rem 3rem rgb(0, 0, 0);
 }
-main figure figcaption{
-    text-align: center;
-    color: #fff;
-    font-size: 3rem;
-    font-weight: bold;
-    background-color: #333;
-    border: solid .2rem #555;
-    padding: 1rem;
-    max-width: 50rem;
-    margin: 0rem auto;
-    margin-bottom: 2rem;
-}
+
 main ul{
-    display: grid;
-    border-radius: 0.5rem;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: .75rem;
+    flex-wrap: wrap;
+}
+main ul li{
+    margin: 1rem auto;
 }
 
 main ul li img{
-    border: .5rem solid rgb(255, 255, 255);
-    border-radius: 1rem;
+    margin: 0rem auto;
+    display: block;
+    max-height: 50vh;
+    max-width: 70rem;
+    border-radius: .75rem;
+    align-items: center;
+    box-shadow: 0rem 0rem 2rem rgb(0, 0, 0);
 }
 
 main section p{
@@ -156,60 +166,72 @@ main section p{
 /*up*/
 main .up{
     position: fixed;
-    max-width: 6rem;
+    max-width: 4.5rem;
     padding: 1rem;
-    max-height: 6rem;
+    max-height: 4.5rem;
     bottom: 2rem;
     right: 2rem;
     background-color: #fafafa;
-    border-radius: .5rem;
+    border-radius: .75rem;
     box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
-    border: solid .2rem #111;
+    border: solid .2rem rgb(0, 0, 0);
     transform: rotate(180deg);
 }
 /*Footer */
-footer .contact{
+
+footer .contact {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
 }
-footer{
+
+footer {
     color: #fff;
-    background-color: #222;
+    background-color: #111;
     padding: 2rem;
-    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+    border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
 }
-footer ul{
+
+footer ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-footer .tel img, footer .mail img{
+
+footer .tel img,
+footer .mail img,
+footer .cv img,
+footer .link a:nth-child(1) img {
     filter: invert(1);
 }
-footer ul:first-child{
+
+footer ul:first-child,
+footer ul:nth-child(2) {
     border-right: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul:last-child{
+
+footer ul:last-child {
     border-left: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul li{
+
+footer ul li {
     align-items: center;
-    
 }
-footer ul li a img{
+
+footer ul li a img {
     display: inline-block;
     max-width: 5rem;
     vertical-align: middle;
     margin-right: 1rem;
 }
-footer ul li a{
+
+footer ul li a {
     color: #fff;
     font-size: 2rem;
     text-align: center;
 }
 
-footer p{
+footer p {
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;

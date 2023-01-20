@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	btn.addEventListener("click", () => {
 		el.classList.toggle("open-menu");
-		btn.innerHTML === "☰" ? (btn.innerHTML = "✕") : (btn.innerHTML = "☰");
+		btn.innerHTML === "☰" ? btn.innerHTML = "✕" : btn.innerHTML = "☰";
 	});
 
 	down.addEventListener("click", () => {
 		el.classList.toggle("open-menu");
-		btn.innerHTML === "☰" ? (btn.innerHTML = "✕") : (btn.innerHTML = "☰");
+		btn.innerHTML === "☰" ? btn.innerHTML = "✕" : btn.innerHTML = "☰";
 	});
 
 	let dates = new Date();
@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		duration: 1000,
 		origin: "top",
 		distance: "10rem",
-		delay: 100,
+		delay: 100
 	});
 
 	sr.reveal("main section", {
 		duration: 1000,
 		origin: "top",
 		distance: "5rem",
-		delay: 1,
+		delay: 1
 	});
 });
