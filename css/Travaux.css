@@ -1,6 +1,7 @@
 /*reset*/
 
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -11,7 +12,7 @@ body {
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
     font-weight: 300;
-    background-color: #333;
+    background-color: #191c1f;
     text-transform: capitalize;
 }
 
@@ -77,17 +78,16 @@ img {
 /*theme*/
 
 header {
-    background-color: #27ae60;
-    line-height: 6.5rem;
-    border-bottom: solid 0.5rem #1b7e44;
+    padding-top: 2rem;
 }
 
 header h1 {
     text-align: center;
-    padding: 1rem;
-    color: #fff;
-    text-shadow: 0.5rem 0.5rem 0 #202d3a;
+    font-size: 4.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: #FFF 0px 0px 4px, #27ae60 0px 0px 15px, #27ae60 0px 0px 20px, #27ae60 0px 0px 25px, #27ae60 0px 0px 40px;
 }
+
 
 header img {
     max-width: 9rem;
@@ -144,7 +144,6 @@ nav ul li a:hover {
 .slide {
     overflow: hidden;
     margin: 1rem;
-    padding: 1rem;
     position: relative;
     transition: all 400ms ease-in-out;
 }
@@ -174,29 +173,18 @@ nav ul li a:hover {
 
 main {
     max-width: 140rem;
-    margin: 0 auto;
-    padding: 2rem 0 2rem 0rem;
+    margin: 1rem auto;
 }
 
 main h2 {
-    font-size: 6rem;
+    font-size: 4rem;
     color: #fff;
-}
-
-main h3 {
-    text-align: center;
-    font-size: 3rem;
-    color: #fff;
-    background-color: #333;
-    margin: 0 auto;
-    max-width: 40rem;
-    transform: translateY(2.5rem);
-    border-radius: 1rem;
 }
 
 main hr {
     border: 0.1rem solid #fff;
     width: 100%;
+    margin: 1rem auto;
     z-index: -1;
 }
 
@@ -223,20 +211,16 @@ main .page {
 
 main section p a {
     background-color: #fafafa;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 8rem;
     color: #000;
     font-size: 2rem;
-    border-radius: 0.7rem;
-    border: solid .3rem #fff;
+    border-radius: 0.75rem;
 }
 
 main section {
-    padding: 5rem;
     margin: 1rem auto;
-    box-shadow: 8px 8px 31px #0e0e0e, -8px -8px 31px #363636;
     display: block;
-    border-radius: 1rem;
-    background-color: #222;
+    border-radius: .75rem;
 }
 
 main section ul {
@@ -250,11 +234,11 @@ main section ul li {
 main section img {
     margin: 2rem auto;
     display: block;
-    object-fit: contain;
-    max-width: 80rem;
-    height: 56vh;
+    object-fit: cover;
+    max-width: 100rem;
+    max-height: 63vh;
     background-color: #1b7e44;
-    border-radius: 1rem;
+    border-radius: .75rem;
     border: solid .1rem #fff;
 }
 
@@ -279,34 +263,35 @@ main .up {
     transform: rotate(180deg);
 }
 
-
-/*Footer */
-
+/* Footer */
 footer .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 1rem;
+    padding: .5rem;
 }
 
 footer {
     color: #fff;
-    background-color: #222;
-    padding: 2rem;
-    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+    background-color: #111;
+    padding: 1rem;
+    border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
 }
 
 footer ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
 }
 
 footer .tel img,
-footer .mail img {
+footer .mail img,
+footer .cv img,
+footer .link a:nth-child(1) img {
     filter: invert(1);
 }
 
-footer ul:first-child {
+footer ul:first-child,
+footer ul:nth-child(2) {
     border-right: solid 0.3rem rgb(255, 255, 255);
 }
 
@@ -337,35 +322,44 @@ footer p {
     text-align: start;
 }
 
+
 @media screen and (max-width: 75rem) {
     main {
         padding: 1rem;
     }
+
     footer .contact {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+
     footer ul li a img {
         display: inline-block;
         vertical-align: middle;
         max-width: 3.5rem;
     }
+
     footer ul {
         padding: 1rem;
     }
+
     footer .ico {
         margin: 1rem;
     }
+
     footer ul:first-child {
         border-right: none;
     }
+
     footer ul:last-child {
         border-left: none;
     }
+
     footer ul li a {
         display: inline-block;
         vertical-align: middle;
     }
+
     main .up {
         position: fixed;
         max-width: 4rem;

@@ -1,165 +1,207 @@
 /*reset*/
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
-html{
+
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-size: 1.6rem;
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
-    font-weight: 300;
-    background-color: #333;
+    font-weight: 500;
+    background-color: #191c1f;
 }
-h1,h2,h3,p,figure,ul,ol,section{
+
+h1,
+h2,
+h3,
+p,
+figure,
+ul,
+ol,
+section {
     margin: 0;
     padding: 0;
-    list-style: none; 
+    list-style: none;
 }
-a,button{
+
+a,
+button {
     text-decoration: none;
     padding: 0;
     border: 0;
 }
-img{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	vertical-align: middle;
+
+img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-:root{
-    --color-defaut:#222;
-    --color-primary:#E8F3E8;
+
+:root {
+    --color-defaut: #222;
+    --color-primary: #E8F3E8;
     --color-secondary: #34495e;
-    --color-tertiaire:#1a3236;
-    --color-defaut:#975102;
-    --color-header:#0A3409;
+    --color-tertiaire: #012228;
+    --color-defaut: #975102;
+    --color-header: #0A3409;
 
 }
 
 /* scroll bars */
-*{
+* {
     /* For FF and non-webkit browsers */
     scrollbar-width: thin;
     scrollbar-color: #222 #333;
 }
+
 *::-webkit-scrollbar {
     width: .2rem;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: #222;
     outline: .1rem solid #333;
 }
 
 /*theme*/
-header{
-    background-color: #27ae60;
-    line-height: 6.5rem;
-    border-bottom: solid 0.5rem #1b7e44;
+header {
+    padding-top: 2rem;
 }
-header h1{
+
+header h1 {
     text-align: center;
-    padding: 1rem;
-    color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #0b483c,.5rem .5rem 0 #08372d;
+    font-size: 4.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: #FFF 0px 0px 4px, #27ae60 0px 0px 15px, #27ae60 0px 0px 20px, #27ae60 0px 0px 25px, #27ae60 0px 0px 40px;
 }
-header img{
+
+body>header:nth-child(1)>h1:nth-child(1)>a:nth-child(1)>img:nth-child(1) {
+    filter: invert(1);
+}
+
+header img {
     max-width: 9rem;
     vertical-align: middle;
     padding-right: 3rem;
     transform: translateY(-0.4rem), translateX(0.4rem);
 }
-header h1 .material-icons{
+
+header h1 .material-icons {
     display: none;
 }
+
 /*navigation*/
 
-nav ul{
-    position : relative;
+nav ul {
+    position: relative;
     text-align: center;
     margin-top: 1rem;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     vertical-align: middle;
     margin: 0 auto;
     padding: 2rem;
 }
-main ul li a{
+
+main ul li a {
     color: #fff;
     padding: 1rem 2rem;
     border-radius: .5rem;
     border: solid .2rem rgba(17, 17, 17, 0.474);
-    background-color: #444;
+    background-color: #222;
     font-weight: 300;
     text-transform: capitalize;
 }
+
 /*MAIN*/
-main{
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 2rem auto;
+main {
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    padding: 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
 }
-main h2{
+
+main h2 {
     font-size: 6rem;
     text-align: center;
     color: #fff;
 }
+
 main section {
-    max-width: 110rem;
+    max-width: 70rem;
     margin: 1rem auto;
     border: solid .2rem #12846dc7;
-    background-color: #222;
     padding: 2rem;
-    border-radius: 1.5rem;
-    
+    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #27ae60, 0 0 0.8rem #27ae60, 0 0 1.8rem #27ae60, inset 0 0 1.1rem #27ae60;
+    border-radius: .75rem;
+
     color: #fff;
 }
-main section img{
-    border: #fff solid 0.2rem;
-    border-radius: 1rem;
+
+main section img {
+    border-radius: .75rem;
 }
-main section .maquette{
+
+main section .maquette {
     display: flex;
 }
-main section p{
+
+main section p {
     font-size: 1.6rem;
     margin: 2rem auto;
     text-align: justify;
 }
-main section img{
+
+main section img {
     display: block;
-    max-width: 30rem;
+    max-width: 50rem;
+    object-fit: contain;
+    max-height: 40vh;
     margin: 0 auto;
 }
-main section h2{
+
+main section h2 {
     padding-bottom: 1rem;
-    text-shadow: 0.25rem 0.25rem 0 #12816b,.5rem .5rem 0 #15967c;
+    text-shadow: 0.25rem 0.25rem 0 #12816b, .5rem .5rem 0 #15967c;
 }
-html body main section#It1 ul li:nth-child(2) img{
+
+html body main section#It1 ul li:nth-child(2) img {
     max-width: 30rem;
     margin: 0 auto;
 }
 
 
-main section ul li{
+main section ul li {
     padding: 1rem;
     margin: 1rem auto;
 }
-main section ul li{
-    background-color: #444;
+
+main section ul li {
+    background-color: #222;
     border-radius: 1rem;
 }
-main section ul li:nth-child(2n + 1){
+
+main section ul li:nth-child(2n + 1) {
     background-color: #333;
     border-radius: 1rem;
 }
+
 /*up*/
-main .up{
+main .up {
     position: fixed;
     max-width: 6rem;
     padding: 1rem;
@@ -173,84 +215,110 @@ main .up{
     transform: rotate(180deg);
 }
 
-/*Footer */
-footer .contact{
+/* Footer */
+footer .contact {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: .5rem;
 }
-footer{
+
+footer {
     color: #fff;
-    background-color: #222;
-    padding: 2rem;
-    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+    background-color: #111;
+    padding: 1rem;
+    border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
 }
-footer ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+footer ul {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
 }
-footer .tel img, footer .mail img{
+
+footer .tel img,
+footer .mail img,
+footer .cv img,
+footer .link a:nth-child(1) img {
     filter: invert(1);
 }
-footer ul:first-child{
+
+footer ul:first-child,
+footer ul:nth-child(2) {
     border-right: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul:last-child{
+
+footer ul:last-child {
     border-left: solid 0.3rem rgb(255, 255, 255);
 }
-footer ul li{
+
+footer ul li {
     align-items: center;
-    
 }
-footer ul li a img{
+
+footer ul li a img {
     display: inline-block;
     max-width: 5rem;
     vertical-align: middle;
     margin-right: 1rem;
 }
-footer ul li a{
+
+footer ul li a {
     color: #fff;
     font-size: 2rem;
     text-align: center;
 }
 
-footer p{
+footer p {
     padding: 1rem;
     font-size: 1.6rem;
     text-align: start;
 }
+
+footer p {
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-align: start;
+}
+
 @media screen and (max-width: 75rem) {
-    main{
+    main {
         padding: 1rem;
     }
-    footer .contact{
+
+    footer .contact {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    footer ul li a img{
+
+    footer ul li a img {
         display: inline-block;
         vertical-align: middle;
         max-width: 3.5rem;
     }
-    footer ul{
+
+    footer ul {
         padding: 1rem;
     }
-    footer .ico{
+
+    footer .ico {
         margin: 1rem;
     }
-    footer ul:first-child{
-        
+
+    footer ul:first-child {
+
         border-right: none;
     }
-    footer ul:last-child{
+
+    footer ul:last-child {
         border-left: none;
     }
-    footer ul li a{
+
+    footer ul li a {
         display: inline-block;
         vertical-align: middle;
     }
-    main .up{
+
+    main .up {
         position: fixed;
         max-width: 4rem;
         padding: 1rem;
@@ -263,5 +331,5 @@ footer p{
         border: solid .2rem #111;
         transform: rotate(180deg);
     }
-   
+
 }

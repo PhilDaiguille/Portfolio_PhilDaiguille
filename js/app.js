@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	btn.addEventListener("click", () => {
 		el.classList.toggle("open-menu");
-		btn.innerHTML === "☰" ? btn.innerHTML = "✕" : btn.innerHTML = "☰";
+		btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? btn.innerHTML = `<i class="fa-solid fa-x"></i>` : btn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
 	});
 
 	down.addEventListener("click", () => {
 		el.classList.toggle("open-menu");
-		btn.innerHTML === "☰" ? btn.innerHTML = "✕" : btn.innerHTML = "☰";
+		btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? btn.innerHTML = `<i class="fa-solid fa-x"></i>` : btn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
 	});
 
 	let dates = new Date();

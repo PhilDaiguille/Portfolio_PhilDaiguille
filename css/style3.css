@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -14,7 +15,7 @@ html {
 body {
     font: 1.6rem 'Encode Sans', sans-serif;
     margin: 0;
-    background-color: #1a1c1e;
+    background-color: #191c1f;
     text-transform: capitalize;
 }
 
@@ -167,7 +168,7 @@ header nav {
 .open-menu ul li a {
     display: block;
     background-color: #222;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     padding: 1rem 3rem;
     color: #fff;
     transition: all .5s ease-in-out;
@@ -188,7 +189,7 @@ main section {
     background: #191c1f;
     margin: 3rem auto;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     text-transform: none;
 }
 
@@ -259,8 +260,6 @@ main .experience figure time {
 
 main .resume {
     padding: .5rem;
-    border: solid .2rem #c0392b;
-    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #c0392b, 0 0 0.8rem #c0392b, 0 0 1.8rem #c0392b, inset 0 0 1.1rem #c0392b;
 }
 
 main figure ul li .resume li {
@@ -289,8 +288,12 @@ main .experience figure {
     margin: 2rem auto;
 }
 
+main section.formation figure ul li i.fa-solid.fa-graduation-cap {
+    font-size: 6rem;
+}
+
 main .experience figure a img {
-    max-width: 30rem;
+    max-width: 25rem;
     object-fit: contain;
 }
 
@@ -299,7 +302,7 @@ main .experience figure:nth-child(2n+1) ul {
 }
 
 main .experience figure ul {
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -312,7 +315,7 @@ main .experience figure ul li {
 }
 
 main .formation figure ul {
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -330,7 +333,7 @@ main .travaux figure {
 }
 
 main .travaux figure ul {
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -343,7 +346,7 @@ main .loisir ul li h2,
 main .travaux ul li h2 {
     font-size: 2.3rem;
     border-bottom: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     text-align: center;
 }
 
@@ -353,7 +356,7 @@ main .travaux ul {
     flex-direction: column;
     justify-content: space-between;
     border-bottom: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     text-align: center;
     border: solid .2rem #27ae60;
     transition: all 0.5s ease-in-out;
@@ -364,7 +367,7 @@ main .loisir ul {
     font-size: 2.3rem;
     margin: 2rem;
     border-bottom: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     text-align: center;
     border: solid .2rem #12846dc7;
     transition: all 0.5s ease-in-out;
@@ -452,7 +455,7 @@ main .veille ul {
     font-size: 2.3rem;
     margin: 2rem;
     border-bottom: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     text-align: center;
     border: solid .2rem #8e44ad;
     box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #a242ca, 0 0 0.8rem #aa6dc4, 0 0 1.8rem #a971c0, inset 0 0 1.1rem #9651b3;
@@ -514,20 +517,20 @@ main .up {
 footer .contact {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 1rem;
+    padding: .5rem;
 }
 
 footer {
     color: #fff;
     background-color: #111;
-    padding: 2rem;
+    padding: 1rem;
     border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
 }
 
 footer ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
 }
 
 footer .tel img,
@@ -574,22 +577,27 @@ footer p {
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
+
     header .nav {
         flex-direction: column;
     }
+
     header .nav ul li {
         margin: 1rem auto;
         width: 100%;
     }
+
     header .nav {
         font-size: 1.5rem;
         width: 100%;
     }
+
     header .burger {
         padding-top: 1.2rem;
         padding-left: 1rem;
         display: block;
     }
+
     header {
         padding: 1rem;
         text-align: center;
@@ -600,6 +608,7 @@ footer p {
         margin-bottom: 1rem;
         top: 0;
     }
+
     .open-menu {
         position: fixed;
         height: 100vh;
@@ -611,6 +620,7 @@ footer p {
         visibility: visible;
         background-color: #1e201f;
     }
+
     .open-menu nav {
         position: static;
         display: block;
@@ -618,28 +628,36 @@ footer p {
         margin-top: 10rem;
         width: 100%;
     }
+
     .open-menu ul li a {
         padding: 0;
     }
+
     header h1 {
         font-size: 2.5rem;
     }
+
     header h2 {
         font-size: 2rem;
     }
+
     main {
         padding-top: 1rem;
     }
+
     .container {
         padding: 1rem;
     }
+
     h3,
     h2 {
         text-align: center;
     }
+
     .container li {
         font-size: 1.4rem;
     }
+
     main .experience figure,
     main .loisir figure,
     main .formation figure,
@@ -649,49 +667,61 @@ footer p {
         padding: 0;
         grid-template-columns: repeat(1, 1fr);
     }
+
     main .experience figure ul:hover,
     main .loisir figure ul:hover {
         transform: none;
         box-shadow: none;
     }
+
     .item-7 {
         max-width: 45%;
         background-color: #2980b9;
         border-radius: 1rem;
         box-shadow: 0.3rem 0.3rem 0rem #236ea0;
     }
+
     footer .contact {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+
     footer ul li a img {
         display: inline-block;
         vertical-align: middle;
         max-width: 3.5rem;
     }
+
     footer ul {
         padding: 1rem;
     }
+
     footer .ico {
         margin: 1rem;
     }
+
     footer ul:first-child {
         border-right: none;
     }
+
     footer ul:last-child {
         border-left: none;
     }
+
     footer ul li a {
         display: inline-block;
         vertical-align: middle;
     }
+
     header h1 .material-icons {
         display: inline-block;
         padding-right: 2rem;
     }
+
     main section .History {
         padding: 0;
     }
+
     main .up {
         position: fixed;
         max-width: 4rem;
@@ -705,6 +735,7 @@ footer p {
         border: solid .2rem #111;
         transform: rotate(180deg);
     }
+
     @media screen and (orientation: landscape) {
         .aside a img {
             max-width: 5%;
