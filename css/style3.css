@@ -1,5 +1,6 @@
 /*reset*/
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
     font-size: 62.5%;
@@ -78,7 +79,7 @@ img {
 header {
     line-height: 5.5rem;
     text-align: center;
-    background: url(../asset/Background.jpeg) no-repeat scroll center center / cover;
+    background: url(../assets/Background.jpeg) no-repeat scroll center center / cover;
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center center;
@@ -94,7 +95,7 @@ header h1 {
     padding-top: 25rem;
     text-align: center;
     max-width: 80rem;
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0 auto;
     font-weight: 900;
 }
@@ -102,11 +103,11 @@ header h1 {
 header h2 {
     color: rgb(0, 0, 0);
     text-align: center;
-    margin: 0 auto;
+    margin: 1rem auto;
+    font-size: calc(30vw/10);
     max-width: 80rem;
     font-weight: 900;
     padding-top: 1rem;
-    font-size: 3rem;
 }
 
 .burger {
@@ -162,7 +163,7 @@ header nav {
 .open-menu ul li a {
     display: block;
     background-color: #222;
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     padding: 1rem 3rem;
     color: #fff;
     transition: all .5s ease-in-out;
@@ -180,10 +181,9 @@ main {
 
 main section {
     max-width: 135rem;
-    background: #191c1f;
     margin: 3rem auto;
     padding: 1rem;
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     text-transform: none;
 }
 
@@ -214,15 +214,17 @@ main section ul li {
 
 
 /*Information*/
-
 main .information h2 {
     color: #fff;
+    font-size: 6rem;
+    
+    font-weight: 900;
     text-shadow: 0.25rem 0.25rem 0 #2c3e50, .5rem .5rem 0 #34495e;
 }
 
 main .information p {
     padding: 2rem;
-    margin: 1rem 3rem;
+    margin: 4rem 3rem;
     border: solid .2rem #34495e;
     box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #2c3e50, 0 0 0.8rem #2c3e50, 0 0 1.8rem #2c3e50, inset 0 0 1.1rem #2c3e50;
     text-align: justify;
@@ -237,16 +239,10 @@ main .experience figure,
 main .information figure {
     display: flex;
     flex-direction: column;
+    border-radius: .75rem;
 }
 
-main .formation figure {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    margin: 2rem auto;
-    width: auto;
-    max-width: 125rem;
-}
+
 
 main .experience figure time {
     color: #e74c3c;
@@ -258,7 +254,17 @@ main .resume {
 
 main figure ul li .resume li {
     text-align: justify;
-    margin: .2rem 1rem;
+    margin: .2rem .2rem;
+    padding: 1rem 1.5rem;
+    border-radius: .75rem;
+    background-color: #242424;
+}
+
+main .experience #Experience {
+    font-size: 6rem;
+    
+    font-weight: 900;
+
 }
 
 main .experience h2 {
@@ -278,8 +284,11 @@ main .formation figure ul li a {
 main .experience figure {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 2rem auto;
+    justify-content: left;
+    margin: 2rem;
+    padding: 2rem 2rem;
+    border: solid 0.3rem #000;
+    background-color: #111;
 }
 
 main section.formation figure ul li i.fa-solid.fa-graduation-cap {
@@ -287,29 +296,33 @@ main section.formation figure ul li i.fa-solid.fa-graduation-cap {
 }
 
 main .experience figure a img {
-    max-width: 25rem;
+    width: 5vw;
+    align-items: center;
     object-fit: contain;
-}
-
-main .experience figure:nth-child(2n+1) ul {
-    order: 1;
-}
-
-main .experience figure ul {
-    border-radius: 0.75rem;
     margin: 1rem;
+}
+
+main .experience figure ul.resume {
+    border-radius: .5rem;
+    /* margin: 1rem; */
+    align-self: center;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
     transition: all 0.5s ease-in-out;
+    flex-wrap: wrap;
+    align-items: center;
+
 }
 
 main .experience figure ul li {
     padding: 0.5rem;
 }
 
+/* FORMATION */
 main .formation figure ul {
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -319,6 +332,16 @@ main .formation figure ul {
     transition: all 0.5s ease-in-out;
 }
 
+main .formation figure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    margin: 2rem auto;
+    width: auto;
+    max-width: 125rem;
+}
+
+/* TRAVAUX */
 main .travaux figure {
     display: grid;
     padding: 3rem 5rem;
@@ -327,7 +350,7 @@ main .travaux figure {
 }
 
 main .travaux figure ul {
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -340,7 +363,7 @@ main .loisir ul li h2,
 main .travaux ul li h2 {
     font-size: 2.3rem;
     border-bottom: none;
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     text-align: center;
 }
 
@@ -350,7 +373,7 @@ main .travaux ul {
     flex-direction: column;
     justify-content: space-between;
     border-bottom: none;
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     text-align: center;
     border: solid .2rem #27ae60;
     transition: all 0.5s ease-in-out;
@@ -361,7 +384,7 @@ main .loisir ul {
     font-size: 2.3rem;
     margin: 2rem;
     border-bottom: none;
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     text-align: center;
     border: solid .2rem #12846dc7;
     transition: all 0.5s ease-in-out;
@@ -387,21 +410,30 @@ main .veille ul li h2 {
 
 main .compet h2 {
     text-shadow: 0.25rem 0.25rem 0 #d35400, .5rem .5rem 0 #e67e22;
+    font-size: 6rem;
+}
+
+main section.formation figure ul li h2 {
+    font-size: calc(16vw/10);
 }
 
 main .loisir h2 {
     text-shadow: 0.25rem 0.25rem 0 #12816b, .5rem .5rem 0 #15967c;
+    font-size: 6rem;
 }
 
 main .formation h2 {
+    font-size: 6rem;
     text-shadow: 0.25rem 0.25rem 0 #2980b9, .5rem .5rem 0 #3498db;
 }
 
 main .travaux h2 {
+    font-size: 6rem;
     text-shadow: 0.25rem 0.25rem 0 #27ae60, .5rem .5rem 0 #2ecc71;
 }
 
 main .veille h2 {
+    font-size: 6rem;
     text-shadow: 0.25rem 0.25rem 0 #8e44ad, .5rem .5rem 0 #9b59b6;
 }
 
@@ -432,6 +464,10 @@ main .veille figure {
     margin: 0 auto;
 }
 
+main .veille figure h2 {
+    font-size: 3rem;
+}
+
 main .veille ul li img {
     max-height: 15rem;
     max-width: 15rem;
@@ -449,7 +485,7 @@ main .veille ul {
     font-size: 2.3rem;
     margin: 2rem;
     border-bottom: none;
-    border-radius: 0.75rem;
+    border-radius: .5rem;
     text-align: center;
     border: solid .2rem #8e44ad;
     box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #a242ca, 0 0 0.8rem #aa6dc4, 0 0 1.8rem #a971c0, inset 0 0 1.1rem #9651b3;
@@ -475,11 +511,12 @@ main .compet ul li {
 main .compet ul li img {
     object-fit: contain;
     max-width: 7rem;
+    transition: all ease-in-out 0.4s;
 }
 
 main .compet ul li img:hover {
     transform: scale(1.2);
-    transition: all ease-in-out 0.4s;
+
 }
 
 main section figure figcaption {
@@ -667,14 +704,6 @@ footer p {
         transform: none;
         box-shadow: none;
     }
-
-    .item-7 {
-        max-width: 45%;
-        background-color: #2980b9;
-        border-radius: 1rem;
-        box-shadow: 0.3rem 0.3rem 0rem #236ea0;
-    }
-
     footer .contact {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

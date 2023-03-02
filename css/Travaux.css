@@ -40,6 +40,7 @@ img {
     display: inline-block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     vertical-align: middle;
 }
 
@@ -76,117 +77,34 @@ img {
 
 
 /*theme*/
-
-header {
-    padding-top: 2rem;
+header{
+    padding: 1rem;
 }
 
 header h1 {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 7rem;
+    font-weight: 900;
     color: rgb(255, 255, 255);
     text-shadow: #FFF 0px 0px 4px, #27ae60 0px 0px 15px, #27ae60 0px 0px 20px, #27ae60 0px 0px 25px, #27ae60 0px 0px 40px;
 }
-
-
-header img {
-    max-width: 9rem;
-    vertical-align: middle;
-    padding-right: 3rem;
-    transform: translateY(-0.4rem), translateX(0.4rem);
+header a{
+    color: #fff !important;
 }
 
-header h1 .material-icons {
-    display: none;
-}
-
-
-/*navigation*/
-
-nav ul {
-    max-width: 100rem;
-    margin: 0 auto 2rem;
-    font-size: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 4.5rem;
-    font-size: 1.6rem;
-    text-align: center;
-    width: calc(100% /5);
-}
-
-nav ul li a {
-    display: block;
-    border-radius: 0.5rem;
-    width: 100%;
-    color: #fff;
-}
-
-nav ul li a:hover {
-    background-color: var(--color-tertiaire);
-    box-shadow: 0.2rem 0.2rem .1rem #202d3a;
-    color: #fff;
-}
-
-.History {
-    transition: all 400ms ease-in-out;
-}
-
-.History:target {
-    background-color: #34495e;
-}
-
-
-/*slide*/
-
-.slide {
-    overflow: hidden;
-    margin: 1rem;
-    position: relative;
-    transition: all 400ms ease-in-out;
-}
-
-.slide section.active {
-    display: block;
-}
-
-.slide section {
-    display: none;
-}
-
-.slide ul {
-    margin: 0 auto;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.suivant,
-.precedent {
-    color: #fff;
-    margin: auto 5rem;
-    font-size: 4rem;
-    cursor: pointer;
-}
+/*MAIN*/
 
 main {
-    max-width: 140rem;
+    min-height: 80vh;
     margin: 1rem auto;
 }
-
+ 
 main h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+    padding: .5rem;
     color: #fff;
 }
 
-main hr {
-    border: 0.1rem solid #fff;
-    width: 100%;
-    margin: 1rem auto;
-    z-index: -1;
-}
 
 main section h2 {
     text-align: center;
@@ -194,14 +112,6 @@ main section h2 {
     color: #fff;
     text-transform: capitalize;
 }
-
-main a {
-    color: #fff;
-    font-weight: 700;
-    padding-bottom: 2rem;
-    font-size: 2rem;
-}
-
 main .page {
     text-align: center;
     color: #fff;
@@ -211,9 +121,11 @@ main .page {
 
 main section p a {
     background-color: #fafafa;
-    padding: 0.5rem 8rem;
+    padding: .5rem 5rem;
     color: #000;
+    font-weight: 700;
     font-size: 2rem;
+    display: inline-block;
     border-radius: 0.75rem;
 }
 
@@ -232,36 +144,87 @@ main section ul li {
 }
 
 main section img {
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: block;
-    object-fit: cover;
-    max-width: 100rem;
-    max-height: 63vh;
-    background-color: #1b7e44;
+    object-fit: contain;
     border-radius: .75rem;
-    border: solid .1rem #fff;
 }
 
 main section p {
     text-align: center;
 }
 
-
-/*up*/
-
-main .up {
-    position: fixed;
-    max-width: 6rem;
-    padding: 1rem;
-    max-height: 6rem;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #fafafa;
-    border-radius: .5rem;
-    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
-    border: solid .2rem #111;
-    transform: rotate(180deg);
+.swiper {
+    padding: 2rem;
+    margin: 3rem auto;
+    min-height: 70vh;
 }
+.swiper .swiper-wrapper {
+    align-items: center;
+}
+.swiper .swiper-slide {
+    border-radius: 5px;
+    min-height: 40vh;
+    background-color: #000;
+    border: 1px solid #fff;
+    transition: 0.2s;
+}
+.swiper .swiper-slide img{
+    min-height: 40vh;
+    border-radius: .75rem;
+    object-fit: cover;
+}
+.swiper .swiper-slide.active {
+    min-height: 70vh;
+}
+.swiper .prev, .swiper .next {
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 20%;
+    padding: 1rem;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.95;
+    transition: 0.2s;
+}
+.swiper .prev:hover, .swiper .next:hover {
+    opacity: 1;
+}
+.swiper .prev svg, .swiper .next svg {
+    width: 2rem;
+    height: 2rem;
+}
+.swiper .prev svg path, .swiper .next svg path {
+    fill: #fff;
+}
+.swiper .prev {
+    left: 25px;
+}
+.swiper .next {
+    right: 25px;
+}
+.swiper .pagination {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    z-index: 100;
+}
+.swiper .pagination span {
+    font-size: 0;
+    opacity: 1;
+    margin: 1rem ;
+    border: .2rem solid #fff;
+}
+.swiper .pagination span.swiper-pagination-bullet-active {
+    background-color: transparent;
+    transform: scale(1.5);
+    border: .5rem solid #fff;
+}
+
 
 /* Footer */
 footer .contact {
