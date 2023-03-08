@@ -1,3 +1,5 @@
 User-agent : Googlebot
 Allow: /*
 Disallow: /*pdf
+Disallow: /*png
+Disallow: /*jpg
