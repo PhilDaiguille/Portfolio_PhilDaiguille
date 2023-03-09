@@ -283,6 +283,7 @@ footer p {
 @media screen and (max-width: 75rem) {
     main {
         padding: 1rem;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     footer .contact {
