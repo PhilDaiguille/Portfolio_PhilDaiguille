@@ -104,7 +104,7 @@ header h2 {
     color: rgb(0, 0, 0);
     text-align: center;
     margin: 1rem auto;
-    font-size: calc(30vw/10);
+    font-size: 4rem;
     max-width: 80rem;
     font-weight: 900;
     padding-top: 1rem;
@@ -296,7 +296,7 @@ main section.formation figure ul li i.fa-solid.fa-graduation-cap {
 }
 
 main .experience figure a img {
-    width: 5vw;
+    width: 10rem;
     align-items: center;
     object-fit: contain;
     margin: 1rem;
@@ -414,7 +414,7 @@ main .compet h2 {
 }
 
 main section.formation figure ul li h2 {
-    font-size: calc(16vw/10);
+    font-size: 2.3rem;
 }
 
 main .loisir h2 {
