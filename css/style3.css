@@ -126,45 +126,45 @@ header h2 {
 
 header nav {
     display: none;
-    position: fixed;
+    position: static;
 }
 
 .open-menu {
     position: fixed;
     display: block;
-    height: 100vh;
+    height: 100%;
     z-index: 2;
-    max-width: 100%;
     top: 0;
     left: 0;
     transition: all .6s ease-in-out;
     visibility: visible;
-    background-color: #1a1c1e;
+    background-color: #191c1f;
 }
 
 .open-menu nav {
+    width: fit-content;
     position: static;
     display: block;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-top: 7rem;
-    width: 40rem;
+    
 }
 
 .open-menu nav ul {
     width: 100%;
+    margin: 0 auto;
 }
 
 .open-menu ul li {
-    border-radius: 0.6rem;
+    border-radius: 0.75rem;
     margin: 1rem auto;
-    border: solid .1rem rgb(255, 255, 255);
+    border: solid .15rem rgb(255, 255, 255);
 }
 
 .open-menu ul li a {
     display: block;
-    background-color: #222;
     border-radius: .5rem;
-    padding: 1rem 3rem;
+    padding: .5rem 4rem;
     color: #fff;
     transition: all .5s ease-in-out;
 }
@@ -216,8 +216,6 @@ main section ul li {
 /*Information*/
 main .information h2 {
     color: #fff;
-    font-size: 6rem;
-    
     font-weight: 900;
     text-shadow: 0.25rem 0.25rem 0 #2c3e50, .5rem .5rem 0 #34495e;
 }
@@ -259,12 +257,8 @@ main figure ul li .resume li {
     border-radius: .75rem;
     background-color: #242424;
 }
-
-main .experience #Experience {
-    font-size: 6rem;
-    
+main .History{
     font-weight: 900;
-
 }
 
 main .experience h2 {
@@ -410,7 +404,6 @@ main .veille ul li h2 {
 
 main .compet h2 {
     text-shadow: 0.25rem 0.25rem 0 #d35400, .5rem .5rem 0 #e67e22;
-    font-size: 6rem;
 }
 
 main section.formation figure ul li h2 {
@@ -419,21 +412,17 @@ main section.formation figure ul li h2 {
 
 main .loisir h2 {
     text-shadow: 0.25rem 0.25rem 0 #12816b, .5rem .5rem 0 #15967c;
-    font-size: 6rem;
 }
 
 main .formation h2 {
-    font-size: 6rem;
     text-shadow: 0.25rem 0.25rem 0 #2980b9, .5rem .5rem 0 #3498db;
 }
 
 main .travaux h2 {
-    font-size: 6rem;
     text-shadow: 0.25rem 0.25rem 0 #27ae60, .5rem .5rem 0 #2ecc71;
 }
 
 main .veille h2 {
-    font-size: 6rem;
     text-shadow: 0.25rem 0.25rem 0 #8e44ad, .5rem .5rem 0 #9b59b6;
 }
 
@@ -642,14 +631,12 @@ footer p {
 
     .open-menu {
         position: fixed;
-        height: 100vh;
+        height: 100%;
         z-index: 2;
-        width: 100%;
         top: 0;
         transition: all .3s;
         right: 0;
         visibility: visible;
-        background-color: #1e201f;
     }
 
     .open-menu nav {
@@ -730,7 +717,12 @@ footer p {
     footer ul:last-child {
         border-left: none;
     }
-
+    .experience > figure h2, .experience > figure ul li{
+        padding: 1rem;
+    }
+    .experience > figure > a:nth-child(1){
+        margin: 0 auto;
+    }
     footer ul li a {
         display: inline-block;
         vertical-align: middle;
