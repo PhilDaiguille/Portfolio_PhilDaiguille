@@ -1,6 +1,6 @@
 /*reset*/
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
     font-size: 62.5%;
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font: 1.6rem 'Encode Sans', sans-serif;
+    font: 1.6rem 'Montserrat', sans-serif;
     margin: 0;
     background-color: #191c1f;
     text-transform: capitalize;
@@ -180,9 +180,9 @@ main {
 }
 
 main section {
-    max-width: 135rem;
+    max-width: 150rem;
     margin: 3rem auto;
-    padding: 1rem;
+    padding: 4rem;
     border-radius: .5rem;
     text-transform: none;
 }
@@ -195,9 +195,9 @@ main section h3 {
 }
 
 main section .History {
-    font-size: 4.5rem;
-    font-weight: 800;
-    padding: 2rem 0rem 0rem 2rem;
+    font-size: 5rem;
+    font-weight: 900;
+    padding: 2rem 2rem;
     color: #fff;
 }
 
@@ -277,7 +277,7 @@ main .formation figure ul li a {
 
 main .experience figure {
     display: flex;
-    flex-direction: row;
+    flex-direction:row  ;
     justify-content: left;
     margin: 2rem;
     padding: 2rem 2rem;
@@ -405,11 +405,6 @@ main .veille ul li h2 {
 main .compet h2 {
     text-shadow: 0.25rem 0.25rem 0 #d35400, .5rem .5rem 0 #e67e22;
 }
-
-main section.formation figure ul li h2 {
-    font-size: 2.3rem;
-}
-
 main .loisir h2 {
     text-shadow: 0.25rem 0.25rem 0 #12816b, .5rem .5rem 0 #15967c;
 }
@@ -451,10 +446,6 @@ main .veille figure {
     padding: 3rem 5rem;
     width: auto;
     margin: 0 auto;
-}
-
-main .veille figure h2 {
-    font-size: 3rem;
 }
 
 main .veille ul li img {
@@ -667,9 +658,23 @@ footer p {
         padding: 1rem;
     }
 
+    main section {
+        max-width: 150rem;
+        margin: 3rem auto;
+        padding: 1rem;
+        border-radius: .5rem;
+        text-transform: none;
+    }
+    
     h3,
     h2 {
         text-align: center;
+    }
+    main section .History {
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 2rem 2rem;
+        color: #fff;
     }
 
     .container li {
