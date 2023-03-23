@@ -317,21 +317,17 @@ main .experience figure ul li {
 /* FORMATION */
 main .formation figure ul {
     border-radius: .5rem;
-    margin: 2rem;
+    margin: 2rem auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     border: solid .2rem #3498db;
     box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #3498db, 0 0 0.8rem #3498db, 0 0 1.8rem #3498db, inset 0 0 1.1rem #3498db;
     transition: all 0.5s ease-in-out;
 }
 
 main .formation figure {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
     margin: 2rem auto;
-    width: auto;
     max-width: 125rem;
 }
 
@@ -473,24 +469,24 @@ main .veille ul {
 
 
 /*stat*/
-
-main .compet ul {
-    margin: 0.5rem;
+main .compet ul{
+    margin: 1rem auto;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
 }
 
 main .compet ul li {
     text-align: center;
+    flex: 0 11%;
 }
 
 main .compet ul li img {
     object-fit: contain;
-    max-width: 7rem;
+    max-width: 8rem;
     transition: all ease-in-out 0.4s;
 }
 
@@ -683,14 +679,26 @@ footer p {
 
     main .experience figure,
     main .loisir figure,
-    main .formation figure,
     main .travaux figure,
     main .veille figure {
         display: grid;
         padding: 0;
         grid-template-columns: repeat(1, 1fr);
     }
-
+    main .formation figure{
+        padding: 1rem;
+    }
+    main .formation figure ul{
+        display: block;    
+        margin: 2rem auto;
+    }
+    main .compet ul li {
+        text-align: center;
+        flex: inherit;
+    }
+    main .formation figure ul li{
+        text-align: center;
+    }
     main .experience figure ul:hover,
     main .loisir figure ul:hover {
         transform: none;
