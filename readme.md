@@ -4,17 +4,12 @@
 
 ### Étudiant BTS SIO 2ème Année chez ITIC Paris
 
-<p> Je suis actuellement en 2ème Année de BTS option SIO ( Services Informatique aux Organisations ) . </p>
+Je suis actuellement en 2ème Année de BTS option SIO ( Services Informatique aux Organisations ) .
 
-<p align="center">
-	<img src="./assets/Readme.png" width="900">
-</p>
+![Reamde](./assets/Readme.png)
 
 * Pour voir le portfolio en question : **[PhilDaiguille](https://phildaiguille.github.io/Portfolio_PhilDaiguille/)**.
 
-# Credits
+## Credits
 
 * [**Philippe DELENTE**](https://github.com/PhilDaiguille) : Développeur front-end.
-
-
-

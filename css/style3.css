@@ -481,7 +481,6 @@ main .compet ul{
 
 main .compet ul li {
     text-align: center;
-    flex: 0 11%;
 }
 
 main .compet ul li img {
@@ -531,7 +530,7 @@ footer {
     color: #fff;
     background-color: #111;
     padding: 1rem;
-    border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
+    border-top: solid 0.1rem rgba(0, 0, 0, 0.37);
 }
 
 footer ul {
