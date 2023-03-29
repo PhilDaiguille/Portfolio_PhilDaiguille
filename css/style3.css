@@ -47,12 +47,22 @@ img {
 }
 
 :root {
-    --color-defaut: #222;
-    --color-primary: #E8F3E8;
-    --color-secondary: #274664;
-    --color-tertiaire: #2c3e50;
-    --color-defaut: #975102;
-    --color-header: #0A3409;
+    --color-dark: #191c1f;
+    --color-white: #fff;
+    --color-gray:#13364f;
+    --color-gray-dark:#13364f;
+    --color-red:#e6351a;
+    --color-red-dark:#be2810;
+    --color-blue:#0d7cb8;
+    --color-blue-dark:#0d7cb8;
+    --color-orange:#e57909;
+    --color-orange-dark:#d15000;
+    --color-green:#0cad58;
+    --color-green-dark:#0cad58;
+    --color-turquoise:#04b899;
+    --color-turquoise-dark:#049f83;
+    --color-purple:#962eb7;
+    --color-purple-dark:#8a1eae;
 }
 
 
@@ -217,14 +227,14 @@ main section ul li {
 main .information h2 {
     color: #fff;
     font-weight: 900;
-    text-shadow: 0.25rem 0.25rem 0 #2c3e50, .5rem .5rem 0 #34495e;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-gray-dark), .5rem .5rem 0 var(--color-gray);
 }
 
 main .information p {
     padding: 2rem;
     margin: 4rem 3rem;
-    border: solid .2rem #34495e;
-    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #2c3e50, 0 0 0.8rem #2c3e50, 0 0 1.8rem #2c3e50, inset 0 0 1.1rem #2c3e50;
+    border: solid .2rem var(--color-gray);
+    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem var(--color-gray-dark), 0 0 0.8rem var(--color-gray-dark), 0 0 1.8rem var(--color-gray-dark), inset 0 0 1.1rem var(--color-gray-dark);
     text-align: justify;
     line-height: 2.5rem;
     border-radius: .5rem;
@@ -243,7 +253,7 @@ main .information figure {
 
 
 main .experience figure time {
-    color: #e74c3c;
+    color: var(--color-red);
 }
 
 main .resume {
@@ -262,7 +272,7 @@ main .History{
 }
 
 main .experience h2 {
-    text-shadow: 0.25rem 0.25rem 0 #c0392b, .5rem .5rem 0 #e74c3c;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-red-dark), .5rem .5rem 0 var(--color-red);
 }
 
 main .experience figure ul li h2 {
@@ -321,8 +331,8 @@ main .formation figure ul {
     display: flex;
     align-items: center;
     flex-direction: row;
-    border: solid .2rem #3498db;
-    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #3498db, 0 0 0.8rem #3498db, 0 0 1.8rem #3498db, inset 0 0 1.1rem #3498db;
+    border: solid .2rem var(--color-blue);
+    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem var(--color-blue), 0 0 0.8rem var(--color-blue), 0 0 1.8rem var(--color-blue), inset 0 0 1.1rem var(--color-blue);
     transition: all 0.5s ease-in-out;
 }
 
@@ -365,9 +375,9 @@ main .travaux ul {
     border-bottom: none;
     border-radius: .5rem;
     text-align: center;
-    border: solid .2rem #27ae60;
+    border: solid .2rem var(--color-green);
     transition: all 0.5s ease-in-out;
-    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #27ae60, 0 0 0.8rem #27ae60, 0 0 1.8rem #27ae60, inset 0 0 1.1rem #27ae60;
+    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem var(--color-green-dark), 0 0 0.8rem var(--color-green-dark), 0 0 1.8rem var(--color-green-dark), inset 0 0 1.1rem var(--color-green-dark);
 }
 
 main .loisir ul {
@@ -376,9 +386,9 @@ main .loisir ul {
     border-bottom: none;
     border-radius: .5rem;
     text-align: center;
-    border: solid .2rem #12846dc7;
+    border: solid .2rem var(--color-turquoise-dark);
     transition: all 0.5s ease-in-out;
-    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #12846dc7, 0 0 0.8rem #12846dc7, 0 0 1.8rem #12846dc7, inset 0 0 1.1rem #12846dc7;
+    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem var(--color-turquoise), 0 0 0.8rem var(--color-turquoise), 0 0 1.8rem var(--color-turquoise), inset 0 0 1.1rem var(--color-turquoise);
 }
 
 main .experience ul li img,
@@ -399,22 +409,22 @@ main .veille ul li h2 {
 }
 
 main .compet h2 {
-    text-shadow: 0.25rem 0.25rem 0 #d35400, .5rem .5rem 0 #e67e22;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-orange-dark), .5rem .5rem 0 var(--color-orange);
 }
 main .loisir h2 {
-    text-shadow: 0.25rem 0.25rem 0 #12816b, .5rem .5rem 0 #15967c;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-turquoise-dark), .5rem .5rem 0 var(--color-turquoise);
 }
 
 main .formation h2 {
-    text-shadow: 0.25rem 0.25rem 0 #2980b9, .5rem .5rem 0 #3498db;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-blue-dark), .5rem .5rem 0 var(--color-blue);
 }
 
 main .travaux h2 {
-    text-shadow: 0.25rem 0.25rem 0 #27ae60, .5rem .5rem 0 #2ecc71;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-green-dark), .5rem .5rem 0 var(--color-green);
 }
 
 main .veille h2 {
-    text-shadow: 0.25rem 0.25rem 0 #8e44ad, .5rem .5rem 0 #9b59b6;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-purple-dark), .5rem .5rem 0 var(--color-purple);
 }
 
 main .loisir ul li img,
@@ -463,8 +473,8 @@ main .veille ul {
     border-bottom: none;
     border-radius: .5rem;
     text-align: center;
-    border: solid .2rem #8e44ad;
-    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem #a242ca, 0 0 0.8rem #aa6dc4, 0 0 1.8rem #a971c0, inset 0 0 1.1rem #9651b3;
+    border: solid .2rem var(--color-purple-dark);
+    box-shadow: 0 0 .2rem #fefefe, 0 0 .2rem #fefefe, 0 0 2rem var(--color-purple), 0 0 0.8rem var(--color-purple), 0 0 1.8rem var(--color-purple), inset 0 0 1.1rem var(--color-purple);
 }
 
 
@@ -697,11 +707,6 @@ footer p {
     }
     main .formation figure ul li{
         text-align: center;
-    }
-    main .experience figure ul:hover,
-    main .loisir figure ul:hover {
-        transform: none;
-        box-shadow: none;
     }
     footer .contact {
         display: grid;
