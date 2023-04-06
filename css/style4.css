@@ -43,6 +43,7 @@ img {
 }
 
 * {
+    color-scheme: light dark;
     box-sizing: border-box;
 }
 
@@ -89,7 +90,7 @@ img {
 header {
     line-height: 5.5rem;
     text-align: center;
-    background: url(../assets/Background.webp) no-repeat scroll center center / cover;
+    background: url(../assets/background2.png) no-repeat scroll center center / cover;
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center center;
@@ -97,6 +98,7 @@ header {
     width: 100%;
     height: 100vh;
     top: 0;
+    box-shadow: 0 0 5rem #000;
 }
 
 header h1 {
@@ -196,7 +198,6 @@ main section {
     border-radius: .5rem;
     text-transform: none;
 }
-
 main section h3 {
     font-size: 3rem;
     padding: 1rem 4rem;
@@ -205,7 +206,7 @@ main section h3 {
 }
 
 main section .History {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 900;
     padding: 2rem 2rem;
     color: #fff;
@@ -257,15 +258,15 @@ main .experience figure time {
 }
 
 main .resume {
-    padding: .5rem;
+    padding: 2rem;
 }
 
 main figure ul li .resume li {
     text-align: justify;
     margin: .2rem .2rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: .75rem;
-    background-color: #242424;
+    background-color: #111;
 }
 main .History{
     font-weight: 900;
@@ -291,8 +292,6 @@ main .experience figure {
     justify-content: left;
     margin: 2rem;
     padding: 2rem 2rem;
-    border: solid 0.3rem #000;
-    background-color: #111;
 }
 
 main section.formation figure ul li i.fa-solid.fa-graduation-cap {
@@ -300,7 +299,7 @@ main section.formation figure ul li i.fa-solid.fa-graduation-cap {
 }
 
 main .experience figure a img {
-    width: 10rem;
+    width: 11rem;
     align-items: center;
     object-fit: contain;
     margin: 1rem;
@@ -495,7 +494,7 @@ main .compet ul li {
 
 main .compet ul li img {
     object-fit: contain;
-    max-width: 8rem;
+    max-width: 7rem;
     transition: all ease-in-out 0.4s;
 }
 
@@ -529,65 +528,52 @@ main .up {
 
 
 /*Footer */
-
-footer .contact {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: .5rem;
+footer{
+    padding: 4rem;
 }
-
-footer {
-    color: #fff;
-    background-color: #111;
-    padding: 1rem;
-    border-top: solid 0.1rem rgba(0, 0, 0, 0.37);
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111111;
+    margin: 1rem;
+    border-radius: .75rem;
+    
 }
-
-footer ul {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
+footer hr{
+    height: .4rem;
+    background-color: #fff;
+    border-radius: 25%;
 }
-
-footer .tel img,
-footer .mail img,
-footer .cv img,
-footer .link a:nth-child(1) img {
+footer ul li{
+    padding: 1rem 2rem;
+}
+footer ul li:first-child a:first-child img{
     filter: invert(1);
 }
-
-footer ul:first-child,
-footer ul:nth-child(2) {
-    border-right: solid 0.3rem rgb(255, 255, 255);
-}
-
-footer ul:last-child {
-    border-left: solid 0.3rem rgb(255, 255, 255);
-}
-
-footer ul li {
-    align-items: center;
-}
-
-footer ul li a img {
-    display: inline-block;
-    max-width: 5rem;
-    vertical-align: middle;
-    margin-right: 1rem;
-}
-
-footer ul li a {
-    color: #fff;
-    font-size: 2rem;
+footer p{
     text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
 }
-
-footer p {
-    padding: 1rem;
-    font-size: 1.6rem;
-    text-align: start;
+footer h2{
+    font-size: 6rem;
+    font-weight: 900;
+    padding: 2rem 2rem;
+    color: #fff;
+    text-shadow: 0.25rem 0.25rem 0 var(--color-gray-dark), .5rem .5rem 0 var(--color-gray);
 }
-
+footer ul li a{
+    color: #fff;
+}
+footer img{
+    max-width: 5rem;
+}
+footer .contact{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+}
 @media screen and (max-width: 60rem) {
     main section #picture {
         grid-template-columns: repeat(1, 1fr);
@@ -617,7 +603,7 @@ footer p {
     header {
         padding: 1rem;
         text-align: center;
-        background: url(../assets/BackgroundM.jpeg) no-repeat scroll center center / cover;
+        background: url(../assets/background3.png) no-repeat scroll center center / cover;
         /*position: fixed;*/
         width: 100%;
         height: 100vh;

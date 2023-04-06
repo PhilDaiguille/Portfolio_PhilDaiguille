@@ -3,3 +3,6 @@ src
 package-lock.json
 package.json
 .vscode
+vite.config.js
+dist
+target
