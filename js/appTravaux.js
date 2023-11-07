@@ -13,13 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		centeredSlides: true,
 		slideActiveClass: "active",
 		navigation: {
-		  nextEl: ".next",
-		  prevEl: ".prev"
+			nextEl: ".next",
+			prevEl: ".prev"
 		},
 		pagination: {
-		  el: ".pagination",
-		  clickable: true
-		},
-	  });
-
+			el: ".pagination",
+			clickable: true
+		}
+	});
 });

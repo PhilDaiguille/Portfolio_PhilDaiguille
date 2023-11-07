@@ -2,9 +2,9 @@
 
 ## Philippe Delente
 
-### Étudiant BTS SIO 2ème Année chez ITIC Paris
+### Étudiant BAC+2
 
-Je suis actuellement en 2ème Année de BTS option SIO ( Services Informatique aux Organisations ) .
+Je suis actuellement en 3ème Année d'études.
 
 ![Reamde](./assets/Readme.png)
 
