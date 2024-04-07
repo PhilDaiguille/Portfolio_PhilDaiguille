@@ -1,213 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atelier_Professionel</title>
-    <link rel="stylesheet" href="../css/PPE.css">
-    <meta name="description" content="Portfolio Atelier Professionel avec HTML/CSS/JS/PHP et Java/JavaFX">
-    <link rel="stylesheet" href="../css/PPE.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-    <link rel="manifest" href="../assets/site.webmanifest">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../css/PPE.css" />
+    <meta
+      name="description"
+      content="Portfolio Atelier Professionel avec HTML/CSS/JS/PHP et Java/JavaFX"
+    />
+    <link rel="stylesheet" href="../css/PPE.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1><a href="../index.html#travaux"><img
-                    src="../assets/4124824-cog-web-options-web-preferences-web-setting-webpage_113885.png"
-                    alt="icone Web"></a>Travaux Projet - AP ( Atelier Professionnel ) JAVA</h1>
+      <h1>
+        <a href="../index.html#travaux"
+          ><img
+            src="../assets/4124824-cog-web-options-web-preferences-web-setting-webpage_113885.png"
+            alt="icone Web" /></a
+        >Travaux Projet - AP ( Atelier Professionnel ) JAVA
+      </h1>
     </header>
     <main>
-        <div>
-            <section>
-                <h2>AP_JAVA</h2>
-                <img src="../assets/tp_web/ppe_java.png" alt="PPE_JAVA">
-                <h2>Sujet</h2>
-                <p>Un des responsables de la M2L, utilise une application pour gérer les employés des ligues.
-                    L’application
-                    est mise à votre disposition par le biais des ressources suivantes :</p>
-                <p>Cette application, très simple, n’existe qu’en ligne de commande et est mono-utilisateur. Nous
-                    souhaiterions désigner un administrateur par ligue et lui confier la tâche de recenser les employés
-                    de
-                    sa ligue. Une partie du travail est déjà faite mais vous allez devoir le compléter.</p>
-                <p>Les niveaux d’habilitation des utilisateurs sont les suivants : </p>
-                <ul>
-                    <li>Un simple employé de ligue peut ouvrir l’application et s’en servir comme un annuaire, mais il
-                        ne
-                        dispose d’aucun droit d’écriture. </li>
-                    <li>Un employé par ligue est admininstrateur et dispose de droits d’écriture peut gérer la liste des
-                        emloyés de sa propre ligue avec une application bureau. </li>
-                    <li>Le super-admininstrateur a accès en écriture à tous les employés des ligues. Il peut aussi gérer
-                        les
-                        comptes des administrateurs des ligues avec une application accessible en ligne de commande.
-                    </li>
-                    <li>L’application doit être rendue multi-utilisateurs grace à l’utilisation d’une base de données.
-                    </li>
-                    <li>Les trois niveaux d’habilitation ci-dessus doivent être mis en place. </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Itération 1</h2>
-                <ul>
-                    <li> Modélisation d’une base de données avec un MCD. </li>
-                    <li><img src="https://github.com/PhilDaiguille/personnel/blob/master/Documentation/mcd.jpg?raw=true"
-                            alt="MCD"></li>
-                    <li>Vérification du fonctionnement correct de l’application grâce à des tests unitaires. </li>
-                    <li>Gestion de la date de départ et de celle d’arrivée de chaque employé (couche métier + tests
-                        unitaires). </li>
-                    <li>Représentation des menus du dialogue en ligne de commande avec un arbre heuristique (Utilisez un
-                        logiciel de type Freemind). </li>
-                    <li><img src="https://github.com/PhilDaiguille/personnel/blob/master/Documentation/ACCUEIL.png?raw=true"
-                            alt="heuristique"></li>
-                </ul>
-            </section>
-            <section>
-                <h2>Itération 2</h2>
-                <ul>
-                    <li> Création de la base de données. </li>
-                    <li>Gestion des dates dans le dialogue en ligne de commande. </li>
-                    <li>Dans le dialogue en ligne de commande, un employé doit être selectionné avant que l’on puisse
-                        choisir de modifier ou de supprimer. </li>
-                    <li>Possibilité de changer l’administrateur d’une ligue en ligne de commande. </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Itération 3</h2>
-                <ul>
-                    <li> Création d’une classe fille de Passerelle permettant de gérer la connexion à la base de données
-                        avec JDBC (ou avec Hibernate si vous le souhaitez). </li>
-                    <li>Modélisation de l’interface graphique avec des maquettes. </li>
-                    <li>Possibilité de changer l’administrateur d’une ligue en ligne de commande. </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Itération 4</h2>
-                <ul>
-                    <li> Création d’une interface graphique avec JavaFx pour que les administrateurs puissent gérer les
-                        ligues. </li>
-                    <li>Si une ligue n’a pas d’administrateur, c’est automatiquement le root qui devient
-                        l’administrateur de
-                        la ligue (avec les tests unitaires correspondants). </li>
-                    <li>Installation de la base de données sur un serveur accessible dans le réseau local de la société.
-                    </li>
-                    <li>Rédaction d’un mode opératoire à l’usage des administrateurs. </li>
-                </ul>
-            </section>
-        </div>
-        <div>
-            <section>
-                <h2>AP_WEB</h2>
-                <img src="../assets/asset/WEB.png" alt="WEB">
-                <h2>Sujet</h2>
-                <p>
-                    Une agence nous confie la réalisation d’une page publicitaire pour
-                    la Maison de ligues sur le web. La promotion a pour but de
-                    conquérir des nouveaux abonné(e)s, en proposant la diffusion de
-                    toutes les compétitions sportives. Pour cela nous conseille d’abord
-                    d’analyser toutes les fonctionnalités au travers des deux wireframes.
-                    Les spécifications pour le fonctionnement de chaque partie ne sont
-                    pas définies. La charte graphique doit être crée par vous.
-                </p>
-                <p>
-                    Pour commencer vous devez tout simplement mettre en place une
-                    structure html sémantique car le contenu de cette publication est
-                    destiné à tout public. Penser à produire un code optimisé pour les
-                    moteurs de recherche à l’indexation de l’information.
-                </p>
-            </section>
-            <section>
-                <h2>Maquette</h2>
-                <ul class="maquette">
-                    <li><img src="../assets/APWEB.png" alt="APPWEB"></li>
-                    <li><img src="../assets/APWEB2.png" alt="APPWEB2"></li>
-                </ul>
-            </section>
-            <section>
-                <h2>réalisation</h2>
-                <h3>Réaliser une interface d’admin gestion client</h3>
-                <p>
-                    Cette partie du site a pour but de permettre aux administrateurs des Maisons
-                    des ligues, de recenser leurs clients. Pour ce faire, il faut créer une interface
-                    admin qui permet d’ajouter un client, modifier sont profile ou le supprimer.
-                </p>
-                <h3>Aspect fonctionnel</h3>
-                <p>
-                    Vous devez créer toute la partie gestion. Pour les enregistrements à publier il
-                    faut créer une page avec un formulaire de 4 champs : Nom, Prénom, Age et
-                    adresse électronique. Tous les champs sont obligatoires. Afficher un warning
-                    dans le cas l’administrateur ne renseigne pas un champ.
-                </p>
-                <h3>Base de données</h3>
-                <img src="../assets/APBDD.png" alt="BDD">
-                <h3>Aspect technique</h3>
-                <p>
-                    Les technologies autorisées sont : html5 css3, js et php orienté objet
-                    Police de caractères : ‘Open Sans’, sans-serif
-                    Iconographies obligatoires de votre choix
-                    La couleur des thèmes doivent être indexée dans des variables css
-                    Le code HTML généré doit être valide selon les normes du W3C et tester
-                    également, pour les spécificités de la WAI et du WCAG (accessibilité)
-                    Votre rendu sera publié sur un dépôt Github. Celui ci doit avoir une
-                    structure logique, contenir un readme.md avec présentation du projet et
-                    un fichier « .gitignore » si besoin.
-                </p>
-            </section>
-            <section>
-                <h2>PHP</h2>
-                <p>
-                <h3>Connexion à la base de données</h3>
-                <p>
-                    PHP
-                </p>
-            </section>
-        </div>
-        <a href="#"><img src="../assets/arrow.png" class="up" alt="up"></a>
+      <div>
+        <section>
+          <h2>AP_JAVA</h2>
+          <img src="../assets/tp_web/ppe_java.png" alt="PPE_JAVA" />
+          <h2>Sujet</h2>
+          <p>
+            Un des responsables de la M2L, utilise une application pour gérer
+            les employés des ligues. L’application est mise à votre disposition
+            par le biais des ressources suivantes :
+          </p>
+          <p>
+            Cette application, très simple, n’existe qu’en ligne de commande et
+            est mono-utilisateur. Nous souhaiterions désigner un administrateur
+            par ligue et lui confier la tâche de recenser les employés de sa
+            ligue. Une partie du travail est déjà faite mais vous allez devoir
+            le compléter.
+          </p>
+          <p>Les niveaux d’habilitation des utilisateurs sont les suivants :</p>
+          <ul>
+            <li>
+              Un simple employé de ligue peut ouvrir l’application et s’en
+              servir comme un annuaire, mais il ne dispose d’aucun droit
+              d’écriture.
+            </li>
+            <li>
+              Un employé par ligue est admininstrateur et dispose de droits
+              d’écriture peut gérer la liste des emloyés de sa propre ligue avec
+              une application bureau.
+            </li>
+            <li>
+              Le super-admininstrateur a accès en écriture à tous les employés
+              des ligues. Il peut aussi gérer les comptes des administrateurs
+              des ligues avec une application accessible en ligne de commande.
+            </li>
+            <li>
+              L’application doit être rendue multi-utilisateurs grace à
+              l’utilisation d’une base de données.
+            </li>
+            <li>
+              Les trois niveaux d’habilitation ci-dessus doivent être mis en
+              place.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Itération 1</h2>
+          <ul>
+            <li>Modélisation d’une base de données avec un MCD.</li>
+            <li>
+              <img
+                src="https://github.com/PhilDaiguille/personnel/blob/master/Documentation/mcd.jpg?raw=true"
+                alt="MCD"
+              />
+            </li>
+            <li>
+              Vérification du fonctionnement correct de l’application grâce à
+              des tests unitaires.
+            </li>
+            <li>
+              Gestion de la date de départ et de celle d’arrivée de chaque
+              employé (couche métier + tests unitaires).
+            </li>
+            <li>
+              Représentation des menus du dialogue en ligne de commande avec un
+              arbre heuristique (Utilisez un logiciel de type Freemind).
+            </li>
+            <li>
+              <img
+                src="https://github.com/PhilDaiguille/personnel/blob/master/Documentation/ACCUEIL.png?raw=true"
+                alt="heuristique"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Itération 2</h2>
+          <ul>
+            <li>Création de la base de données.</li>
+            <li>Gestion des dates dans le dialogue en ligne de commande.</li>
+            <li>
+              Dans le dialogue en ligne de commande, un employé doit être
+              selectionné avant que l’on puisse choisir de modifier ou de
+              supprimer.
+            </li>
+            <li>
+              Possibilité de changer l’administrateur d’une ligue en ligne de
+              commande.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Itération 3</h2>
+          <ul>
+            <li>
+              Création d’une classe fille de Passerelle permettant de gérer la
+              connexion à la base de données avec JDBC (ou avec Hibernate si
+              vous le souhaitez).
+            </li>
+            <li>Modélisation de l’interface graphique avec des maquettes.</li>
+            <li>
+              Possibilité de changer l’administrateur d’une ligue en ligne de
+              commande.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Itération 4</h2>
+          <ul>
+            <li>
+              Création d’une interface graphique avec JavaFx pour que les
+              administrateurs puissent gérer les ligues.
+            </li>
+            <li>
+              Si une ligue n’a pas d’administrateur, c’est automatiquement le
+              root qui devient l’administrateur de la ligue (avec les tests
+              unitaires correspondants).
+            </li>
+            <li>
+              Installation de la base de données sur un serveur accessible dans
+              le réseau local de la société.
+            </li>
+            <li>
+              Rédaction d’un mode opératoire à l’usage des administrateurs.
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div>
+        <section>
+          <h2>AP_WEB</h2>
+          <img src="../assets/asset/WEB.png" alt="WEB" />
+          <h2>Sujet</h2>
+          <p>
+            Une agence nous confie la réalisation d’une page publicitaire pour
+            la Maison de ligues sur le web. La promotion a pour but de conquérir
+            des nouveaux abonné(e)s, en proposant la diffusion de toutes les
+            compétitions sportives. Pour cela nous conseille d’abord d’analyser
+            toutes les fonctionnalités au travers des deux wireframes. Les
+            spécifications pour le fonctionnement de chaque partie ne sont pas
+            définies. La charte graphique doit être crée par vous.
+          </p>
+          <p>
+            Pour commencer vous devez tout simplement mettre en place une
+            structure html sémantique car le contenu de cette publication est
+            destiné à tout public. Penser à produire un code optimisé pour les
+            moteurs de recherche à l’indexation de l’information.
+          </p>
+        </section>
+        <section>
+          <h2>Maquette</h2>
+          <ul class="maquette">
+            <li><img src="../assets/APWEB.png" alt="APPWEB" /></li>
+            <li><img src="../assets/APWEB2.png" alt="APPWEB2" /></li>
+          </ul>
+        </section>
+        <section>
+          <h2>réalisation</h2>
+          <h3>Réaliser une interface d’admin gestion client</h3>
+          <p>
+            Cette partie du site a pour but de permettre aux administrateurs des
+            Maisons des ligues, de recenser leurs clients. Pour ce faire, il
+            faut créer une interface admin qui permet d’ajouter un client,
+            modifier sont profile ou le supprimer.
+          </p>
+          <h3>Aspect fonctionnel</h3>
+          <p>
+            Vous devez créer toute la partie gestion. Pour les enregistrements à
+            publier il faut créer une page avec un formulaire de 4 champs : Nom,
+            Prénom, Age et adresse électronique. Tous les champs sont
+            obligatoires. Afficher un warning dans le cas l’administrateur ne
+            renseigne pas un champ.
+          </p>
+          <h3>Base de données</h3>
+          <img src="../assets/APBDD.png" alt="BDD" />
+          <h3>Aspect technique</h3>
+          <p>
+            Les technologies autorisées sont : html5 css3, js et php orienté
+            objet Police de caractères : ‘Open Sans’, sans-serif Iconographies
+            obligatoires de votre choix La couleur des thèmes doivent être
+            indexée dans des variables css Le code HTML généré doit être valide
+            selon les normes du W3C et tester également, pour les spécificités
+            de la WAI et du WCAG (accessibilité) Votre rendu sera publié sur un
+            dépôt Github. Celui ci doit avoir une structure logique, contenir un
+            readme.md avec présentation du projet et un fichier « .gitignore »
+            si besoin.
+          </p>
+        </section>
+        <section>
+          <h2>PHP</h2>
+          <p></p>
+          <h3>Connexion à la base de données</h3>
+          <p>PHP</p>
+        </section>
+      </div>
+      <a href="#"><img src="../assets/arrow.png" class="up" alt="up" /></a>
     </main>
     <footer id="Contact">
-        <div role="region" class="contact">
+      <div role="region" class="contact">
+        <ul class="tel">
+          <li>
+            <a href="tel:0783544539">
+              <img
+                src="../assets/telephone_icon-icons.com_65394.png"
+                alt="tel"
+              />
+              07 83 54 45 39</a
+            >
+          </li>
+        </ul>
+        <ul class="ico">
+          <li>
+            <address class="link">
+              <a href="https://github.com/PhilDaiguille" target="blank">
+                <img src="../assets/icons8-github.svg" alt="github" />
+              </a>
+              <a href="https://twitter.com/Phildattente" target="blank">
+                <img src="../assets/icons8-twitter.svg" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/philippe-delente-7117a6203/"
+                target="blank"
+              >
+                <img src="../assets/icons8-linkedin.svg" alt="linkedin" />
+              </a>
+              <a
+                href="https://www.instagram.com/phil_d_aiguille/?hl=fr"
+                target="blank"
+              >
+                <img src="../assets/icons8-instagram.svg" alt="instagram" />
+              </a>
+            </address>
+          </li>
+        </ul>
 
-            <ul class="tel">
-                <li>
-                    <a href="tel:0783544539">
-                        <img src="../assets/telephone_icon-icons.com_65394.png" alt="tel"> 07 83 54 45 39</a>
-                </li>
-            </ul>
-            <ul class="ico">
-                <li>
-                    <address class="link">
-                        <a href="https://github.com/PhilDaiguille" target="blank">
-                            <img src="../assets/icons8-github.svg" alt="github">
-                        </a>
-                        <a href="https://twitter.com/Phildattente" target="blank">
-                            <img src="../assets/icons8-twitter.svg" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/philippe-delente-7117a6203/" target="blank">
-                            <img src="../assets/icons8-linkedin.svg" alt="linkedin">
-                        </a>
-                        <a href="https://www.instagram.com/phil_d_aiguille/?hl=fr" target="blank">
-                            <img src="../assets/icons8-instagram.svg" alt="instagram">
-                        </a>
-                    </address>
-                </li>
-            </ul>
+        <ul class="mail">
+          <li>
+            <a href="mailto:philippe.delente@gmail.com"
+              ><img
+                src="../assets/1904660-email-envelope-letter-mail-message-post-send_122510.png"
+                alt="mail"
+              />Philippe.delente@gmail.com</a
+            >
+          </li>
+        </ul>
+      </div>
 
-            <ul class="mail">
-                <li>
-                    <a href="mailto:philippe.delente@gmail.com"><img
-                            src="../assets/1904660-email-envelope-letter-mail-message-post-send_122510.png"
-                            alt="mail">Philippe.delente@gmail.com</a>
-                </li>
-            </ul>
-        </div>
-
-        <hr>
-        <p>Copyright &copy; <span></span> - Philippe DELENTE</p>
+      <hr />
+      <p>Copyright &copy; <span></span> - Philippe DELENTE</p>
     </footer>
-</body>
-
+  </body>
 </html>

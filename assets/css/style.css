@@ -2,16 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("./skills.css");
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
-  font: 1.6rem "Montserrat", sans-serif;
+  font:
+    1.6rem "Montserrat",
+    sans-serif;
   margin: 0;
   text-transform: capitalize;
-  background: url(../assets/background.svg) repeat;
+  background: url(../images/background.svg) repeat;
   background-position: center top;
   background-color: #121212;
 }
@@ -44,7 +47,7 @@ img {
   vertical-align: middle;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -189,6 +192,7 @@ main section {
   border-radius: 0.5rem;
   text-transform: none;
 }
+
 main section h3 {
   font-size: 3rem;
   padding: 1rem 4rem;
@@ -218,16 +222,19 @@ main section ul li {
 main .information h2 {
   color: #fff;
   font-weight: 900;
-  text-shadow: 0.25rem 0.25rem 0 var(--color-gray-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-gray-dark),
     0.5rem 0.5rem 0 var(--color-gray);
 }
-main .information div{
+
+main .information div {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 2rem;
 }
+
 main .information div img {
   width: 75%;
   height: 75%;
@@ -235,6 +242,7 @@ main .information div img {
   border-radius: 100%;
   border: solid 0.2rem var(--color-gray);
 }
+
 main .information div p {
   padding: 2rem;
   margin: 5rem 2.5rem;
@@ -269,10 +277,12 @@ main figure ul li .resume li {
   border-radius: 0.75rem;
   background-color: #121212;
 }
+
 main .History {
   font-weight: 900;
 }
-.carrousel{
+
+.carrousel {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -282,8 +292,10 @@ main .History {
   gap: 4rem;
   transition: transform 0.3s ease-in-out;
 }
+
 main .experience h2 {
-  text-shadow: 0.25rem 0.25rem 0 var(--color-red-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-red-dark),
     0.5rem 0.5rem 0 var(--color-red);
 }
 
@@ -299,20 +311,21 @@ main .formation figure ul li a {
 
 main .experience figure {
   display: flex;
-    background-color: #121212;
-    border: solid 0.2rem var(--color-white);
-    min-height: 30rem;
-    padding: 2rem 5rem;
-    min-width: 113rem;
-    align-items: center;
-    flex-direction: row;
-    justify-content: left;
-    margin: 2rem auto;
+  background-color: #121212;
+  border: solid 0.2rem var(--color-white);
+  min-height: 30rem;
+  padding: 2rem 5rem;
+  min-width: 113rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  margin: 2rem auto;
 }
 
 main section.formation figure ul li i.fa-solid.fa-graduation-cap {
   font-size: 6rem;
 }
+
 main .experience figure a img {
   width: 11rem;
   align-items: center;
@@ -333,7 +346,8 @@ main .experience figure ul.resume {
   flex-wrap: wrap;
   align-items: center;
 }
-main .experience figure ul.resume li{
+
+main .experience figure ul.resume li {
   background-color: #000;
 }
 
@@ -426,26 +440,32 @@ main .veille ul li h2 {
 }
 
 main .compet h2 {
-  text-shadow: 0.25rem 0.25rem 0 var(--color-orange-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-orange-dark),
     0.5rem 0.5rem 0 var(--color-orange);
 }
+
 main .loisir h2 {
-  text-shadow: 0.25rem 0.25rem 0 var(--color-turquoise-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-turquoise-dark),
     0.5rem 0.5rem 0 var(--color-turquoise);
 }
 
 main .formation h2 {
-  text-shadow: 0.25rem 0.25rem 0 var(--color-blue-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-blue-dark),
     0.5rem 0.5rem 0 var(--color-blue);
 }
 
 main .travaux h2 {
-  text-shadow: 0.25rem 0.25rem 0 var(--color-green-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-green-dark),
     0.5rem 0.5rem 0 var(--color-green);
 }
 
 main .veille h2 {
-  text-shadow: 0.25rem 0.25rem 0 var(--color-purple-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-purple-dark),
     0.5rem 0.5rem 0 var(--color-purple);
 }
 
@@ -548,14 +568,17 @@ footer {
   padding: 5rem 10rem;
   background-color: #020202;
 }
+
 footer h2 {
   font-size: 6rem;
   font-weight: 900;
   padding: 2rem 2rem;
   color: #fff;
-  text-shadow: 0.25rem 0.25rem 0 var(--color-gray-dark),
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-gray-dark),
     0.5rem 0.5rem 0 var(--color-gray);
 }
+
 footer .contact {
   display: flex;
   justify-content: center;
@@ -564,20 +587,24 @@ footer .contact {
   padding: 4rem;
   gap: 2rem;
 }
+
 footer ul {
   background-color: #111;
   padding: 1rem 2rem;
   border-radius: 0.75rem;
 }
+
 footer ul li {
   border-radius: 0.75rem;
   margin: 1rem auto;
 }
+
 footer ul li img {
   width: 5rem;
   transition: all ease-in-out 0.4s;
 }
-footer p{
+
+footer p {
   text-align: center;
   color: #fff;
 }
@@ -670,6 +697,7 @@ footer p{
   h2 {
     text-align: center;
   }
+
   main section .History {
     font-size: 3rem;
     font-weight: 900;
@@ -689,20 +717,25 @@ footer p{
     padding: 0;
     grid-template-columns: repeat(1, 1fr);
   }
+
   main .formation figure {
     padding: 1rem;
   }
+
   main .formation figure ul {
     display: block;
     margin: 2rem auto;
   }
+
   main .compet ul li {
     text-align: center;
     flex: inherit;
   }
+
   main .formation figure ul li {
     text-align: center;
   }
+
   footer .contact {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -729,13 +762,16 @@ footer p{
   footer ul:last-child {
     border-left: none;
   }
+
   .experience > figure h2,
   .experience > figure ul li {
     padding: 1rem;
   }
+
   .experience > figure > a:nth-child(1) {
     margin: 0 auto;
   }
+
   footer ul li a {
     display: inline-block;
     vertical-align: middle;
