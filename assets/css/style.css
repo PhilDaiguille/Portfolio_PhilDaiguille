@@ -313,7 +313,7 @@ main .experience figure {
   display: flex;
   background-color: #121212;
   border: solid 0.2rem var(--color-white);
-  min-height: 30rem;
+  min-height: 45rem;
   padding: 2rem 5rem;
   min-width: 113rem;
   align-items: center;

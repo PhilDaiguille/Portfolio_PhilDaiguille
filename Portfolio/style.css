@@ -1,0 +1,807 @@
+/*reset*/
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font:
+    1.6rem "Montserrat",
+    sans-serif;
+  margin: 0;
+  text-transform: capitalize;
+  background: url(../images/background.svg) repeat;
+  background-position: center top;
+  background-color: #121212;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+ul,
+ol,
+section {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-dark: #191c1f;
+  --color-white: #fff;
+  --color-gray: #13364f;
+  --color-gray-dark: #13364f;
+  --color-red: #e6351a;
+  --color-red-dark: #be2810;
+  --color-blue: #0d7cb8;
+  --color-blue-dark: #0d7cb8;
+  --color-orange: #e57909;
+  --color-orange-dark: #d15000;
+  --color-green: #0cad58;
+  --color-green-dark: #0cad58;
+  --color-turquoise: #04b899;
+  --color-turquoise-dark: #049f83;
+  --color-purple: #962eb7;
+  --color-purple-dark: #8a1eae;
+}
+
+/* scroll bars */
+
+* {
+  /* For FF and non-webkit browsers */
+  scrollbar-width: thin;
+  scrollbar-color: #222 #333;
+}
+
+*::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #222;
+  outline: 0.1rem solid #333;
+}
+
+/*theme*/
+
+header {
+  line-height: 5.5rem;
+  text-align: center;
+  /*position: fixed;*/
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+
+header h1 {
+  color: rgb(255, 255, 255);
+  display: block;
+  padding-top: 25rem;
+  text-align: center;
+  max-width: 80rem;
+  font-size: 6rem;
+  margin: 0 auto;
+  font-weight: 900;
+}
+
+header h2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 4rem;
+  max-width: 80rem;
+  font-weight: 900;
+  padding-top: 1rem;
+}
+
+.burger {
+  position: fixed;
+  top: 2rem;
+  left: 3rem;
+  cursor: pointer;
+  z-index: 5;
+  font-weight: 900;
+  color: #fff;
+  font-size: 5rem;
+}
+
+/*navigation*/
+
+header nav {
+  display: none;
+  position: static;
+}
+
+.open-menu {
+  position: fixed;
+  display: block;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  min-width: 25rem;
+  left: 0;
+  transition: all 0.6s ease-in-out;
+  visibility: visible;
+  background-color: #111;
+}
+
+.open-menu nav {
+  width: fit-content;
+  position: static;
+  display: block;
+  padding: 1rem 2rem;
+  margin-top: 7rem;
+}
+
+.open-menu nav ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.open-menu ul li {
+  border-radius: 0.75rem;
+  margin: 1rem auto;
+  border: solid 0.15rem rgb(255, 255, 255);
+}
+
+.open-menu ul li a {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 0.5rem 4rem;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+/*main*/
+
+main {
+  z-index: 5;
+  max-width: 90%;
+  margin: 1rem auto;
+}
+
+main section {
+  max-width: 150rem;
+  margin: 3rem auto;
+  padding: 2.5rem 4rem;
+  border-radius: 0.5rem;
+  text-transform: none;
+}
+
+main section h3 {
+  font-size: 3rem;
+  padding: 1rem 4rem;
+  color: #fff;
+  text-shadow: none;
+}
+
+main section .History {
+  font-size: 6rem;
+  font-weight: 900;
+  padding: 2rem 2rem;
+  color: #fff;
+}
+
+main section p {
+  font-size: 1.6rem;
+  padding: 2rem;
+  color: #fff;
+}
+
+main section ul li {
+  padding: 2rem;
+  color: #fff;
+}
+
+/*Information*/
+main .information h2 {
+  color: #fff;
+  font-weight: 900;
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-gray-dark),
+    0.5rem 0.5rem 0 var(--color-gray);
+}
+
+main .information div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+main .information div img {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 100%;
+  border: solid 0.2rem var(--color-gray);
+}
+
+main .information div p {
+  padding: 2rem;
+  margin: 5rem 2.5rem;
+  border: solid 0.2rem var(--color-gray);
+  text-align: justify;
+  background-color: #121212;
+  line-height: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+/*Expérience*/
+
+main .experience figure,
+main .information figure {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+}
+
+main .experience figure time {
+  color: var(--color-red);
+}
+
+main .resume {
+  padding: 2rem;
+}
+
+main figure ul li .resume li {
+  text-align: justify;
+  margin: 0.2rem 0.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  background-color: #121212;
+}
+
+main .History {
+  font-weight: 900;
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: auto;
+  padding: 2rem;
+  gap: 4rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+main .experience h2 {
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-red-dark),
+    0.5rem 0.5rem 0 var(--color-red);
+}
+
+main .experience figure ul li h2 {
+  text-shadow: none;
+  text-align: start;
+}
+
+main .experience figure ul li a,
+main .formation figure ul li a {
+  color: #fff;
+}
+
+main .experience figure {
+  display: flex;
+  background-color: #121212;
+  border: solid 0.2rem var(--color-white);
+  min-height: 45rem;
+  padding: 2rem 5rem;
+  min-width: 113rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  margin: 2rem auto;
+}
+
+main section.formation figure ul li i.fa-solid.fa-graduation-cap {
+  font-size: 6rem;
+}
+
+main .experience figure a img {
+  width: 11rem;
+  align-items: center;
+  object-fit: contain;
+  margin: 4rem;
+  border-radius: 0.75rem;
+}
+
+main .experience figure ul.resume {
+  border-radius: 0.5rem;
+  /* margin: 1rem; */
+  align-self: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  transition: all 0.5s ease-in-out;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+main .experience figure ul.resume li {
+  background-color: #000;
+}
+
+main .experience figure ul li {
+  padding: 0.5rem;
+}
+
+/* FORMATION */
+main .formation figure ul {
+  border-radius: 0.5rem;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: solid 0.2rem var(--color-blue);
+  transition: all 0.5s ease-in-out;
+}
+
+main .formation figure {
+  margin: 2rem auto;
+  max-width: 125rem;
+  background-color: #111;
+}
+
+/* TRAVAUX */
+main .travaux figure {
+  display: grid;
+  gap: 2rem;
+  width: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main .travaux figure ul {
+  border-radius: 0.5rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+main .experience ul li h2,
+main .loisir ul li h2,
+main .travaux ul li h2 {
+  font-size: 2.3rem;
+  border-bottom: none;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+main .travaux ul {
+  font-size: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: none;
+  border-radius: 0.5rem;
+  background-color: #121212;
+  text-align: center;
+  border: solid 0.2rem var(--color-green);
+  transition: all 0.5s ease-in-out;
+}
+
+main .loisir ul {
+  font-size: 2.3rem;
+  margin: 2rem;
+  border-bottom: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: #121212;
+  border: solid 0.2rem var(--color-turquoise-dark);
+  transition: all 0.5s ease-in-out;
+}
+
+main .experience ul li img,
+main .formation ul li img {
+  display: block;
+  margin: 0rem auto;
+  padding: 0.5rem;
+  max-height: 10rem;
+  max-width: 10rem;
+  object-fit: cover;
+}
+
+main .loisir ul li h2,
+main .formation ul li h2,
+main .travaux ul li h2,
+main .veille ul li h2 {
+  text-shadow: none;
+}
+
+main .compet h2 {
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-orange-dark),
+    0.5rem 0.5rem 0 var(--color-orange);
+}
+
+main .loisir h2 {
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-turquoise-dark),
+    0.5rem 0.5rem 0 var(--color-turquoise);
+}
+
+main .formation h2 {
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-blue-dark),
+    0.5rem 0.5rem 0 var(--color-blue);
+}
+
+main .travaux h2 {
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-green-dark),
+    0.5rem 0.5rem 0 var(--color-green);
+}
+
+main .veille h2 {
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-purple-dark),
+    0.5rem 0.5rem 0 var(--color-purple);
+}
+
+main .loisir ul li img,
+main .travaux ul li img {
+  max-height: 10rem;
+  max-width: 10rem;
+  object-fit: cover;
+}
+
+/*loisir*/
+
+main .loisir figure {
+  display: grid;
+  gap: 2rem;
+  width: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* veille */
+
+main .veille figure {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+
+main .veille ul li img {
+  max-height: 15rem;
+  max-width: 15rem;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  filter: invert(1);
+}
+
+main .veille {
+  display: block;
+}
+
+main .veille ul {
+  font-size: 2.3rem;
+  margin: 2rem;
+  border-bottom: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: #121212;
+  border: solid 0.2rem var(--color-purple-dark);
+}
+
+/*stat*/
+main .compet ul {
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+main .compet ul li {
+  text-align: center;
+}
+
+main .compet ul li img {
+  object-fit: contain;
+  max-width: 7rem;
+  transition: all ease-in-out 0.4s;
+}
+
+main .compet ul li img:hover {
+  transform: scale(1.2);
+}
+
+main section figure figcaption {
+  text-align: center;
+  margin: 1rem auto auto auto;
+  font-weight: bold;
+}
+
+/*up*/
+
+main .up {
+  position: fixed;
+  max-width: 6rem;
+  padding: 1rem;
+  max-height: 6rem;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+  border: solid 0.2rem #111;
+  transform: rotate(180deg);
+}
+
+/*Footer */
+footer {
+  padding: 5rem 10rem;
+  background-color: #020202;
+}
+
+footer h2 {
+  font-size: 6rem;
+  font-weight: 900;
+  padding: 2rem 2rem;
+  color: #fff;
+  text-shadow:
+    0.25rem 0.25rem 0 var(--color-gray-dark),
+    0.5rem 0.5rem 0 var(--color-gray);
+}
+
+footer .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+footer ul {
+  background-color: #111;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+}
+
+footer ul li {
+  border-radius: 0.75rem;
+  margin: 1rem auto;
+}
+
+footer ul li img {
+  width: 5rem;
+  transition: all ease-in-out 0.4s;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 60rem) {
+  main section #picture {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+
+  header .nav {
+    flex-direction: column;
+  }
+
+  header .nav ul li {
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  header .nav {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  header .burger {
+    padding-top: 1.2rem;
+    padding-left: 1rem;
+    display: block;
+  }
+
+  header {
+    padding: 1rem;
+    text-align: center;
+    background: url(../assets/background3.png) no-repeat scroll center center /
+      cover;
+    /*position: fixed;*/
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 1rem;
+    top: 0;
+  }
+
+  .open-menu {
+    position: fixed;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    transition: all 0.3s;
+    right: 0;
+    visibility: visible;
+  }
+
+  .open-menu nav {
+    position: static;
+    display: block;
+    padding: 1rem;
+    margin-top: 10rem;
+    width: 100%;
+  }
+
+  .open-menu ul li a {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding-top: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  main section {
+    max-width: 150rem;
+    margin: 3rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-transform: none;
+  }
+
+  h3,
+  h2 {
+    text-align: center;
+  }
+
+  main section .History {
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 2rem 2rem;
+    color: #fff;
+  }
+
+  .container li {
+    font-size: 1.4rem;
+  }
+
+  main .experience figure,
+  main .loisir figure,
+  main .travaux figure,
+  main .veille figure {
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main .formation figure {
+    padding: 1rem;
+  }
+
+  main .formation figure ul {
+    display: block;
+    margin: 2rem auto;
+  }
+
+  main .compet ul li {
+    text-align: center;
+    flex: inherit;
+  }
+
+  main .formation figure ul li {
+    text-align: center;
+  }
+
+  footer .contact {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer ul li a img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 3.5rem;
+  }
+
+  footer ul {
+    padding: 1rem;
+  }
+
+  footer .ico {
+    margin: 1rem;
+  }
+
+  footer ul:first-child {
+    border-right: none;
+  }
+
+  footer ul:last-child {
+    border-left: none;
+  }
+
+  .experience > figure h2,
+  .experience > figure ul li {
+    padding: 1rem;
+  }
+
+  .experience > figure > a:nth-child(1) {
+    margin: 0 auto;
+  }
+
+  footer ul li a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  header h1 .material-icons {
+    display: inline-block;
+    padding-right: 2rem;
+  }
+
+  main section .History {
+    padding: 0;
+  }
+
+  main .up {
+    position: fixed;
+    max-width: 4rem;
+    padding: 1rem;
+    max-height: 4rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+    border: solid 0.2rem #111;
+    transform: rotate(180deg);
+  }
+
+  @media screen and (orientation: landscape) {
+    .aside a img {
+      max-width: 5%;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { carousel } from "./components/carousel.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector(".burger");
   const el = document.querySelector("header div");
@@ -6,10 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const toggleMenu = () => {
     el.classList.toggle("open-menu");
+    console.log(btn.innerHTML === "<i class=\"fa-solid fa-bars\"></i>");
     btn.innerHTML =
-      btn.innerHTML === '<i class="fa-solid fa-bars"></i>'
-        ? '<i class="fa-solid fa-x"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+      btn.innerHTML === "<i class=\"fa-solid fa-bars\"></i>"
+        ? "<i class=\"fa-solid fa-x\"></i>"
+        : "<i class=\"fa-solid fa-bars\"></i>";
   };
 
   btn.addEventListener("click", toggleMenu);
@@ -24,57 +27,37 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1000,
     origin: "top",
     distance: "10rem",
-    delay: 100,
+    delay: 100
   });
 
   sr.reveal("main section", {
     duration: 1000,
     origin: "top",
     distance: "5rem",
-    delay: 1,
+    delay: 1
   });
 
-  const carousel = document.querySelector(".carrousel");
-  let isDragging = false;
-  let startPosX = 0;
-  let scrollLeft = 0;
-
-  carousel.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startPosX = e.clientX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-    carousel.style.cursor = "pointer";
-    carousel.style.userSelect = "none";
-  });
-
-  carousel.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    const x = e.clientX - carousel.offsetLeft;
-    const walk = (x - startPosX) * 3;
-    carousel.scrollLeft = scrollLeft - walk;
-  });
-
-  carousel.addEventListener("mouseup", () => {
-    isDragging = false;
-    carousel.style.cursor = "pointer";
-    carousel.style.userSelect = "auto";
-  });
+  if (window.innerWidth > 768) {
+    if (document.querySelector(".carrousel")) {
+      new carousel(".carrousel");
+    }
+  }
 
   skillsEvents();
 });
 
-function skillsEvents() {
-  function events() {
+function skillsEvents () {
+  function events () {
     const categories = document.querySelectorAll(
-      "#skills_section .box .menu .category",
+      "#skills_section .box .menu .category"
     );
     const skillsLists = document.querySelectorAll(
-      "#skills_section .box .box_content .skills_list",
+      "#skills_section .box .box_content .skills_list"
     );
 
-    function choose(i) {
+    function choose (i) {
       const skillSelector = document.querySelector(
-        "#skills_section .box .menu .selector",
+        "#skills_section .box .menu .selector"
       );
       skillSelector.style.top = (100 / categories.length) * i + "%";
 
@@ -91,7 +74,7 @@ function skillsEvents() {
     choose(0);
   }
 
-  function generateSkills(myData) {
+  function generateSkills (myData) {
     const box = document.querySelector("#skills_section .box");
     box.innerHTML = "";
 
