@@ -5,48 +5,34 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
+  <loc>https://portfolio-phil-daiguille.vercel.app/</loc>
+  <lastmod>2024-12-10T17:12:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/views/Travaux.html</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
+  <loc>https://portfolio-phil-daiguille.vercel.app/projet/personnel/</loc>
+  <lastmod>2024-12-10T17:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/views/Atelier_Professionel.html</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
+  <loc>https://portfolio-phil-daiguille.vercel.app/projet/bts-sio/java/</loc>
+  <lastmod>2024-12-10T17:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/views/Dessin.html</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
+  <loc>https://portfolio-phil-daiguille.vercel.app/loisirs/dessin/</loc>
+  <lastmod>2024-12-10T17:12:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/views/Photographie.html</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
+  <loc>https://portfolio-phil-daiguille.vercel.app/loisirs/photographie/</loc>
+  <lastmod>2024-12-10T17:12:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/views/veilleTechno.html</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
+  <loc>https://portfolio-phil-daiguille.vercel.app/blog/</loc>
+  <lastmod>2024-12-10T17:12:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/assets/CV_Philippe_DELENTE_Professionel.pdf</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://proud-ground-079c6f203.5.azurestaticapps.net/index.html</loc>
-  <lastmod>2024-11-09T20:32:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>

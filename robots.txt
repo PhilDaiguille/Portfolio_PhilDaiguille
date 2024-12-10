@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /CV_Philippe_DELENTE_Professionel.pdf
 sitemap: https://portfolio-phil-daiguille.vercel.app/sitemap.xml
