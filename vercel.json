@@ -13,7 +13,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self' https://vercel.live/; script-src 'self' https://www.google-analytics.com https://vercel.live/; style-src 'self' 'unsafe-inline'; img-src 'self' https://bytemeuh-farm.fr https://www.google.com; font-src 'self' https://fonts.googleapis.com; frame-src https://www.youtube-nocookie.com/"
+          "value": "default-src 'self' https://vercel.live/; script-src 'self' https://www.google-analytics.com https://vercel.live/ https://kit.fontawesome.com/afd4b6b3dd.js https://cdn.jsdelivr.net/; style-src 'self' https://cdn.jsdelivr.net/ 'unsafe-inline'; img-src 'self' https://bytemeuh-farm.fr https://www.google.com; font-src 'self' https://fonts.googleapis.com; frame-src https://www.youtube-nocookie.com/"
         },
         {
           "key": "Access-Control-Allow-Origin",

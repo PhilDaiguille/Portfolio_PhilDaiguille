@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Encode Sans', sans-serif;
-    margin: 0;
-    font-weight: 300;
-    background-color: #191c1f;;
+  font-size: 1.6rem;
+  font-family: 'Encode Sans', sans-serif;
+  margin: 0;
+  font-weight: 300;
+  background-color: #191c1f;
 }
 
 h1,
@@ -22,383 +22,384 @@ figure,
 ul,
 ol,
 section {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a,
 button {
-    text-decoration: none;
-    padding: 0;
-    border: 0;
+  text-decoration: none;
+  padding: 0;
+  border: 0;
 }
 
 img {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-defaut: #222;
-    --color-primary: #E8F3E8;
-    --color-secondary: #34495e;
-    --color-tertiaire: #1a3236;
-    --color-defaut: #975102;
-    --color-header: #0A3409;
-
+  --color-defaut: #222;
+  --color-primary: #e8f3e8;
+  --color-secondary: #34495e;
+  --color-tertiaire: #1a3236;
+  --color-defaut: #975102;
+  --color-header: #0a3409;
 }
 
 /* scroll bars */
 * {
-    /* For FF and non-webkit browsers */
-    scrollbar-width: thin;
-    scrollbar-color: #222 #333;
+  /* For FF and non-webkit browsers */
+  scrollbar-width: thin;
+  scrollbar-color: #222 #333;
 }
 
 *::-webkit-scrollbar {
-    width: .2rem;
+  width: 0.2rem;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #222;
-    outline: .1rem solid #191c1f;;
+  background-color: #222;
+  outline: 0.1rem solid #191c1f;
 }
 
 /*theme*/
 header {
-    background-color: #9b59b6;
-    line-height: 6.5rem;
-    border-bottom: solid 0.5rem #8e44ad;
+  background-color: #9b59b6;
+  line-height: 6.5rem;
+  border-bottom: solid 0.5rem #8e44ad;
 }
 
 header h1 {
-    text-align: center;
-    padding: 1rem;
-    color: #fff;
-    text-shadow: 0.25rem 0.25rem 0 #7a3299, .5rem .5rem 0 #64237f;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  text-shadow:
+    0.25rem 0.25rem 0 #7a3299,
+    0.5rem 0.5rem 0 #64237f;
 }
 
 header img {
-    display: inline-block;
-    max-width: 10rem;
-    vertical-align: middle;
-    padding-right: 3rem;
-    filter: invert(1);
+  display: inline-block;
+  max-width: 10rem;
+  vertical-align: middle;
+  padding-right: 3rem;
+  filter: invert(1);
 }
 
 header h1 .material-icons {
-    display: none;
+  display: none;
 }
 
 /*navigation*/
 
 nav ul {
-    position: relative;
-    text-align: center;
-    margin-top: 1rem;
+  position: relative;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 nav ul li {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 auto;
-    padding: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 /*MAIN*/
 main {
-    max-width: 120rem;
-    margin: 4rem auto;
-    padding: 2rem auto;
+  max-width: 120rem;
+  margin: 4rem auto;
+  padding: 2rem auto;
 }
 
 main h2 {
-    font-size: 6rem;
-    text-align: center;
-    color: #fff;
+  font-size: 6rem;
+  text-align: center;
+  color: #fff;
 }
 
 main section {
-    max-width: 110rem;
-    margin: 1rem auto;
-    background-color: #161616;
-    border: solid .2rem #8e44ad;
-    padding: 2rem;
-    box-shadow: 8px 8px 31px #0e0e0e, -8px -8px 31px #000;
-    border-radius: 1.5rem;
+  max-width: 110rem;
+  margin: 1rem auto;
+  background-color: #161616;
+  border: solid 0.2rem #8e44ad;
+  padding: 2rem;
+  box-shadow:
+    8px 8px 31px #0e0e0e,
+    -8px -8px 31px #000;
+  border-radius: 1.5rem;
 
-    color: #fff;
+  color: #fff;
 }
 
 main .def ul li:last-child {
-    font-size: 1.8rem;
-    text-align: justify;
-    padding: 1rem;
-    border-radius: .5rem;
-    background-color: #444;
+  font-size: 1.8rem;
+  text-align: justify;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #444;
 }
 
 main .def figure ul {
-    font-size: 2.3rem;
-    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
-    margin: 2rem;
-    border-bottom: none;
-    border-radius: 0.5rem;
-    text-align: center;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: solid .2rem #8e44ad;
+  font-size: 2.3rem;
+  box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+  margin: 2rem;
+  border-bottom: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 0.2rem #8e44ad;
 }
 
 main section img {
-    display: block;
-    max-width: 40rem;
-    margin: 0 auto;
-    object-fit: cover;
+  display: block;
+  max-width: 40rem;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 main section figure li img {
-    display: inline-block;
-    max-width: 20rem;
-    vertical-align: middle;
-    object-fit: cover;
+  display: inline-block;
+  max-width: 20rem;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
 main .def figure ul li {
-
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 main .def figure ul li a {
-    display: block;
-    position: relative;
+  display: block;
+  position: relative;
 }
 
 main section figure figcaption {
-    display: none;
+  display: none;
 }
 
 main img {
-    border-radius: 1rem;
+  border-radius: 1rem;
 }
 
 main section h2 {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-    text-shadow: 0.25rem 0.25rem 0 #8e44ad, .5rem .5rem 0 #9b59b6;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  text-shadow:
+    0.25rem 0.25rem 0 #8e44ad,
+    0.5rem 0.5rem 0 #9b59b6;
 }
 
 main .def figure {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main .info a {
-    display: block;
-    max-width: 15rem;
-    text-align: center;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: #111;
-    border: solid .2rem #8e44ad;
-    margin: 1rem auto;
-    color: #fff;
-
+  display: block;
+  max-width: 15rem;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #111;
+  border: solid 0.2rem #8e44ad;
+  margin: 1rem auto;
+  color: #fff;
 }
 
 main .def h3 {
-    text-align: center;
+  text-align: center;
 }
 
 main .info h2 {
-    text-align: start;
-    text-shadow: 0.25rem 0.25rem 0 #8a3cac;
-    font-size: 4rem;
+  text-align: start;
+  text-shadow: 0.25rem 0.25rem 0 #8a3cac;
+  font-size: 4rem;
 }
 
 main .info p {
-    text-align: justify;
-    font-size: 1.6rem;
-    margin: 1rem auto;
-    padding: 1rem;
-    border-radius: .5rem;
-    background-color: #34343481;
+  text-align: justify;
+  font-size: 1.6rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #34343481;
 }
 
 main .constrast {
-    display: flex;
-    margin: 1rem auto;
-    justify-content: space-around;
+  display: flex;
+  margin: 1rem auto;
+  justify-content: space-around;
 }
 
 main .UX {
-    max-width: 70rem;
+  max-width: 70rem;
 }
 
 main .constrast li img {
-    max-width: 50rem;
+  max-width: 50rem;
 }
 
 main .source ul li {
-    padding: 1rem;
-    margin: 1rem auto;
-    text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 main .source ul li a {
-    color: #fff;
+  color: #fff;
 }
 
 main .source ul li {
-    background-color: #444;
-    border-radius: 1rem;
+  background-color: #444;
+  border-radius: 1rem;
 }
 
 main .source ul li:nth-child(2n + 1) {
-    background-color: #333;
-    border-radius: 1rem;
+  background-color: #333;
+  border-radius: 1rem;
 }
 
 /*up*/
 main .up {
-    position: fixed;
-    max-width: 6rem;
-    padding: 1rem;
-    max-height: 6rem;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #fafafa;
-    border-radius: .5rem;
-    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
-    border: solid .2rem #111;
-    transform: rotate(180deg);
+  position: fixed;
+  max-width: 6rem;
+  padding: 1rem;
+  max-height: 6rem;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+  border: solid 0.2rem #111;
+  transform: rotate(180deg);
 }
 
 /* Footer */
 footer .contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: .5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.5rem;
 }
 
 footer {
-    color: #fff;
-    background-color: #111;
-    padding: 1rem;
-    border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
+  color: #fff;
+  background-color: #111;
+  padding: 1rem;
+  border-top: solid 0.5rem rgba(0, 0, 0, 0.37);
 }
 
 footer ul {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 footer .tel img,
 footer .mail img,
 footer .cv img,
 footer .link a:nth-child(1) img {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 footer ul:first-child,
 footer ul:nth-child(2) {
-    border-right: solid 0.3rem rgb(255, 255, 255);
+  border-right: solid 0.3rem rgb(255, 255, 255);
 }
 
 footer ul:last-child {
-    border-left: solid 0.3rem rgb(255, 255, 255);
+  border-left: solid 0.3rem rgb(255, 255, 255);
 }
 
 footer ul li {
-    align-items: center;
+  align-items: center;
 }
 
 footer ul li a img {
-    display: inline-block;
-    max-width: 5rem;
-    vertical-align: middle;
-    margin-right: 1rem;
+  display: inline-block;
+  max-width: 5rem;
+  vertical-align: middle;
+  margin-right: 1rem;
 }
 
 footer ul li a {
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
 }
 
 footer p {
-    padding: 1rem;
-    font-size: 1.6rem;
-    text-align: start;
+  padding: 1rem;
+  font-size: 1.6rem;
+  text-align: start;
 }
 
 @media screen and (max-width: 75rem) {
-    main {
-        padding: 1rem;
-    }
+  main {
+    padding: 1rem;
+  }
 
-    main .def figure {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
+  main .def figure {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    footer .contact {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
+  footer .contact {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    footer ul li a img {
-        display: inline-block;
-        vertical-align: middle;
-        max-width: 3.5rem;
-    }
+  footer ul li a img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 3.5rem;
+  }
 
-    footer ul {
-        padding: 1rem;
-    }
+  footer ul {
+    padding: 1rem;
+  }
 
-    footer .ico {
-        margin: 1rem;
-    }
+  footer .ico {
+    margin: 1rem;
+  }
 
-    footer ul:first-child {
+  footer ul:first-child {
+    border-right: none;
+  }
 
-        border-right: none;
-    }
+  footer ul:last-child {
+    border-left: none;
+  }
 
-    footer ul:last-child {
-        border-left: none;
-    }
+  footer ul li a {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-    footer ul li a {
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    main .up {
-        position: fixed;
-        max-width: 4rem;
-        padding: 1rem;
-        max-height: 4rem;
-        bottom: 2rem;
-        right: 2rem;
-        background-color: #fafafa;
-        border-radius: .5rem;
-        box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
-        border: solid .2rem #111;
-        transform: rotate(180deg);
-    }
-
+  main .up {
+    position: fixed;
+    max-width: 4rem;
+    padding: 1rem;
+    max-height: 4rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(47, 47, 47, 0.725);
+    border: solid 0.2rem #111;
+    transform: rotate(180deg);
+  }
 }

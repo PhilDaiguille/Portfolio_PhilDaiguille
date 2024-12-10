@@ -1,36 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-	console.log("loaded");
-	let btn = document.querySelector(".burger");
-	let el = document.querySelector("header div");
-	let date = document.querySelector("footer p");
-	let down = document.querySelector("nav ul");
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('loaded');
+  let btn = document.querySelector('.burger');
+  let el = document.querySelector('header div');
+  let date = document.querySelector('footer p');
+  let down = document.querySelector('nav ul');
 
-	btn.addEventListener("click", () => {
-		el.classList.toggle("open-menu");
-		btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? btn.innerHTML = `<i class="fa-solid fa-x"></i>` : btn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-	});
+  btn.addEventListener('click', () => {
+    el.classList.toggle('open-menu');
+    btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? (btn.innerHTML = `<i class="fa-solid fa-x"></i>`) : (btn.innerHTML = `<i class="fa-solid fa-bars"></i>`);
+  });
 
-	down.addEventListener("click", () => {
-		el.classList.toggle("open-menu");
-		btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? btn.innerHTML = `<i class="fa-solid fa-x"></i>` : btn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-	});
+  down.addEventListener('click', () => {
+    el.classList.toggle('open-menu');
+    btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? (btn.innerHTML = `<i class="fa-solid fa-x"></i>`) : (btn.innerHTML = `<i class="fa-solid fa-bars"></i>`);
+  });
 
-	let dates = new Date();
-	date.innerHTML = `Copyright © ${dates.getFullYear()} - Philippe DELENTE | Tous droits réservés`;
+  let dates = new Date();
+  date.innerHTML = `Copyright © ${dates.getFullYear()} - Philippe DELENTE | Tous droits réservés`;
 
-	const sr = ScrollReveal();
+  const sr = ScrollReveal();
 
-	sr.reveal("header h1, header h2", {
-		duration: 1000,
-		origin: "top",
-		distance: "10rem",
-		delay: 100
-	});
+  sr.reveal('header h1, header h2', {
+    duration: 1000,
+    origin: 'top',
+    distance: '10rem',
+    delay: 100,
+  });
 
-	sr.reveal("main section", {
-		duration: 1000,
-		origin: "top",
-		distance: "5rem",
-		delay: 1
-	});
+  sr.reveal('main section', {
+    duration: 1000,
+    origin: 'top',
+    distance: '5rem',
+    delay: 1,
+  });
 });

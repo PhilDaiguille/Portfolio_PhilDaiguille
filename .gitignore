@@ -6,3 +6,7 @@ package.json
 vite.config.js
 dist
 target
+.idea
+rollup.config.js
+.prettierrc
+.prettierignore
