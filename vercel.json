@@ -48,5 +48,11 @@
     }
   ],
   "trailingSlash": true,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/assets/images/favicon.ico"
+    }
+  ]
 }

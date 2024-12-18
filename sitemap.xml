@@ -5,43 +5,34 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://portfolio-phil-daiguille.vercel.app/</loc>
-  <lastmod>2024-12-12T20:53:50+00:00</lastmod>
+  <lastmod>2024-12-18T10:22:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://portfolio-phil-daiguille.vercel.app/projet/personnel/</loc>
-  <lastmod>2024-12-12T20:53:51+00:00</lastmod>
+  <lastmod>2024-12-18T10:22:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portfolio-phil-daiguille.vercel.app/projet/bts-sio/java/</loc>
-  <lastmod>2024-12-12T20:53:51+00:00</lastmod>
+  <lastmod>2024-12-18T10:22:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portfolio-phil-daiguille.vercel.app/loisirs/dessin/</loc>
-  <lastmod>2024-12-12T20:53:51+00:00</lastmod>
+  <lastmod>2024-12-18T10:22:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portfolio-phil-daiguille.vercel.app/loisirs/photographie/</loc>
-  <lastmod>2024-12-12T20:53:51+00:00</lastmod>
+  <lastmod>2024-12-18T10:22:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://portfolio-phil-daiguille.vercel.app/blog/</loc>
-  <lastmod>2024-12-12T20:53:51+00:00</lastmod>
+  <lastmod>2024-12-18T10:22:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://portfolio-phil-daiguille.vercel.app/assets/CV_Philippe_DELENTE_Professionel.pdf</loc>
-  <lastmod>2024-12-12T20:53:52+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
 </urlset>
