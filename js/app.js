@@ -1,19 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('loaded');
-  let btn = document.querySelector('.burger');
-  let el = document.querySelector('header div');
   let date = document.querySelector('footer p');
-  let down = document.querySelector('nav ul');
-
-  btn.addEventListener('click', () => {
-    el.classList.toggle('open-menu');
-    btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? (btn.innerHTML = `<i class="fa-solid fa-x"></i>`) : (btn.innerHTML = `<i class="fa-solid fa-bars"></i>`);
-  });
-
-  down.addEventListener('click', () => {
-    el.classList.toggle('open-menu');
-    btn.innerHTML === `<i class="fa-solid fa-bars"></i>` ? (btn.innerHTML = `<i class="fa-solid fa-x"></i>`) : (btn.innerHTML = `<i class="fa-solid fa-bars"></i>`);
-  });
 
   let dates = new Date();
   date.innerHTML = `Copyright © ${dates.getFullYear()} - Philippe DELENTE | Tous droits réservés`;

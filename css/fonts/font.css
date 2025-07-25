@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'TuskerGrotesk';
+    src: url('../TuskerGrotesk/TuskerGrotesk-Regular.woff2') format('woff2'),
+        url('../TuskerGrotesk/TuskerGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Utilisation de la police */
+body,
+.tusker-grotesk {
+    font-family: 'TuskerGrotesk', Arial, sans-serif;
+}
