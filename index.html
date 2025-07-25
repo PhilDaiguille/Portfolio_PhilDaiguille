@@ -29,32 +29,56 @@
   </head>
   <body class="">
     <header>
-      <h1>Philippe DELENTE</h1>
-      <h2>Développeur Front-End</h2>
-      <span class="burger"><i class="fa-solid fa-bars"></i></span>
-      <div class="close-menu">
+      <div class="sticky">
+        <div>
+          <h1>Philippe DELENTE</h1>
+          <h2>Développeur Web</h2>
+        </div>
         <nav>
           <ul>
             <li><a href="#Experience">Expérience</a></li>
             <li><a href="#Compétences">Compétences</a></li>
             <li><a href="#Formation">Formation</a></li>
             <li><a href="#travaux">Travaux</a></li>
-            <li><a href="#Loisirs">Loisirs</a></li>
-            <li><a href="#Veille">Veille Technologique</a></li>
             <li><a href="#Contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div>
+          <h3>Développeur<span class="com">&</span></h3>
+          <h3>Créatif</h3>
+        </div>
+        <div class="content">
+          <p>Je suis développeur web passionné, spécialisé dans le web en tout genre. J’aime allier art et code pour concevoir des expériences UX/UI uniques.</p>
+          <a href="#Contact" class="btn-contact">Contactez moi</a>
+        </div>
+      </section>
       <!-- Information -->
       <section class="information">
-        <h2 id="info" class="History">Qui suis-je</h2>
-        <p>
-          Je m'appelle Philippe Delente, j'ai 20 ans et je développe des choses sur mon temps libre. <br />
-          J'adore mélanger l'art et la programmation et je suis toujours à la recherche de nouveaux défis. J'ai fait des sites web, des script Python, de la photo et du dessin. Je m'intéresse beaucoup à l'UX et à l'UI.<br />
-          Ayant un BAC +2 avec un BTS SIO, je suis attentif aux offres d'emplois.
-        </p>
+        <div>
+          <h2 id="info" class="History">Qui suis-je</h2>
+          <div class="content">
+            <p>
+              Je m'appelle Philippe Delente, je suis un développeur web passionné de 23 ans, spécialisé dans la création de sites web et d'applications. En dehors de mon travail, je développe divers projets during mon temps libre, allant des scripts Python à
+              la photographie et au dessin.
+            </p>
+            <p>
+              J'adore combiner l'art et la programmation pour créer des expériences utilisateur (UX) et des interfaces utilisateur (UI) innovantes. Je suis toujours à la recherche de nouveaux défis pour repousser les limites de la créativité et de la
+              technologie.
+            </p>
+            <p>
+              Avec un Bachelor en Ingénierie du Web (BAC +3), je suis attentif aux offres d'emploi dans le domaine du développement web et de la conception UX/UI. Mon objectif est de contribuer à des projets ambitieux où je peux appliquer mes compétences
+              techniques et artistiques.
+            </p>
+          </div>
+        </div>
+        <div>
+          <img src="./assets/pp.png" alt="Philippe Delente" />
+        </div>
       </section>
       <!--Experience-->
       <section class="experience">
@@ -85,15 +109,6 @@
               <h2> <time datetime="2021">2021</time> • Developpeur • Stage </h2>
             </li>
             <li>www.nutri-animale.com • Conseil en alimentation (Autoentrepreneur)</li>
-            <li>
-              <ul class="resume">
-                <li>Cahier des charges simple pour un site web indépendant</li>
-                <li>Analyser l'existant et collecter les besoins de l'autoentrepreneur</li>
-                <li>Moderniser le design</li>
-                <li>Proposer des axes d'amélioration / accessibilités</li>
-                <li>Développer un site web et "mobile responsive"</li>
-              </ul>
-            </li>
           </ul>
         </figure>
         <figure>
@@ -103,13 +118,6 @@
               <h2> <time datetime="2018">2018</time> • Assistant Informatique • Stage </h2>
             </li>
             <li> Taxi G7 • Groupe Rousselet, 92 Clichy (Effectifs : 280) </li>
-            <li>
-              <ul class="resume">
-                <li>Recetter des applications / messagerie vocale</li>
-                <li>Maintenance informatique</li>
-                <li>Traiter les tickets des collaborateurs</li>
-              </ul>
-            </li>
           </ul>
         </figure>
         <figure>
@@ -119,12 +127,6 @@
               <h2> <time datetime="2017">2017</time> • Assistant Technicien Informatique • Stage </h2>
             </li>
             <li> Mairie de Charenton, 94 Charenton-le-Pont (Effectifs service : 5) </li>
-            <li>
-              <ul class="resume">
-                <li>Mettre en place et remplacer du matériel informatique</li>
-                <li>Dépanner le réseau informatique</li>
-              </ul>
-            </li>
           </ul>
         </figure>
       </section>
@@ -404,7 +406,6 @@
       </section>
       <a href="#"><img src="./assets/arrow.png" class="up" alt="up" /></a>
     </main>
-
     <footer id="Contact">
       <h2 class="History">Contact</h2>
       <section class="contact">
