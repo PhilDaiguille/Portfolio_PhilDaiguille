@@ -6,7 +6,7 @@
 
 Je suis actuellement en 2ème Année de BTS option SIO ( Services Informatique aux Organisations ) .
 
-![Reamde](./assets/Readme.png)
+![Reamde](./assets/Readme.webp)
 
 - Pour voir le portfolio en question : **[PhilDaiguille](https://phildaiguille.github.io/Portfolio_PhilDaiguille/)**.
 
