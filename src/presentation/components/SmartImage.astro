@@ -1,0 +1,21 @@
+---
+// Renders a build-time-optimized <Image> for local assets, or a plain <img> for remote URLs.
+import { Image } from 'astro:assets';
+import type { ImageSource } from '../../domain/portfolio';
+
+interface Props {
+  src: ImageSource;
+  alt: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { src, alt, class: className, loading } = Astro.props;
+const isLocal = typeof src !== 'string';
+---
+
+{isLocal ? (
+  <Image src={src as any} alt={alt} class={className} loading={loading} />
+) : (
+  <img src={src as string} alt={alt} class={className} loading={loading} />
+)}

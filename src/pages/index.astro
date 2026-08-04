@@ -1,0 +1,204 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SmartImage from '../presentation/components/SmartImage.astro';
+import { getHomeContent } from '../application/getHomeContent';
+import profilePicture from '../assets/images/pp.webp';
+
+const { experiences, skillGroups, education, travaux, seoProject, loisirs, veille, navLinks } = getHomeContent();
+---
+
+<BaseLayout
+  title="Philippe Delente - Développeur Web Front-End & Back-End"
+  description="Explorez le portfolio de Philippe Delente, développeur web spécialisé en HTML, CSS, JS, PHP. Découvrez mes projets sur GitHub et PhilDaiguille."
+  canonical="https://phildaiguille.fr/"
+  stylesheet="/css/app.css"
+  ogImage="https://phildaiguille.fr/assets/android-chrome-192x192.webp"
+  fullSeo
+  showCv
+>
+  <Fragment slot="header">
+    <header>
+      <div class="sticky">
+        <div>
+          <h1>Philippe DELENTE</h1>
+          <h2>Développeur Web</h2>
+        </div>
+        <nav>
+          <ul>
+            {navLinks.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </Fragment>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h3>Développeur<span class="com">&</span></h3>
+      <h3>Créatif</h3>
+    </div>
+    <div class="content">
+      <p>Je suis développeur web passionné, spécialisé dans le web en tout genre. J'aime allier art et code pour concevoir des expériences UX/UI uniques.</p>
+      <a href="#Contact" class="btn-contact">Contactez moi</a>
+    </div>
+  </section>
+
+  <!-- Information -->
+  <section class="information">
+    <div>
+      <h2 id="info" class="History">Qui suis-je</h2>
+      <div class="content">
+        <p>
+          Je m'appelle Philippe Delente, je suis un développeur web passionné de 23 ans, spécialisé dans la création de sites web et d'applications. En dehors de mon travail, je développe divers projets during mon temps libre, allant des scripts Python à
+          la photographie et au dessin.
+        </p>
+        <p>
+          J'adore combiner l'art et la programmation pour créer des expériences utilisateur (UX) et des interfaces utilisateur (UI) innovantes. Je suis toujours à la recherche de nouveaux défis pour repousser les limites de la créativité et de la
+          technologie.
+        </p>
+        <p>
+          Avec un Bachelor en Ingénierie du Web (BAC +3), je suis attentif aux offres d'emploi dans le domaine du développement web et de la conception UX/UI. Mon objectif est de contribuer à des projets ambitieux où je peux appliquer mes compétences
+          techniques et artistiques.
+        </p>
+      </div>
+    </div>
+    <div>
+      <Image src={profilePicture} alt="" />
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience">
+    <h2 id="Experience" class="History">Expérience</h2>
+    {experiences.map((exp) => (
+      <figure>
+        <a href={exp.link}><SmartImage src={exp.logo} alt="" /></a>
+        <ul>
+          <li>
+            <h2> <time datetime={exp.year}>{exp.year}</time> • {exp.role} </h2>
+          </li>
+          <li>{exp.organization}</li>
+          {exp.details && (
+            <li>
+              <ul class="resume">
+                {exp.details.map((detail) => <li>{detail}</li>)}
+              </ul>
+            </li>
+          )}
+        </ul>
+      </figure>
+    ))}
+  </section>
+
+  <!-- Compétences -->
+  <section class="compet">
+    <h2 id="Compétences" class="History">Compétences</h2>
+    {skillGroups.map((group) => (
+      <>
+        <h3>{group.title}</h3>
+        <ul>
+          {group.skills.map((skill) => (
+            <li>
+              <figure>
+                <img src={skill.icon} alt="" />
+                <figcaption>{skill.name}</figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
+  </section>
+
+  <!-- Formation -->
+  <section class="formation">
+    <h2 id="Formation" class="History">Formation</h2>
+    <figure>
+      {education.map((item) => (
+        <ul>
+          <li><i class="fa-solid fa-graduation-cap"></i></li>
+          <li>
+            <h2>{item.title}</h2>
+            <p>{item.school}</p>
+          </li>
+        </ul>
+      ))}
+    </figure>
+  </section>
+
+  <!-- Travaux -->
+  <section class="travaux">
+    <h2 id="travaux" class="History">Travaux</h2>
+    <figure>
+      {travaux.map((item) => (
+        <ul>
+          <li>
+            <h2>{item.title}</h2>
+          </li>
+          <li>
+            <a href={item.href}><Image src={item.image!} alt="" /></a>
+          </li>
+        </ul>
+      ))}
+      <ul>
+        <li>
+          <h2>Projet SEO</h2>
+          <ul>
+            <li><a target="_blank" href={seoProject.href}>{seoProject.title}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </figure>
+  </section>
+
+  <!-- Loisirs -->
+  <section class="loisir">
+    <h2 id="Loisirs" class="History">Loisirs</h2>
+    <figure>
+      {loisirs.map((item) => (
+        <ul>
+          <li>
+            <h2>{item.title}</h2>
+          </li>
+          <li>
+            <a href={item.href}><Image src={item.image!} alt="" /></a>
+          </li>
+        </ul>
+      ))}
+    </figure>
+  </section>
+
+  <!-- Veille -->
+  <section class="veille">
+    <h2 id="Veille" class="History">Veille Technologique</h2>
+    <figure>
+      <ul>
+        <li>
+          <h2>{veille.title}</h2>
+        </li>
+        <li>
+          <a href={veille.href}><Image src={veille.image!} alt="" /></a>
+        </li>
+      </ul>
+    </figure>
+  </section>
+
+  <Fragment slot="scripts">
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
+      integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script is:inline>
+      const sr = ScrollReveal();
+      sr.reveal('header h1, header h2', { duration: 1000, origin: 'top', distance: '10rem', delay: 100 });
+      sr.reveal('main section', { duration: 1000, origin: 'top', distance: '5rem', delay: 1 });
+    </script>
+  </Fragment>
+</BaseLayout>

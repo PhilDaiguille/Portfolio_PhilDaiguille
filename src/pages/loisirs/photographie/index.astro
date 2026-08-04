@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SimpleHeader from '../../../presentation/components/SimpleHeader.astro';
+import photoIcon from '../../../assets/images/assetexp/photo.webp';
+
+const photoOrder = ['IMG_0645', 'IMG_0650', 'IMG_0651', 'IMG_1088', 'IMG_0436', 'IMG_0458', 'IMG_1421', 'IMG_1428'];
+const photoModules = import.meta.glob<{ default: ImageMetadata }>('../../../assets/images/assetphoto/*.webp', { eager: true });
+const photos = photoOrder.map((name) => photoModules[`../../../assets/images/assetphoto/${name}.webp`].default);
+---
+
+<BaseLayout title="Photographie" description="Portfolio" canonical="https://phildaiguille.fr/loisirs/photographie/" stylesheet="/css/loisirs.css">
+  <SimpleHeader slot="header" href="/#Loisirs" icon={photoIcon}>Portfolio - Photographie</SimpleHeader>
+
+  <ul>
+    {photos.map((photo) => (
+      <li>
+        <Image src={photo} alt="" loading="lazy" />
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

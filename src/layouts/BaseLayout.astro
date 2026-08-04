@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import SiteHead from '../presentation/components/SiteHead.astro';
+import Footer from '../presentation/components/Footer.astro';
+import arrowIcon from '../assets/images/arrow.webp';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  stylesheet: string;
+  ogImage?: string;
+  fullSeo?: boolean;
+  showCv?: boolean;
+  showScrollTop?: boolean;
+}
+
+const { title, description, canonical, stylesheet, ogImage, fullSeo = false, showCv = false, showScrollTop = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <SiteHead title={title} description={description} canonical={canonical} stylesheet={stylesheet} ogImage={ogImage} fullSeo={fullSeo} />
+    <slot name="head" />
+  </head>
+  <body>
+    <slot name="header" />
+    <main>
+      <slot />
+      {showScrollTop && <a href="#"><Image src={arrowIcon} class="up" alt="" /></a>}
+    </main>
+    <Footer showCv={showCv} />
+    <slot name="scripts" />
+  </body>
+</html>

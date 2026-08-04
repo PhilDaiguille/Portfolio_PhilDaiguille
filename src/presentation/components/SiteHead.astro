@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  stylesheet: string;
+  ogImage?: string;
+  fullSeo?: boolean;
+}
+
+const { title, description, canonical, stylesheet, ogImage, fullSeo = false } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+{fullSeo && <meta name="robots" content="index" />}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+{fullSeo && (
+  <>
+    <meta name="keywords" content="Philippe Delente, développeur web, front-end, back-end, HTML, CSS, JS, PHP, portfolio, GitHub, PhilDaiguille" />
+    <meta name="author" content="Philippe Delente" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="google-site-verification" content="ZFL8bBryJYfgWtG-apury9RwKi3DaawQOL5ZTTMrMs0" />
+  </>
+)}
+<link rel="stylesheet" href={stylesheet} />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.webp" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.webp" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.webp" />
+<link rel="manifest" href="/assets/site.webmanifest" />
+{fullSeo && <script async src="https://kit.fontawesome.com/afd4b6b3dd.js" crossorigin="anonymous"></script>}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link rel="canonical" href={canonical} />
