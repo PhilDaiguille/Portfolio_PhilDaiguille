@@ -1,6 +1,6 @@
 /*reset*/
 
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap");
 
 html {
   font-size: 62.5%;
@@ -9,7 +9,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Encode Sans', sans-serif;
+  font-family: "Encode Sans", sans-serif;
   margin: 0;
   font-weight: 300;
   background-color: #191c1f;

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import './partials/normalize.css';
-@import './partials/reset.css';
-@import './fonts/font.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./partials/normalize.css";
+@import "./partials/reset.css";
+@import "./fonts/font.css";
 
 @font-face {
-  font-family: 'Tusker Grotesk';
+  font-family: "Tusker Grotesk";
   font-style: normal;
-  src: url('./fonts/TuskerGrotesk-2600Semibold.woff2') format('woff2');
+  src: url("./fonts/TuskerGrotesk-2600Semibold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
 }
@@ -18,7 +18,7 @@ html {
 
 body {
   font:
-    1.6rem 'Montserrat',
+    1.6rem "Montserrat",
     sans-serif;
   margin: 0;
   font-optical-sizing: auto;
@@ -78,7 +78,7 @@ img {
   --color-turquoise-dark: #049f83;
   --color-purple: #962eb7;
   --color-purple-dark: #8a1eae;
-  --font-title: 'Tusker Grotesk', sans-serif;
+  --font-title: "Tusker Grotesk", sans-serif;
 }
 
 /* scroll bars */
@@ -234,7 +234,7 @@ main section ul li {
     font-size: 4rem;
     margin-left: 1rem;
     font-style: italic;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 }
 
@@ -379,7 +379,7 @@ main .experience h2 {
 main .experience figure ul li h2 {
   text-shadow: none;
   text-align: start;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 main .experience figure ul li a,
