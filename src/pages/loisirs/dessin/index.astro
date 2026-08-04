@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SimpleHeader from '../../../presentation/components/SimpleHeader.astro';
+import designIcon from '../../../assets/images/assetexp/design.webp';
+import dessin1 from '../../../assets/images/assetdessin/dessin1.webp';
+import dessin2 from '../../../assets/images/assetdessin/dessin2.webp';
+import dessin3 from '../../../assets/images/assetdessin/dessin3.webp';
+
+const drawings = [
+  { src: dessin1, title: "L'ornicool" },
+  { src: dessin2, title: 'Femme' },
+  { src: dessin3, title: 'Cosmos' },
+];
+---
+
+<BaseLayout title="Dessin" description="Portfolio" canonical="https://phildaiguille.fr/loisirs/dessin/" stylesheet="/css/loisirs.css">
+  <SimpleHeader slot="header" href="/#Loisirs" icon={designIcon}> Portfolio - Art Numérique</SimpleHeader>
+
+  {drawings.map((drawing) => (
+    <figure>
+      <Image src={drawing.src} alt="" loading="lazy" />
+      <figcaption>
+        <h2>{drawing.title}</h2>
+      </figcaption>
+    </figure>
+  ))}
+</BaseLayout>

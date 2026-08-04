@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import { getContactInfo, getCopyrightYear } from '../../application/getSiteInfo';
+import phoneIcon from '../../assets/images/telephone_icon-icons.com_65394.webp';
+import cvIcon from '../../assets/images/assetexp/resume_business_cv_work_job_curriculum_icon_175611.webp';
+import mailIcon from '../../assets/images/1904660-email-envelope-letter-mail-message-post-send_122510.webp';
+
+interface Props {
+  showCv?: boolean;
+}
+
+const { showCv = false } = Astro.props;
+const { phone, phoneHref, email, emailHref, cvHref, socialLinks } = getContactInfo();
+const year = getCopyrightYear();
+---
+
+<footer id="Contact">
+  {showCv && <h2 class="History">Contact</h2>}
+  <section class="contact" role={showCv ? undefined : 'region'}>
+    <ul class="tel">
+      <li>
+        <a href={phoneHref}> <Image src={phoneIcon} alt="" /> {phone}</a>
+      </li>
+    </ul>
+    {showCv && (
+      <ul class="cv">
+        <li>
+          <a href={cvHref} target="_blank">
+            <Image src={cvIcon} alt="" />
+            CV
+          </a>
+        </li>
+      </ul>
+    )}
+    <ul class="ico">
+      <li>
+        <address class="link">
+          {socialLinks.map((social) => (
+            <a href={social.href} target="blank">
+              <img src={social.icon} alt="" />
+            </a>
+          ))}
+        </address>
+      </li>
+    </ul>
+    <ul class="mail">
+      <li>
+        <a href={emailHref}><Image src={mailIcon} alt="" />{email}</a>
+      </li>
+    </ul>
+  </section>
+  <hr />
+  <p>Copyright &copy; {year} - Philippe DELENTE</p>
+</footer>
