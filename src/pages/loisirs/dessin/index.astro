@@ -14,12 +14,12 @@ const drawings = [
 ];
 ---
 
-<BaseLayout title="Dessin" description="Portfolio" canonical="https://phildaiguille.fr/loisirs/dessin/" stylesheet="/css/loisirs.css">
+<BaseLayout title="Dessin — Philippe Delente" description="Galerie de mes dessins et illustrations, entre art traditionnel et création numérique." stylesheet="/css/loisirs.css">
   <SimpleHeader slot="header" href="/#Loisirs" icon={designIcon}> Portfolio - Art Numérique</SimpleHeader>
 
   {drawings.map((drawing) => (
     <figure>
-      <Image src={drawing.src} alt="" loading="lazy" />
+      <Image src={drawing.src} alt={`Dessin « ${drawing.title} » par Philippe Delente`} loading="lazy" />
       <figcaption>
         <h2>{drawing.title}</h2>
       </figcaption>

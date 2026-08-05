@@ -1,12 +1,12 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SmartImage from '../../../presentation/components/SmartImage.astro';
 import { getCarouselProjects } from '../../../application/getCarouselProjects';
 
 const projects = getCarouselProjects();
 ---
 
-<BaseLayout title="Travaux" description="Portfolio" canonical="https://phildaiguille.fr/projet/personnel/" stylesheet="/css/Travaux.css" showScrollTop={false}>
+<BaseLayout title="Projets personnels — Philippe Delente" description="Mes projets web personnels : sites, applications et expérimentations front-end et back-end." stylesheet="/css/Travaux.css" showScrollTop={false}>
   <Fragment slot="head">
     <link
       rel="stylesheet"
@@ -30,8 +30,8 @@ const projects = getCarouselProjects();
       {projects.map((project) => (
         <section class="swiper-slide">
           <h2>{project.title}</h2>
-          <Image src={project.image} alt="" />
-          <p><a href={project.href}>Voir Projet</a></p>
+          <SmartImage src={project.image} alt={`Aperçu du projet ${project.title}`} />
+          <p><a href={project.href}>Voir le projet {project.title}</a></p>
         </section>
       ))}
     </div>

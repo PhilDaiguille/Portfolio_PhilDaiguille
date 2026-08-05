@@ -9,13 +9,13 @@ const photoModules = import.meta.glob<{ default: ImageMetadata }>('../../../asse
 const photos = photoOrder.map((name) => photoModules[`../../../assets/images/assetphoto/${name}.webp`].default);
 ---
 
-<BaseLayout title="Photographie" description="Portfolio" canonical="https://phildaiguille.fr/loisirs/photographie/" stylesheet="/css/loisirs.css">
+<BaseLayout title="Photographie — Philippe Delente" description="Sélection de mes photographies : paysages, portraits et scènes urbaines." stylesheet="/css/loisirs.css">
   <SimpleHeader slot="header" href="/#Loisirs" icon={photoIcon}>Portfolio - Photographie</SimpleHeader>
 
   <ul>
-    {photos.map((photo) => (
+    {photos.map((photo, i) => (
       <li>
-        <Image src={photo} alt="" loading="lazy" />
+        <Image src={photo} alt={`Photographie ${i + 1} de Philippe Delente`} loading="lazy" />
       </li>
     ))}
   </ul>

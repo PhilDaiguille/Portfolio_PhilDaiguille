@@ -15,7 +15,7 @@ const isLocal = typeof src !== 'string';
 ---
 
 {isLocal ? (
-  <Image src={src as any} alt={alt} class={className} loading={loading} />
+  <Image src={src} alt={alt} class={className} loading={loading} />
 ) : (
   <img src={src as string} alt={alt} class={className} loading={loading} />
 )}
