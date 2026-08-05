@@ -2,7 +2,7 @@
 import { experiences } from "../infrastructure/data/experiences";
 import { skillGroups } from "../infrastructure/data/skills";
 import { education } from "../infrastructure/data/education";
-import { travaux, seoProject, loisirs, veille } from "../infrastructure/data/showcase";
+import { travaux, loisirs, veille } from "../infrastructure/data/showcase";
 import { homeNavLinks } from "../infrastructure/data/nav-links";
 
 export function getHomeContent() {
@@ -11,7 +11,6 @@ export function getHomeContent() {
     skillGroups,
     education,
     travaux,
-    seoProject,
     loisirs,
     veille,
     navLinks: homeNavLinks,

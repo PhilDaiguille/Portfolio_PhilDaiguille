@@ -11,15 +11,17 @@
     "lint:fix": "oxlint --fix",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "fix": "oxlint --fix && oxfmt --fix"
+    "fix": "oxlint --fix && oxfmt"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.1.6"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "oxfmt": "^0.62.0",
-    "oxlint": "^1.77.0"
+    "oxlint": "^1.77.0",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=22.12.0"

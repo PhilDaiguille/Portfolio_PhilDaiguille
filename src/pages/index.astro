@@ -5,15 +5,14 @@ import SmartImage from '../presentation/components/SmartImage.astro';
 import { getHomeContent } from '../application/getHomeContent';
 import profilePicture from '../assets/images/pp.webp';
 
-const { experiences, skillGroups, education, travaux, seoProject, loisirs, veille, navLinks } = getHomeContent();
+const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks } = getHomeContent();
 ---
 
 <BaseLayout
   title="Philippe Delente - Développeur Web Front-End & Back-End"
   description="Explorez le portfolio de Philippe Delente, développeur web spécialisé en HTML, CSS, JS, PHP. Découvrez mes projets sur GitHub et PhilDaiguille."
-  canonical="https://phildaiguille.fr/"
   stylesheet="/css/app.css"
-  ogImage="https://phildaiguille.fr/assets/android-chrome-192x192.webp"
+  ogImage="/assets/android-chrome-512x512.webp"
   fullSeo
   showCv
 >
@@ -53,7 +52,7 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
       <h2 id="info" class="History">Qui suis-je</h2>
       <div class="content">
         <p>
-          Je m'appelle Philippe Delente, je suis un développeur web passionné de 23 ans, spécialisé dans la création de sites web et d'applications. En dehors de mon travail, je développe divers projets during mon temps libre, allant des scripts Python à
+          Je m'appelle Philippe Delente, je suis un développeur web passionné de 23 ans, spécialisé dans la création de sites web et d'applications. En dehors de mon travail, je développe divers projets durant mon temps libre, allant des scripts Python à
           la photographie et au dessin.
         </p>
         <p>
@@ -67,7 +66,7 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
       </div>
     </div>
     <div>
-      <Image src={profilePicture} alt="" />
+      <Image src={profilePicture} alt="Portrait de Philippe Delente, développeur web" />
     </div>
   </section>
 
@@ -76,7 +75,7 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
     <h2 id="Experience" class="History">Expérience</h2>
     {experiences.map((exp) => (
       <figure>
-        <a href={exp.link}><SmartImage src={exp.logo} alt="" /></a>
+        <a href={exp.link}><SmartImage src={exp.logo} alt={`Logo ${exp.organization}`} /></a>
         <ul>
           <li>
             <h2> <time datetime={exp.year}>{exp.year}</time> • {exp.role} </h2>
@@ -104,7 +103,7 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
           {group.skills.map((skill) => (
             <li>
               <figure>
-                <img src={skill.icon} alt="" />
+                <img src={skill.icon} alt={`Logo ${skill.name}`} width="64" height="64" loading="lazy" />
                 <figcaption>{skill.name}</figcaption>
               </figure>
             </li>
@@ -140,18 +139,10 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
             <h2>{item.title}</h2>
           </li>
           <li>
-            <a href={item.href}><Image src={item.image!} alt="" /></a>
+            <a href={item.href}><SmartImage src={item.image!} alt={`Aperçu du projet ${item.title}`} /></a>
           </li>
         </ul>
       ))}
-      <ul>
-        <li>
-          <h2>Projet SEO</h2>
-          <ul>
-            <li><a target="_blank" href={seoProject.href}>{seoProject.title}</a></li>
-          </ul>
-        </li>
-      </ul>
     </figure>
   </section>
 
@@ -165,7 +156,7 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
             <h2>{item.title}</h2>
           </li>
           <li>
-            <a href={item.href}><Image src={item.image!} alt="" /></a>
+            <a href={item.href}><SmartImage src={item.image!} alt={`Aperçu : ${item.title}`} /></a>
           </li>
         </ul>
       ))}
@@ -181,7 +172,7 @@ const { experiences, skillGroups, education, travaux, seoProject, loisirs, veill
           <h2>{veille.title}</h2>
         </li>
         <li>
-          <a href={veille.href}><Image src={veille.image!} alt="" /></a>
+          <a href={veille.href}><SmartImage src={veille.image!} alt={`Aperçu : ${veille.title}`} /></a>
         </li>
       </ul>
     </figure>

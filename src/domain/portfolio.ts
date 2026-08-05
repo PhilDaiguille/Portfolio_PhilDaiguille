@@ -1,15 +1,11 @@
 // Domain: pure business models, no framework dependency.
 
-/** Metadata of a locally imported, build-time-optimizable image. */
-export interface LocalImage {
-  src: string;
-  width: number;
-  height: number;
-  format: string;
-}
-
-/** A local optimizable image, or a remote URL string. */
-export type ImageSource = LocalImage | string;
+/**
+ * A local optimizable image, or a remote URL string.
+ * `ImageMetadata` is Astro's ambient global for imported images — ne pas le redéclarer,
+ * son champ `format` est une union littérale que `<Image>` exige.
+ */
+export type ImageSource = ImageMetadata | string;
 
 export interface SocialLink {
   label: string;

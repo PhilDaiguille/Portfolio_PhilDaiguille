@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/*
-sitemap: https://phildaiguille.fr/sitemap.xml
+
+Sitemap: https://www.phildaiguille.fr/sitemap-index.xml

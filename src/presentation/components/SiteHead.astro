@@ -2,41 +2,82 @@
 interface Props {
   title: string;
   description: string;
-  canonical: string;
   stylesheet: string;
   ogImage?: string;
+  /** Emits verification, JSON-LD and FontAwesome — home page only. */
   fullSeo?: boolean;
 }
 
-const { title, description, canonical, stylesheet, ogImage, fullSeo = false } = Astro.props;
+import { socialLinks } from '../../infrastructure/data/social-links';
+
+const { title, description, stylesheet, ogImage, fullSeo = false } = Astro.props;
+
+// ponytail: canonical derived from the request URL, never hand-written per page.
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = new URL(ogImage ?? '/assets/android-chrome-512x512.webp', Astro.site).href;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Philippe Delente',
+  alternateName: 'PhilDaiguille',
+  url: Astro.site?.href,
+  image: ogImageUrl,
+  jobTitle: 'Développeur Web Front-End & Back-End',
+  email: 'mailto:philippe.delente@gmail.com',
+  telephone: '+33783544539',
+  address: { '@type': 'PostalAddress', addressCountry: 'FR' },
+  knowsAbout: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Java', 'SQL', 'UX/UI Design'],
+  sameAs: socialLinks.map((s) => s.href),
+};
+
+// ponytail: fil d'Ariane à deux niveaux (Accueil > page). Les segments intermédiaires
+// (/projet/, /projet/bts-sio/) n'existent pas comme pages, donc rien à lister entre les deux.
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: Astro.site?.href },
+    { '@type': 'ListItem', position: 2, name: title.split('—')[0].trim(), item: canonical },
+  ],
+};
 ---
 
 <meta charset="UTF-8" />
-{fullSeo && <meta name="robots" content="index" />}
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{title}</title>
 <meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Philippe Delente" />
+
+<meta property="og:type" content={fullSeo ? 'profile' : 'website'} />
+<meta property="og:site_name" content="Philippe Delente — Portfolio" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:url" content={canonical} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+{!fullSeo && <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />}
+
 {fullSeo && (
   <>
-    <meta name="keywords" content="Philippe Delente, développeur web, front-end, back-end, HTML, CSS, JS, PHP, portfolio, GitHub, PhilDaiguille" />
-    <meta name="author" content="Philippe Delente" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
     <meta name="google-site-verification" content="ZFL8bBryJYfgWtG-apury9RwKi3DaawQOL5ZTTMrMs0" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
+    <script async src="https://kit.fontawesome.com/afd4b6b3dd.js" crossorigin="anonymous"></script>
   </>
 )}
+
 <link rel="stylesheet" href={stylesheet} />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.webp" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.webp" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.webp" />
-<link rel="manifest" href="/assets/site.webmanifest" />
-{fullSeo && <script async src="https://kit.fontawesome.com/afd4b6b3dd.js" crossorigin="anonymous"></script>}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-<link rel="canonical" href={canonical} />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.webp" />
+<link rel="icon" type="image/webp" sizes="32x32" href="/assets/favicon-32x32.webp" />
+<link rel="icon" type="image/webp" sizes="16x16" href="/assets/favicon-16x16.webp" />
+<link rel="manifest" href="/assets/site.webmanifest" />

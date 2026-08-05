@@ -14,12 +14,6 @@ export const travaux: ShowcaseLink[] = [
   },
 ];
 
-export const seoProject: ShowcaseLink = {
-  title: "Accueil",
-  href: "https://bytemeuh-farm.fr/",
-  external: true,
-};
-
 export const loisirs: ShowcaseLink[] = [
   { title: "Arts plastiques / Arts numériques", href: "/loisirs/dessin/", image: dessinIcon },
   { title: "Photographie", href: "/loisirs/photographie/", image: photoIcon },
