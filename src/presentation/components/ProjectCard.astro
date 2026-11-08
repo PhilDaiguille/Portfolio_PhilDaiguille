@@ -4,6 +4,7 @@ import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
 import Code from '@lucide/astro/icons/code';
 import ArrowRight from '@lucide/astro/icons/arrow-right';
 import SmartImage from './SmartImage.astro';
+import { withBase } from '../../application/url';
 
 interface Props {
   project: Project;
@@ -29,7 +30,7 @@ const blank = { target: '_blank', rel: 'noopener' };
     {(p.demo || p.repo || p.caseStudy) && (
       <p class="project-actions">
         {p.caseStudy && (
-          <a class="btn-contact" href={`/projets/${p.caseStudy.slug}/`}>
+          <a class="btn-contact" href={withBase(`/projets/${p.caseStudy.slug}/`)}>
             Étude de cas <ArrowRight size={18} aria-hidden="true" /><span class="sr-only"> : {p.title}</span>
           </a>
         )}

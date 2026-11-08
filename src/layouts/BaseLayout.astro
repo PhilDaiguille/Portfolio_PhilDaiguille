@@ -6,6 +6,7 @@ import SiteHeader from '../presentation/components/SiteHeader.astro';
 import PageIntro from '../presentation/components/PageIntro.astro';
 import Footer from '../presentation/components/Footer.astro';
 import { getBreadcrumbs } from '../application/getBreadcrumbs';
+import { stripBase } from '../application/url';
 import { siteNavLinks } from '../infrastructure/data/nav-links';
 
 interface Props {
@@ -26,7 +27,7 @@ interface Props {
 }
 
 const { title, description, heading, lead, accent, ogImage, ogType, schema, fullSeo = false, showCv = false, crumbLabel } = Astro.props;
-const crumbs = getBreadcrumbs(Astro.url.pathname, crumbLabel ?? heading);
+const crumbs = getBreadcrumbs(stripBase(Astro.url.pathname), crumbLabel ?? heading);
 ---
 
 <!doctype html>

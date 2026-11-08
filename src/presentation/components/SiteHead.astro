@@ -12,6 +12,7 @@ interface Props {
 
 import type { Crumb } from '../../application/getBreadcrumbs';
 import { getContactInfo } from '../../application/getSiteInfo';
+import { withBase, stripBase, isMirror } from '../../application/url';
 import { skillGroups } from '../../infrastructure/data/skills';
 import tuskerFont from '../../styles/fonts/TuskerGrotesk-2600Semibold.woff2?url';
 
@@ -19,7 +20,7 @@ const { title, description, ogImage, ogType, schema, crumbs, fullSeo = false } =
 const { emailHref, phoneE164, socialLinks } = getContactInfo();
 
 // ponytail: canonical derived from the request URL, never hand-written per page.
-const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const canonical = new URL(stripBase(Astro.url.pathname), Astro.site).href;
 const ogImageUrl = new URL(ogImage ?? '/assets/og-image.png', Astro.site).href;
 
 const personSchema = {
@@ -49,7 +50,7 @@ const breadcrumbSchema = {
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content={isMirror ? 'noindex, follow' : 'index, follow'} />
 <meta name="author" content="Philippe Delente" />
 
 <meta property="og:type" content={ogType ?? (fullSeo ? 'profile' : 'website')} />
@@ -84,7 +85,7 @@ const breadcrumbSchema = {
 <!-- Police des grands titres (hero) : préchargée pour éviter le saut au rendu. -->
 <link rel="preload" href={tuskerFont} as="font" type="font/woff2" crossorigin />
 <!-- PNG : seul format accepté par iOS (écran d'accueil) et les vieux Safari. -->
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-<link rel="manifest" href="/assets/site.webmanifest" />
+<link rel="apple-touch-icon" sizes="180x180" href={withBase('/assets/apple-touch-icon.png')} />
+<link rel="icon" type="image/png" sizes="32x32" href={withBase('/assets/favicon-32x32.png')} />
+<link rel="icon" type="image/png" sizes="16x16" href={withBase('/assets/favicon-16x16.png')} />
+<link rel="manifest" href={withBase('/assets/site.webmanifest')} />

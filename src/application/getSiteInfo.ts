@@ -1,5 +1,6 @@
 // Application layer: shared site-wide use cases (footer contact info, socials).
 import { socialLinks } from "../infrastructure/data/social-links";
+import { withBase } from "./url";
 
 export function getContactInfo() {
   return {
@@ -8,8 +9,8 @@ export function getContactInfo() {
     phoneE164: "+33783544539",
     email: "philippe.delente@gmail.com",
     emailHref: "mailto:philippe.delente@gmail.com",
-    cvHref: "/assets/CV_Philippe_DELENTE_Professionel.pdf",
-    socialLinks,
+    cvHref: withBase("/assets/CV_Philippe_DELENTE_Professionel.pdf"),
+    socialLinks: socialLinks.map((s) => ({ ...s, icon: withBase(s.icon) })),
   };
 }
 
