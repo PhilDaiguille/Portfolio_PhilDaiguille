@@ -10,6 +10,7 @@ import GraduationCap from '@lucide/astro/icons/graduation-cap';
 import MapPin from '@lucide/astro/icons/map-pin';
 import Download from '@lucide/astro/icons/download';
 import { getContactInfo } from '../application/getSiteInfo';
+import { withBase } from '../application/url';
 import profilePicture from '../assets/images/pp.webp';
 
 const { experiences, skillGroups, otherSkills, education, featured, loisirs, veille, navLinks } = getHomeContent();
@@ -85,11 +86,11 @@ const keyFigures = [
 
   <!-- Projets -->
   <section class="travaux" id="travaux">
-    <h2 id="projets" class="History"><a href="/projets/">Projets</a></h2>
+    <h2 id="projets" class="History"><a href={withBase('/projets/')}>Projets</a></h2>
     <ul class="cards projects bento">
       {featured.map((p) => <ProjectCard project={p} />)}
     </ul>
-    <p class="see-all"><a class="btn-ghost" href="/projets/">Tous les projets →</a></p>
+    <p class="see-all"><a class="btn-ghost" href={withBase('/projets/')}>Tous les projets →</a></p>
   </section>
 
   <!-- Experience -->
@@ -137,7 +138,7 @@ const keyFigures = [
           <ul class="skill-list">
             {group.skills.map((skill) => (
               <li class:list={{ 'skill-text': !skill.icon }}>
-                {skill.icon && <img src={skill.icon} alt="" width="32" height="32" loading="lazy" />}
+                {skill.icon && <img src={withBase(skill.icon)} alt="" width="32" height="32" loading="lazy" />}
                 {skill.name}
               </li>
             ))}
@@ -169,13 +170,13 @@ const keyFigures = [
 
   <!-- Loisirs -->
   <section class="loisir">
-    <h2 id="Loisirs" class="History"><a href="/loisirs/">Loisirs</a></h2>
+    <h2 id="Loisirs" class="History"><a href={withBase('/loisirs/')}>Loisirs</a></h2>
     <CardGrid items={loisirs} />
   </section>
 
   <!-- Veille -->
   <section class="veille">
-    <h2 id="Veille" class="History"><a href="/veille/">Veille Technologique</a></h2>
+    <h2 id="Veille" class="History"><a href={withBase('/veille/')}>Veille Technologique</a></h2>
     <CardGrid items={veille} />
   </section>
 

@@ -6,6 +6,7 @@ import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
 import ArrowLeft from '@lucide/astro/icons/arrow-left';
 import Code from '@lucide/astro/icons/code';
 import { caseStudies } from '../../infrastructure/data/projects';
+import { withBase } from '../../application/url';
 
 export const getStaticPaths = (() => caseStudies.map((project) => ({ params: { slug: project.caseStudy!.slug }, props: { project } }))) satisfies GetStaticPaths;
 
@@ -71,7 +72,7 @@ const blank = { target: '_blank', rel: 'noopener' };
       <p>{cs.learned}</p>
     </section>
     <p class="see-all">
-      <a class="btn-ghost" href="/projets/"><ArrowLeft size={18} aria-hidden="true" /> Tous les projets</a>
+      <a class="btn-ghost" href={withBase('/projets/')}><ArrowLeft size={18} aria-hidden="true" /> Tous les projets</a>
     </p>
   </article>
 </BaseLayout>
