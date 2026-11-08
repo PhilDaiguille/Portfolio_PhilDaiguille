@@ -12,7 +12,7 @@ export const projects: Project[] = [
     tag: "Open source",
     year: "2026",
     summary:
-      "89 règles d'accessibilité pour les templates Twig : alt manquants, boutons vides, rôles ARIA invalides… détectés avant la mise en production. Publié en v1 sur Packagist.",
+      "89 règles d'accessibilité pour les templates Twig : alt manquants, boutons vides, rôles ARIA invalides… repérés avant la mise en ligne. En v1 sur Packagist.",
     stack: ["PHP 8.4", "Twig", "Twig-CS-Fixer", "PHPUnit", "CI / Codecov"],
     repo: gh("twig-a11y-rules"),
     demo: "https://packagist.org/packages/phildaiguille/twig-a11y-rules",
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     tag: "En cours",
     year: "2026",
     summary:
-      "Plateforme de jeux de société en ligne, en commençant par un Scrabble multijoueur temps réel : invitation par lien, chrono, chat, revanche, FR/EN, thème clair/sombre.",
+      "Plateforme de jeux de société en ligne, à commencer par un Scrabble multijoueur temps réel : invitation par lien, chrono, chat, revanche, FR/EN.",
     stack: ["Next.js 16", "React 19", "NestJS", "socket.io", "Prisma", "PostgreSQL", "Docker"],
     caseStudy: {
       slug: "arcadia-games",

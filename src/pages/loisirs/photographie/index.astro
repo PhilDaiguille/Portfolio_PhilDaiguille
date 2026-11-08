@@ -15,6 +15,21 @@ const photos = photoOrder.map((name) => photoModules[`../../../assets/images/ass
   accent="loisir"
   schema={{ '@type': 'ImageGallery', name: 'Photographies de Philippe Delente', creator: { '@type': 'Person', name: 'Philippe Delente' } }}
 >
+  <section class="page-text">
+    <p>
+      La photographie m'oblige à ralentir et à observer. J'aime saisir la lumière du matin, la brume au-dessus d'un champ, les reflets d'un lac au coucher du soleil ou un oiseau dans
+      la neige : des scènes simples, que l'on croise souvent sans y prêter attention.
+    </p>
+    <p>
+      Je travaille surtout le cadrage et la lumière au moment de la prise de vue, puis je fais le développement dans Lightroom pour ajuster l'exposition, les couleurs et le contraste
+      sans dénaturer l'image. Paysages, portraits et scènes urbaines : chaque photo est un exercice de composition, et ce regard me sert ensuite pour mettre en valeur un contenu
+      dans une interface.
+    </p>
+    <p>
+      Cette sélection réunit des photos prises au fil de balades, à différentes saisons : de la brume d'automne à la neige de l'hiver, en passant par les ciels d'été. Elles sont
+      présentées sans retouche lourde, pour rester fidèles à ce que j'ai vu sur le moment.
+    </p>
+  </section>
   <ul class="gallery">
     {photos.map((photo, i) => (
       <li>

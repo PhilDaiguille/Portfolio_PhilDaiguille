@@ -1071,6 +1071,19 @@ main .experience .exp-steps {
   }
 }
 
+/* Texte d'introduction des pages de section */
+.page-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 75ch;
+  p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    padding: 0;
+  }
+}
+
 /* Galeries */
 .gallery {
   columns: 3 28rem;

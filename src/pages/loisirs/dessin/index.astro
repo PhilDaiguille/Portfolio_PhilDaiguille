@@ -20,6 +20,21 @@ const drawings = [
   accent="loisir"
   schema={{ '@type': 'ImageGallery', name: 'Dessins de Philippe Delente', creator: { '@type': 'Person', name: 'Philippe Delente' } }}
 >
+  <section class="page-text">
+    <p>
+      Je dessine depuis longtemps, d'abord sur papier puis en numérique. Mes illustrations naissent souvent d'un croquis rapide, que je retravaille ensuite sur ordinateur avec
+      Photoshop et Illustrator : mise en couleur, textures, composition finale. J'explore aussi la 3D avec Blender.
+    </p>
+    <p>
+      On y trouve des personnages, des créatures imaginaires comme L'ornicool, des portraits et des univers plus abstraits comme Cosmos. Chaque pièce est l'occasion de tester une
+      technique, une palette ou un cadrage différent. C'est aussi un excellent entraînement pour mon travail d'interface : le sens de la composition, du contraste et des couleurs se
+      travaille autant sur une feuille que sur un écran.
+    </p>
+    <p>
+      Les trois dessins présentés ici couvrent ces différentes facettes : un personnage imaginaire, un portrait et une composition plus libre. Prenez le temps d'en observer les
+      détails : les textures et les jeux de couleurs racontent souvent plus que le sujet lui-même.
+    </p>
+  </section>
   <ul class="gallery">
     {drawings.map((drawing) => (
       <li>
