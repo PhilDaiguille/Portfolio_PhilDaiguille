@@ -1,48 +1,52 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../presentation/components/SiteHeader.astro';
 import SmartImage from '../presentation/components/SmartImage.astro';
+import ProjectCard from '../presentation/components/ProjectCard.astro';
+import CardGrid from '../presentation/components/CardGrid.astro';
 import { getHomeContent } from '../application/getHomeContent';
+import GraduationCap from '@lucide/astro/icons/graduation-cap';
+import MapPin from '@lucide/astro/icons/map-pin';
+import Download from '@lucide/astro/icons/download';
+import { getContactInfo } from '../application/getSiteInfo';
 import profilePicture from '../assets/images/pp.webp';
 
-const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks } = getHomeContent();
+const { experiences, skillGroups, otherSkills, education, featured, loisirs, veille, navLinks } = getHomeContent();
+const { cvHref } = getContactInfo();
+
+// ponytail: chiffres en dur, à mettre à jour à la main.
+const keyFigures = [
+  { value: '3 ans+', label: 'chez Les Echos Le Parisien Services, en alternance puis en CDD' },
+  { value: 'Bac+5', label: 'Mastère Ingénierie du web, ESGI Paris' },
+  { value: '130', label: 'contributions à la documentation officielle de PHP' },
+  { value: '89', label: "règles d'accessibilité publiées en open source" },
+];
 ---
 
 <BaseLayout
-  title="Philippe Delente - Développeur Web Front-End & Back-End"
-  description="Explorez le portfolio de Philippe Delente, développeur web spécialisé en HTML, CSS, JS, PHP. Découvrez mes projets sur GitHub et PhilDaiguille."
-  stylesheet="/css/app.css"
-  ogImage="/assets/android-chrome-512x512.webp"
+  title="Philippe Delente — Développeur web full-stack PHP / Symfony & TypeScript"
+  description="Portfolio de Philippe Delente, développeur web full-stack PHP / Symfony et TypeScript : outils open source d'accessibilité et de SEO, applications Next.js, NestJS et Vue."
   fullSeo
   showCv
 >
-  <Fragment slot="header">
-    <header>
-      <div class="sticky">
-        <div>
-          <h1>Philippe DELENTE</h1>
-          <h2>Développeur Web</h2>
-        </div>
-        <nav>
-          <ul>
-            {navLinks.map((link) => (
-              <li><a href={link.href}>{link.label}</a></li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </Fragment>
+  <SiteHeader slot="header" links={navLinks} isHome />
 
   <!-- Hero -->
   <section class="hero">
     <div>
-      <h3>Développeur<span class="com">&</span></h3>
-      <h3>Créatif</h3>
+      <h2 class="hero-title"><span>Développeur<span class="com">&</span></span> <span>Créatif</span></h2>
     </div>
     <div class="content">
-      <p>Je suis développeur web passionné, spécialisé dans le web en tout genre. J'aime allier art et code pour concevoir des expériences UX/UI uniques.</p>
-      <a href="#Contact" class="btn-contact">Contactez moi</a>
+      <p>Développeur web full-stack <strong>PHP / Symfony</strong> et <strong>TypeScript</strong>. Je conçois des applications accessibles, rapides et bien référencées, et je publie des outils open source pour y arriver.</p>
+      <div class="hero-actions">
+        <a href="#projets" class="btn-contact">Voir mes projets</a>
+        <a href="#Contact" class="btn-ghost">Contactez-moi</a>
+      </div>
+      <p class="availability">
+        <MapPin size={18} aria-hidden="true" /> Paris · CDD chez Les Echos Le Parisien Services · ouvert aux opportunités
+        <a href={cvHref} download><Download size={18} aria-hidden="true" /> Mon CV (PDF)</a>
+      </p>
     </div>
   </section>
 
@@ -52,22 +56,40 @@ const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks 
       <h2 id="info" class="History">Qui suis-je</h2>
       <div class="content">
         <p>
-          Je m'appelle Philippe Delente, je suis un développeur web passionné de 23 ans, spécialisé dans la création de sites web et d'applications. En dehors de mon travail, je développe divers projets durant mon temps libre, allant des scripts Python à
-          la photographie et au dessin.
+          Je m'appelle Philippe Delente, développeur web full-stack. Diplômé d'un Mastère Ingénierie du web à l'ESGI, je travaille chez Les Echos Le Parisien Services, d'abord en alternance depuis 2023, aujourd'hui en CDD : sites et applications en PHP / Symfony, WordPress, Vue.js et React.
         </p>
         <p>
-          J'adore combiner l'art et la programmation pour créer des expériences utilisateur (UX) et des interfaces utilisateur (UI) innovantes. Je suis toujours à la recherche de nouveaux défis pour repousser les limites de la créativité et de la
-          technologie.
+          Ce qui me motive, c'est le web bien fait : accessible, rapide et bien référencé. J'ai publié un linter d'accessibilité pour Twig, je développe un crawler d'audit SEO en Rust et je contribue à la traduction de la documentation officielle de PHP.
         </p>
         <p>
-          Avec un Bachelor en Ingénierie du Web (BAC +3), je suis attentif aux offres d'emploi dans le domaine du développement web et de la conception UX/UI. Mon objectif est de contribuer à des projets ambitieux où je peux appliquer mes compétences
-          techniques et artistiques.
+          En dehors du code, je dessine et je photographie. Ce regard visuel nourrit mon travail sur les interfaces et l'expérience utilisateur.
         </p>
       </div>
     </div>
     <div>
-      <Image src={profilePicture} alt="Portrait de Philippe Delente, développeur web" />
+      <Image src={profilePicture} alt="Portrait de Philippe Delente, développeur web" width={560} />
     </div>
+  </section>
+
+  <!-- Chiffres clés -->
+  <section class="figures" aria-label="Chiffres clés">
+    <ul class="cards">
+      {keyFigures.map((f) => (
+        <li class="card">
+          <strong>{f.value}</strong>
+          <span>{f.label}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Projets -->
+  <section class="travaux" id="travaux">
+    <h2 id="projets" class="History"><a href="/projets/">Projets</a></h2>
+    <ul class="cards projects bento">
+      {featured.map((p) => <ProjectCard project={p} />)}
+    </ul>
+    <p class="see-all"><a class="btn-ghost" href="/projets/">Tous les projets →</a></p>
   </section>
 
   <!-- Experience -->
@@ -75,12 +97,24 @@ const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks 
     <h2 id="Experience" class="History">Expérience</h2>
     {experiences.map((exp) => (
       <figure>
-        <a href={exp.link}><SmartImage src={exp.logo} alt={`Logo ${exp.organization}`} /></a>
+        <a href={exp.link} class:list={['exp-logo', { invert: exp.logoInvert }]}><SmartImage src={exp.logo} alt={`Logo ${exp.organization}`} width={220} /></a>
         <ul>
           <li>
-            <h2> <time datetime={exp.year}>{exp.year}</time> • {exp.role} </h2>
+            <h2> <time datetime={exp.year.slice(0, 4)}>{exp.year}</time> • {exp.role} </h2>
           </li>
           <li>{exp.organization}</li>
+          {exp.steps && (
+            <li>
+              <ol class="exp-steps">
+                {exp.steps.map((step) => (
+                  <li>
+                    <time datetime={step.year.slice(0, 4)}>{step.year}</time>
+                    <span>{step.role}</span>
+                  </li>
+                ))}
+              </ol>
+            </li>
+          )}
           {exp.details && (
             <li>
               <ul class="resume">
@@ -96,21 +130,25 @@ const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks 
   <!-- Compétences -->
   <section class="compet">
     <h2 id="Compétences" class="History">Compétences</h2>
-    {skillGroups.map((group) => (
-      <>
-        <h3>{group.title}</h3>
-        <ul>
-          {group.skills.map((skill) => (
-            <li>
-              <figure>
-                <img src={skill.icon} alt={`Logo ${skill.name}`} width="64" height="64" loading="lazy" />
-                <figcaption>{skill.name}</figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
-      </>
-    ))}
+    <ul class="cards skill-groups">
+      {skillGroups.map((group) => (
+        <li class="card">
+          <h3>{group.title}</h3>
+          <ul class="skill-list">
+            {group.skills.map((skill) => (
+              <li class:list={{ 'skill-text': !skill.icon }}>
+                {skill.icon && <img src={skill.icon} alt="" width="32" height="32" loading="lazy" />}
+                {skill.name}
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+    <h3 class="skill-other-title">Aussi pratiqué</h3>
+    <ul class="stack skill-other">
+      {otherSkills.map((name) => <li>{name}</li>)}
+    </ul>
   </section>
 
   <!-- Formation -->
@@ -119,7 +157,7 @@ const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks 
     <figure>
       {education.map((item) => (
         <ul>
-          <li><i class="fa-solid fa-graduation-cap"></i></li>
+          <li><GraduationCap size={64} stroke-width={1.5} aria-hidden="true" /></li>
           <li>
             <h2>{item.title}</h2>
             <p>{item.school}</p>
@@ -129,67 +167,16 @@ const { experiences, skillGroups, education, travaux, loisirs, veille, navLinks 
     </figure>
   </section>
 
-  <!-- Travaux -->
-  <section class="travaux">
-    <h2 id="travaux" class="History">Travaux</h2>
-    <figure>
-      {travaux.map((item) => (
-        <ul>
-          <li>
-            <h2>{item.title}</h2>
-          </li>
-          <li>
-            <a href={item.href}><SmartImage src={item.image!} alt={`Aperçu du projet ${item.title}`} /></a>
-          </li>
-        </ul>
-      ))}
-    </figure>
-  </section>
-
   <!-- Loisirs -->
   <section class="loisir">
-    <h2 id="Loisirs" class="History">Loisirs</h2>
-    <figure>
-      {loisirs.map((item) => (
-        <ul>
-          <li>
-            <h2>{item.title}</h2>
-          </li>
-          <li>
-            <a href={item.href}><SmartImage src={item.image!} alt={`Aperçu : ${item.title}`} /></a>
-          </li>
-        </ul>
-      ))}
-    </figure>
+    <h2 id="Loisirs" class="History"><a href="/loisirs/">Loisirs</a></h2>
+    <CardGrid items={loisirs} />
   </section>
 
   <!-- Veille -->
   <section class="veille">
-    <h2 id="Veille" class="History">Veille Technologique</h2>
-    <figure>
-      <ul>
-        <li>
-          <h2>{veille.title}</h2>
-        </li>
-        <li>
-          <a href={veille.href}><SmartImage src={veille.image!} alt={`Aperçu : ${veille.title}`} /></a>
-        </li>
-      </ul>
-    </figure>
+    <h2 id="Veille" class="History"><a href="/veille/">Veille Technologique</a></h2>
+    <CardGrid items={veille} />
   </section>
 
-  <Fragment slot="scripts">
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"
-      integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script is:inline>
-      const sr = ScrollReveal();
-      sr.reveal('header h1, header h2', { duration: 1000, origin: 'top', distance: '10rem', delay: 100 });
-      sr.reveal('main section', { duration: 1000, origin: 'top', distance: '5rem', delay: 1 });
-    </script>
-  </Fragment>
 </BaseLayout>

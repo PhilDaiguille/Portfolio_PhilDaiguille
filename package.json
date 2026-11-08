@@ -15,10 +15,11 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.3.3"
+    "@lucide/astro": "^1.47.0",
+    "astro": "^7.4.7"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "^0.9.12",
     "oxfmt": "^0.62.0",
     "oxlint": "^1.77.0",
     "typescript": "^6.0.3"

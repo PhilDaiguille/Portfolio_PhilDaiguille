@@ -1,33 +1,49 @@
 ---
-import { Image } from 'astro:assets';
+import '../styles/app.css';
+import ArrowUp from '@lucide/astro/icons/arrow-up';
 import SiteHead from '../presentation/components/SiteHead.astro';
+import SiteHeader from '../presentation/components/SiteHeader.astro';
+import PageIntro from '../presentation/components/PageIntro.astro';
 import Footer from '../presentation/components/Footer.astro';
-import arrowIcon from '../assets/images/arrow.webp';
+import { getBreadcrumbs } from '../application/getBreadcrumbs';
+import { siteNavLinks } from '../infrastructure/data/nav-links';
 
 interface Props {
   title: string;
   description: string;
-  stylesheet: string;
+  /** Titre visible (h1) ; absent sur l'accueil qui a son propre hero. */
+  heading?: string;
+  lead?: string;
+  /** Classe d'accent de section : travaux | loisir | veille… */
+  accent?: string;
   ogImage?: string;
+  ogType?: 'website' | 'article' | 'profile';
+  schema?: Record<string, unknown>;
   fullSeo?: boolean;
   showCv?: boolean;
-  showScrollTop?: boolean;
+  /** Libellé du fil d'Ariane pour une page absente de routeLabels. */
+  crumbLabel?: string;
 }
 
-const { title, description, stylesheet, ogImage, fullSeo = false, showCv = false, showScrollTop = true } = Astro.props;
+const { title, description, heading, lead, accent, ogImage, ogType, schema, fullSeo = false, showCv = false, crumbLabel } = Astro.props;
+const crumbs = getBreadcrumbs(Astro.url.pathname, crumbLabel ?? heading);
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
-    <SiteHead title={title} description={description} stylesheet={stylesheet} ogImage={ogImage} fullSeo={fullSeo} />
+    <SiteHead title={title} description={description} ogImage={ogImage} ogType={ogType} schema={schema} crumbs={crumbs} fullSeo={fullSeo} />
     <slot name="head" />
   </head>
   <body>
-    <slot name="header" />
-    <main>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <slot name="header">
+      <SiteHeader links={siteNavLinks} />
+    </slot>
+    <main id="contenu" class:list={[accent, heading && 'page']}>
+      {heading && <PageIntro title={heading} lead={lead} crumbs={crumbs} />}
       <slot />
-      {showScrollTop && <a href="#"><Image src={arrowIcon} class="up" alt="" /></a>}
+      <a href="#" class="up" aria-label="Retour en haut de page"><ArrowUp size={28} stroke-width={2.5} aria-hidden="true" /></a>
     </main>
     <Footer showCv={showCv} />
     <slot name="scripts" />

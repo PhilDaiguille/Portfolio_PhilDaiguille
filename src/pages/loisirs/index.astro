@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CardGrid from '../../presentation/components/CardGrid.astro';
+import { getSections } from '../../application/getSections';
+
+const { loisirs } = getSections();
+---
+
+<BaseLayout
+  title="Loisirs créatifs — Philippe Delente"
+  description="Dessin, illustration numérique et photographie : les loisirs créatifs qui nourrissent le travail UX/UI de Philippe Delente."
+  heading="Loisirs"
+  lead="Quand je ne code pas, je dessine et je photographie. C'est là que se forge mon œil pour l'UI."
+  accent="loisir"
+  schema={{ '@type': 'CollectionPage', name: 'Loisirs', hasPart: loisirs.map((l) => ({ '@type': 'WebPage', name: l.title, url: new URL(l.href, Astro.site).href })) }}
+>
+  <section><CardGrid items={loisirs} /></section>
+</BaseLayout>

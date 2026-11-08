@@ -1,0 +1,77 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartImage from '../../presentation/components/SmartImage.astro';
+import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
+import ArrowLeft from '@lucide/astro/icons/arrow-left';
+import Code from '@lucide/astro/icons/code';
+import { caseStudies } from '../../infrastructure/data/projects';
+
+export const getStaticPaths = (() => caseStudies.map((project) => ({ params: { slug: project.caseStudy!.slug }, props: { project } }))) satisfies GetStaticPaths;
+
+const { project: p } = Astro.props;
+const cs = p.caseStudy!;
+const blank = { target: '_blank', rel: 'noopener' };
+---
+
+<BaseLayout
+  title={`${p.title} : étude de cas — Philippe Delente`}
+  description={p.summary}
+  heading={p.title}
+  lead={p.summary}
+  accent="travaux"
+  ogType="article"
+  schema={{
+    '@type': 'SoftwareSourceCode',
+    name: p.title,
+    description: p.summary,
+    programmingLanguage: p.stack,
+    author: { '@type': 'Person', name: 'Philippe Delente' },
+    ...(p.repo ? { codeRepository: p.repo } : {}),
+  }}
+>
+  <article class="prose case-study">
+    <section>
+      {p.image && <SmartImage src={p.image} alt={`Capture d'écran de ${p.title}`} width={1280} />}
+      <ul class="stack" aria-label="Technologies">
+        {p.stack.map((s) => <li>{s}</li>)}
+      </ul>
+      <p class="project-actions">
+        {p.demo && (
+          <a class="btn-contact" href={p.demo} {...blank}>
+            <ArrowUpRight size={18} aria-hidden="true" /> Voir en ligne<span class="sr-only"> (nouvel onglet)</span>
+          </a>
+        )}
+        {p.repo ? (
+          <a class="btn-ghost" href={p.repo} {...blank}>
+            <Code size={18} aria-hidden="true" /> Code source<span class="sr-only"> sur GitHub (nouvel onglet)</span>
+          </a>
+        ) : (
+          <span class="project-private">Code privé, démo sur demande</span>
+        )}
+      </p>
+      <h2>Le contexte</h2>
+      <p>{cs.context}</p>
+      <h3>Mon rôle</h3>
+      <p>{cs.role}</p>
+    </section>
+    <section>
+      <h2>Points clés</h2>
+      <ul class="split">
+        {cs.highlights.map((h) => (
+          <li>
+            <h3>{h.title}</h3>
+            <p>{h.text}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+    <section>
+      <h2>Ce que j'en retiens</h2>
+      <p>{cs.learned}</p>
+    </section>
+    <p class="see-all">
+      <a class="btn-ghost" href="/projets/"><ArrowLeft size={18} aria-hidden="true" /> Tous les projets</a>
+    </p>
+  </article>
+</BaseLayout>

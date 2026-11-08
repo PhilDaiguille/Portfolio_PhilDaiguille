@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CardGrid from '../../presentation/components/CardGrid.astro';
+import ProjectCard from '../../presentation/components/ProjectCard.astro';
+import { getSections, getEarlyProjects } from '../../application/getSections';
+import { projects } from '../../infrastructure/data/projects';
+
+const { travaux } = getSections();
+const early = getEarlyProjects();
+---
+
+<BaseLayout
+  title="Projets — Philippe Delente"
+  description="Projets de Philippe Delente : outils open source (Twig, Rust), applications Next.js, NestJS, Vue et Nuxt, ateliers BTS SIO et premiers projets front-end."
+  heading="Projets"
+  lead="Outils open source, applications web temps réel et projets d'école, du plus récent au plus ancien."
+  accent="travaux"
+  schema={{
+    '@type': 'CollectionPage',
+    name: 'Projets',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: projects.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, ...(p.demo || p.repo ? { url: p.demo ?? p.repo } : {}) })),
+    },
+  }}
+>
+  <section aria-labelledby="phares">
+    <h2 id="phares" class="section-title">Projets phares</h2>
+    <ul class="cards projects">
+      {projects.map((p, i) => <ProjectCard project={p} featured={i < 2} />)}
+    </ul>
+  </section>
+  <section aria-labelledby="ecole">
+    <h2 id="ecole" class="section-title">Ateliers BTS SIO</h2>
+    <CardGrid items={travaux} />
+  </section>
+  <section aria-labelledby="premiers-projets">
+    <h2 id="premiers-projets" class="section-title">Premiers projets</h2>
+    <p class="section-lead">Mes TP front-end de 2021-2022 : reproductions d'interfaces et petits exercices JavaScript.</p>
+    <div class="compact"><CardGrid items={early} /></div>
+  </section>
+</BaseLayout>

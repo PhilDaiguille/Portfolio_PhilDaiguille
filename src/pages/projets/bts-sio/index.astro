@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ppeJava from '../../../assets/images/tp_web/ppe_java.webp';
+import webImage from '../../../assets/images/WEB.webp';
+import apweb from '../../../assets/images/APWEB.webp';
+import apweb2 from '../../../assets/images/APWEB2.webp';
+import apbdd from '../../../assets/images/APBDD.webp';
+---
+
+<BaseLayout
+  title="BTS SIO : ateliers professionnels Java et PHP — Philippe Delente"
+  description="Ateliers professionnels du BTS SIO SLAM de Philippe Delente : application de gestion des ligues en Java / JavaFX avec base SQL, et site web PHP orienté objet pour la Maison des Ligues."
+  heading="BTS SIO"
+  lead="Deux ateliers professionnels pour la Maison des Ligues : une application métier en Java / JavaFX et un site web en PHP orienté objet."
+  accent="travaux"
+  schema={{
+    '@type': 'CollectionPage',
+    name: 'Ateliers professionnels BTS SIO',
+    hasPart: [
+      { '@type': 'CreativeWork', name: 'AP Java — Gestion des employés des ligues', programmingLanguage: ['Java', 'JavaFX', 'SQL'] },
+      { '@type': 'CreativeWork', name: 'AP Web — Maison des Ligues', programmingLanguage: ['HTML', 'CSS', 'JavaScript', 'PHP'] },
+    ],
+  }}
+>
+  <article class="prose" id="ap-java">
+    <section>
+      <h2>AP Java — Gestion des employés des ligues (M2L)</h2>
+      <Image src={ppeJava} alt="Logo du projet Atelier Professionnel Java" width={320} />
+      <h3>Sujet</h3>
+      <p>Un des responsables de la M2L, utilise une application pour gérer les employés des ligues. L'application est mise à votre disposition par le biais des ressources suivantes :</p>
+      <p>Cette application, très simple, n'existe qu'en ligne de commande et est mono-utilisateur. Nous souhaiterions désigner un administrateur par ligue et lui confier la tâche de recenser les employés de sa ligue. Une partie du travail est déjà faite
+        mais vous allez devoir le compléter.</p>
+      <p>Les niveaux d'habilitation des utilisateurs sont les suivants : </p>
+      <ul>
+        <li>Un simple employé de ligue peut ouvrir l'application et s'en servir comme un annuaire, mais il ne dispose d'aucun droit d'écriture. </li>
+        <li>Un employé par ligue est admininstrateur et dispose de droits d'écriture peut gérer la liste des emloyés de sa propre ligue avec une application bureau. </li>
+        <li>Le super-admininstrateur a accès en écriture à tous les employés des ligues. Il peut aussi gérer les comptes des administrateurs des ligues avec une application accessible en ligne de commande. </li>
+        <li>L'application doit être rendue multi-utilisateurs grace à l'utilisation d'une base de données. </li>
+        <li>Les trois niveaux d'habilitation ci-dessus doivent être mis en place. </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Itération 1</h3>
+      <ul>
+        <li> Modélisation d'une base de données avec un MCD. </li>
+        <li>Vérification du fonctionnement correct de l'application grâce à des tests unitaires. </li>
+        <li>Gestion de la date de départ et de celle d'arrivée de chaque employé (couche métier + tests unitaires). </li>
+        <li>Représentation des menus du dialogue en ligne de commande avec un arbre heuristique (Utilisez un logiciel de type Freemind). </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Itération 2</h3>
+      <ul>
+        <li> Création de la base de données. </li>
+        <li>Gestion des dates dans le dialogue en ligne de commande. </li>
+        <li>Dans le dialogue en ligne de commande, un employé doit être selectionné avant que l'on puisse choisir de modifier ou de supprimer. </li>
+        <li>Possibilité de changer l'administrateur d'une ligue en ligne de commande. </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Itération 3</h3>
+      <ul>
+        <li> Création d'une classe fille de Passerelle permettant de gérer la connexion à la base de données avec JDBC (ou avec Hibernate si vous le souhaitez). </li>
+        <li>Modélisation de l'interface graphique avec des maquettes. </li>
+        <li>Possibilité de changer l'administrateur d'une ligue en ligne de commande. </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Itération 4</h3>
+      <ul>
+        <li> Création d'une interface graphique avec JavaFx pour que les administrateurs puissent gérer les ligues. </li>
+        <li>Si une ligue n'a pas d'administrateur, c'est automatiquement le root qui devient l'administrateur de la ligue (avec les tests unitaires correspondants). </li>
+        <li>Installation de la base de données sur un serveur accessible dans le réseau local de la société. </li>
+        <li>Rédaction d'un mode opératoire à l'usage des administrateurs. </li>
+      </ul>
+    </section>
+  </article>
+  <article class="prose" id="ap-web">
+    <section>
+      <h2>AP Web — Page publicitaire et administration (M2L)</h2>
+      <Image src={webImage} alt="Logo du projet Atelier Professionnel Web" width={320} />
+      <h3>Sujet</h3>
+      <p>
+        Une agence nous confie la réalisation d'une page publicitaire pour la Maison de ligues sur le web. La promotion a pour but de conquérir des nouveaux abonné(e)s, en proposant la diffusion de toutes les compétitions sportives. Pour cela nous
+        conseille d'abord d'analyser toutes les fonctionnalités au travers des deux wireframes. Les spécifications pour le fonctionnement de chaque partie ne sont pas définies. La charte graphique doit être crée par vous.
+      </p>
+      <p>
+        Pour commencer vous devez tout simplement mettre en place une structure html sémantique car le contenu de cette publication est destiné à tout public. Penser à produire un code optimisé pour les moteurs de recherche à l'indexation de l'information.
+      </p>
+    </section>
+    <section>
+      <h3>Maquette</h3>
+      <ul class="maquette">
+        <li><Image src={apweb} alt="Wireframe 1 de la page publicitaire Maison des Ligues" width={1200} /></li>
+        <li><Image src={apweb2} alt="Wireframe 2 de la page publicitaire Maison des Ligues" width={1200} /></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Réalisation</h3>
+      <h4>Réaliser une interface d'admin gestion client</h4>
+      <p> Cette partie du site a pour but de permettre aux administrateurs des Maisons des ligues, de recenser leurs clients. Pour ce faire, il faut créer une interface admin qui permet d'ajouter un client, modifier sont profile ou le supprimer. </p>
+      <h4>Aspect fonctionnel</h4>
+      <p>
+        Vous devez créer toute la partie gestion. Pour les enregistrements à publier il faut créer une page avec un formulaire de 4 champs : Nom, Prénom, Age et adresse électronique. Tous les champs sont obligatoires. Afficher un warning dans le cas
+        l'administrateur ne renseigne pas un champ.
+      </p>
+      <h4>Base de données</h4>
+      <Image src={apbdd} alt="Schéma de la base de données de gestion des clients" width={1200} />
+      <h4>Aspect technique</h4>
+      <p>
+        Les technologies autorisées sont : html5 css3, js et php orienté objet Police de caractères : 'Open Sans', sans-serif Iconographies obligatoires de votre choix La couleur des thèmes doivent être indexée dans des variables css Le code HTML généré
+        doit être valide selon les normes du W3C et tester également, pour les spécificités de la WAI et du WCAG (accessibilité) Votre rendu sera publié sur un dépôt Github. Celui ci doit avoir une structure logique, contenir un readme.md avec présentation
+        du projet et un fichier « .gitignore » si besoin.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

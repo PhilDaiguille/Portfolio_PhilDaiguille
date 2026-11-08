@@ -2,19 +2,25 @@
 interface Props {
   title: string;
   description: string;
-  stylesheet: string;
   ogImage?: string;
-  /** Emits verification, JSON-LD and FontAwesome — home page only. */
+  ogType?: 'website' | 'article' | 'profile';
+  schema?: Record<string, unknown>;
+  crumbs: Crumb[];
+  /** Emits verification and Person JSON-LD — home page only. */
   fullSeo?: boolean;
 }
 
-import { socialLinks } from '../../infrastructure/data/social-links';
+import type { Crumb } from '../../application/getBreadcrumbs';
+import { getContactInfo } from '../../application/getSiteInfo';
+import { skillGroups } from '../../infrastructure/data/skills';
+import tuskerFont from '../../styles/fonts/TuskerGrotesk-2600Semibold.woff2?url';
 
-const { title, description, stylesheet, ogImage, fullSeo = false } = Astro.props;
+const { title, description, ogImage, ogType, schema, crumbs, fullSeo = false } = Astro.props;
+const { emailHref, phoneE164, socialLinks } = getContactInfo();
 
 // ponytail: canonical derived from the request URL, never hand-written per page.
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImageUrl = new URL(ogImage ?? '/assets/android-chrome-512x512.webp', Astro.site).href;
+const ogImageUrl = new URL(ogImage ?? '/assets/og-image.png', Astro.site).href;
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -23,61 +29,62 @@ const personSchema = {
   alternateName: 'PhilDaiguille',
   url: Astro.site?.href,
   image: ogImageUrl,
-  jobTitle: 'Développeur Web Front-End & Back-End',
-  email: 'mailto:philippe.delente@gmail.com',
-  telephone: '+33783544539',
+  jobTitle: 'Développeur web full-stack PHP / Symfony & TypeScript',
+  email: emailHref,
+  telephone: phoneE164,
   address: { '@type': 'PostalAddress', addressCountry: 'FR' },
-  knowsAbout: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Java', 'SQL', 'UX/UI Design'],
+  knowsAbout: skillGroups.flatMap((g) => g.skills.map((s) => s.name)),
   sameAs: socialLinks.map((s) => s.href),
 };
 
-// ponytail: fil d'Ariane à deux niveaux (Accueil > page). Les segments intermédiaires
-// (/projet/, /projet/bts-sio/) n'existent pas comme pages, donc rien à lister entre les deux.
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: Astro.site?.href },
-    { '@type': 'ListItem', position: 2, name: title.split('—')[0].trim(), item: canonical },
-  ],
+  itemListElement: crumbs.map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, name: crumb.name, item: new URL(crumb.href, Astro.site).href })),
 };
 ---
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Philippe Delente" />
 
-<meta property="og:type" content={fullSeo ? 'profile' : 'website'} />
+<meta property="og:type" content={ogType ?? (fullSeo ? 'profile' : 'website')} />
 <meta property="og:site_name" content="Philippe Delente — Portfolio" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Philippe Delente, développeur web full-stack PHP / Symfony et TypeScript" />
 <meta property="og:url" content={canonical} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImageUrl} />
 
+{schema && <script type="application/ld+json" is:inline set:html={JSON.stringify({ '@context': 'https://schema.org', ...schema })} />}
 {!fullSeo && <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />}
 
 {fullSeo && (
   <>
     <meta name="google-site-verification" content="ZFL8bBryJYfgWtG-apury9RwKi3DaawQOL5ZTTMrMs0" />
     <script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
-    <script async src="https://kit.fontawesome.com/afd4b6b3dd.js" crossorigin="anonymous"></script>
   </>
 )}
 
-<link rel="stylesheet" href={stylesheet} />
+<meta name="theme-color" content="#131313" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.webp" />
-<link rel="icon" type="image/webp" sizes="32x32" href="/assets/favicon-32x32.webp" />
-<link rel="icon" type="image/webp" sizes="16x16" href="/assets/favicon-16x16.webp" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300..900&display=swap" />
+<!-- Police des grands titres (hero) : préchargée pour éviter le saut au rendu. -->
+<link rel="preload" href={tuskerFont} as="font" type="font/woff2" crossorigin />
+<!-- PNG : seul format accepté par iOS (écran d'accueil) et les vieux Safari. -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
 <link rel="manifest" href="/assets/site.webmanifest" />

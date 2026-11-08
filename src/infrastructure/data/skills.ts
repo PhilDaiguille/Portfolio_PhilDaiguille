@@ -1,75 +1,78 @@
 import type { SkillGroup } from "../../domain/portfolio";
 
+const dev = (path: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${path}.svg`;
+
+// Groupés par domaine, d'après les projets réels (perso, école, Les Echos).
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Programmation Web",
+    title: "Front-end",
     skills: [
-      { name: "HTML5", icon: "/assets/assetskills/Html.svg" },
-      { name: "CSS3", icon: "/assets/assetskills/Css.svg" },
-      { name: "JS", icon: "/assets/assetskills/JavaScript.svg" },
-      {
-        name: "ElectronJS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
-      },
-      { name: "ThreeJS", icon: "/assets/assetskills/ThreeJS.svg" },
-      {
-        name: "Express.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      },
-      {
-        name: "Socket.io",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-      },
-      { name: "PHP", icon: "/assets/assetskills/PHP.svg" },
-      {
-        name: "Symfony",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg",
-      },
-      {
-        name: "Laravel",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-      },
-      { name: "Vue.JS", icon: "/assets/assetskills/VueJS.svg" },
-      { name: "Vite.JS", icon: "/assets/assetskills/Vitejs-logo.svg" },
-      {
-        name: "Tailwind CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-      },
-      { name: "NodeJS", icon: "/assets/assetskills/icons8-node-js-128.webp" },
-      { name: "Git", icon: "/assets/assetskills/icons8-git-128.webp" },
-      { name: "Docker", icon: "/assets/assetskills/Docker.svg" },
+      { name: "TypeScript", icon: dev("typescript/typescript-original") },
+      { name: "JavaScript", icon: dev("javascript/javascript-original") },
+      { name: "React / Next.js", icon: dev("react/react-original") },
+      { name: "Vue / Nuxt", icon: dev("vuejs/vuejs-original") },
+      { name: "Astro", icon: dev("astro/astro-original") },
+      { name: "Tailwind CSS", icon: dev("tailwindcss/tailwindcss-original") },
+      { name: "HTML / CSS / SCSS", icon: dev("sass/sass-original") },
     ],
   },
   {
-    title: "Programmation",
+    title: "Back-end",
     skills: [
-      { name: "Java", icon: "/assets/assetskills/Java.svg" },
-      { name: "JavaFX", icon: "/assets/assetskills/JavaFX.svg" },
-      { name: "Python", icon: "/assets/assetskills/Python.svg" },
-      { name: "C#", icon: "/assets/assetskills/Csharp.svg" },
-      { name: "Bash", icon: "/assets/assetskills/Bash.svg" },
-      { name: "SQL", icon: "/assets/assetskills/Sql.svg" },
-      {
-        name: "MySQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-      },
-      {
-        name: "PostgreSQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg",
-      },
+      { name: "PHP", icon: dev("php/php-original") },
+      { name: "Symfony / API Platform", icon: dev("symfony/symfony-original") },
+      { name: "NestJS", icon: dev("nestjs/nestjs-original") },
+      { name: "Node.js", icon: dev("nodejs/nodejs-original") },
+      { name: "Laravel", icon: dev("laravel/laravel-original") },
+      { name: "Twig" },
     ],
   },
   {
-    title: "Logiciels illustration",
+    title: "Données",
     skills: [
-      { name: "Photoshop", icon: "/assets/assetskills/Photoshop.svg" },
-      { name: "Illustrator", icon: "/assets/assetskills/Illustrator.svg" },
+      { name: "PostgreSQL", icon: dev("postgresql/postgresql-original") },
+      { name: "MySQL", icon: dev("mysql/mysql-original") },
+      { name: "Prisma", icon: dev("prisma/prisma-original") },
+      { name: "SQL" },
+    ],
+  },
+  {
+    title: "DevOps & qualité",
+    skills: [
+      { name: "Docker", icon: dev("docker/docker-original") },
+      { name: "GitHub Actions", icon: dev("githubactions/githubactions-original") },
+      { name: "Git", icon: dev("git/git-original") },
+      { name: "Linux / Bash", icon: dev("linux/linux-original") },
+      { name: "Terraform", icon: dev("terraform/terraform-original") },
+      { name: "PHPUnit / Vitest" },
+      { name: "PHPStan / Rector" },
+    ],
+  },
+  {
+    title: "Accessibilité & SEO",
+    skills: [{ name: "WCAG / RGAA" }, { name: "SEO technique" }, { name: "Performance web" }],
+  },
+  {
+    title: "Design",
+    skills: [
+      { name: "Figma", icon: dev("figma/figma-original") },
+      { name: "Photoshop", icon: dev("photoshop/photoshop-original") },
+      { name: "Illustrator", icon: dev("illustrator/illustrator-plain") },
       { name: "Lightroom", icon: "/assets/assetskills/Lightroom.svg" },
-      { name: "Blender", icon: "/assets/assetskills/icons8-blender-3d-128.webp" },
-      {
-        name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      },
+      { name: "Blender", icon: dev("blender/blender-original") },
     ],
   },
+];
+
+export const otherSkills = [
+  "Go",
+  "Rust",
+  "Python",
+  "Java / JavaFX",
+  "C#",
+  "Expo (React Native)",
+  "Socket.io",
+  "Express",
+  "Three.js",
+  "Electron",
 ];

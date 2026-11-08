@@ -1,9 +1,8 @@
 ---
-import { Image } from 'astro:assets';
+import Phone from '@lucide/astro/icons/phone';
+import Mail from '@lucide/astro/icons/mail';
+import FileText from '@lucide/astro/icons/file-text';
 import { getContactInfo, getCopyrightYear } from '../../application/getSiteInfo';
-import phoneIcon from '../../assets/images/telephone_icon-icons.com_65394.webp';
-import cvIcon from '../../assets/images/assetexp/resume_business_cv_work_job_curriculum_icon_175611.webp';
-import mailIcon from '../../assets/images/1904660-email-envelope-letter-mail-message-post-send_122510.webp';
 
 interface Props {
   showCv?: boolean;
@@ -15,40 +14,31 @@ const year = getCopyrightYear();
 ---
 
 <footer id="Contact">
-  {showCv && <h2 class="History">Contact</h2>}
-  <section class="contact" role={showCv ? undefined : 'region'}>
-    <ul class="tel">
+  <h2 class="History">Contact</h2>
+  <address class="contact">
+    <ul>
       <li>
-        <a href={phoneHref}> <Image src={phoneIcon} alt="" /> {phone}</a>
+        <a href={phoneHref}><Phone size={24} aria-hidden="true" />{phone}</a>
       </li>
-    </ul>
-    {showCv && (
-      <ul class="cv">
+      <li>
+        <a href={emailHref}><Mail size={24} aria-hidden="true" />{email}</a>
+      </li>
+      {showCv && (
         <li>
-          <a href={cvHref} target="_blank" rel="noopener">
-            <Image src={cvIcon} alt="" />
-            CV
+          <a href={cvHref} target="_blank" rel="noopener"><FileText size={24} aria-hidden="true" />CV (PDF)</a>
+        </li>
+      )}
+    </ul>
+    <!-- ponytail: Lucide n'a plus d'icônes de marque, on garde les SVG des réseaux. -->
+    <ul class="socials">
+      {socialLinks.map((social) => (
+        <li>
+          <a href={social.href} target="_blank" rel="noopener me" aria-label={`${social.label} (nouvel onglet)`}>
+            <img src={social.icon} alt="" width="32" height="32" loading="lazy" />
           </a>
         </li>
-      </ul>
-    )}
-    <ul class="ico">
-      <li>
-        <address class="link">
-          {socialLinks.map((social) => (
-            <a href={social.href} target="blank">
-              <img src={social.icon} alt="" />
-            </a>
-          ))}
-        </address>
-      </li>
+      ))}
     </ul>
-    <ul class="mail">
-      <li>
-        <a href={emailHref}><Image src={mailIcon} alt="" />{email}</a>
-      </li>
-    </ul>
-  </section>
-  <hr />
+  </address>
   <p>Copyright &copy; {year} - Philippe DELENTE</p>
 </footer>

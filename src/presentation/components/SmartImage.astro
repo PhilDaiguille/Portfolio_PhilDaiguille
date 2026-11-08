@@ -1,5 +1,5 @@
 ---
-// Renders a build-time-optimized <Image> for local assets, or a plain <img> for remote URLs.
+// <Image> optimisée pour les imports locaux ; les URLs distantes (logos SVG) restent en <img>.
 import { Image } from 'astro:assets';
 import type { ImageSource } from '../../domain/portfolio';
 
@@ -7,15 +7,18 @@ interface Props {
   src: ImageSource;
   alt: string;
   class?: string;
+  /** Largeur max affichée : borne le srcset généré. */
+  width?: number;
+  /** Image distante uniquement : réserve la place avant chargement (carré par défaut). */
+  height?: number;
   loading?: 'lazy' | 'eager';
 }
 
-const { src, alt, class: className, loading } = Astro.props;
-const isLocal = typeof src !== 'string';
+const { src, alt, class: className, width = 800, height = width, loading = 'lazy' } = Astro.props;
 ---
 
-{isLocal ? (
-  <Image src={src} alt={alt} class={className} loading={loading} />
+{typeof src === 'string' ? (
+  <img src={src} alt={alt} class={className} width={width} height={height} loading={loading} decoding="async" />
 ) : (
-  <img src={src as string} alt={alt} class={className} loading={loading} />
+  <Image src={src} alt={alt} class={className} width={Math.min(width, src.width)} loading={loading} />
 )}
