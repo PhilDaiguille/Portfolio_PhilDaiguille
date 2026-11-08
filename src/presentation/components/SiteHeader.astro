@@ -5,6 +5,7 @@ import X from '@lucide/astro/icons/x';
 import FileText from '@lucide/astro/icons/file-text';
 import { siteNavLinks } from '../../infrastructure/data/nav-links';
 import { getContactInfo } from '../../application/getSiteInfo';
+import { withBase, stripBase } from '../../application/url';
 
 interface Props {
   links: NavLink[];
@@ -14,7 +15,8 @@ interface Props {
 
 const { links, isHome = false } = Astro.props;
 const Brand = isHome ? 'h1' : 'p';
-const current = (href: string) => (href === Astro.url.pathname ? 'page' : undefined);
+const path = stripBase(Astro.url.pathname);
+const current = (href: string) => (href === path ? 'page' : undefined);
 const tabs = links.slice(0, 3);
 // Sur l'accueil, le menu propose aussi les autres pages du site.
 const pages = isHome
@@ -27,14 +29,14 @@ const { cvHref } = getContactInfo();
 
 <header>
   <div class="sticky">
-    <a href="/" class="brand">
+    <a href={withBase('/')} class="brand">
       <Brand class="brand-name">Philippe DELENTE</Brand>
       <span class="brand-role">Développeur Web</span>
     </a>
     <nav aria-label="Navigation principale" class="nav-desktop">
       <ul>
         {links.map((link) => (
-          <li><a href={link.href} aria-current={current(link.href)}>{link.label}</a></li>
+          <li><a href={withBase(link.href)} aria-current={current(link.href)}>{link.label}</a></li>
         ))}
       </ul>
     </nav>
@@ -46,7 +48,7 @@ const { cvHref } = getContactInfo();
   <ul>
     {tabs.map((link) => (
       <li>
-        <a href={link.href} aria-current={current(link.href)}>
+        <a href={withBase(link.href)} aria-current={current(link.href)}>
           <link.icon size={22} aria-hidden="true" />
           <span>{link.label}</span>
         </a>
@@ -72,7 +74,7 @@ const { cvHref } = getContactInfo();
     <ul>
       {links.map((link) => (
         <li>
-          <a href={link.href} aria-current={current(link.href)}><link.icon size={22} aria-hidden="true" />{link.label}</a>
+          <a href={withBase(link.href)} aria-current={current(link.href)}><link.icon size={22} aria-hidden="true" />{link.label}</a>
         </li>
       ))}
     </ul>
@@ -82,7 +84,7 @@ const { cvHref } = getContactInfo();
         <ul>
           {pages.map((link) => (
             <li>
-              <a href={link.href}><link.icon size={22} aria-hidden="true" />{link.label}</a>
+              <a href={withBase(link.href)}><link.icon size={22} aria-hidden="true" />{link.label}</a>
             </li>
           ))}
         </ul>

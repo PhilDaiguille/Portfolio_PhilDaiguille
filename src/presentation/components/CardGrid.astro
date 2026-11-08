@@ -3,6 +3,7 @@ import type { ShowcaseLink } from '../../domain/portfolio';
 import ArrowRight from '@lucide/astro/icons/arrow-right';
 import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
 import SmartImage from './SmartImage.astro';
+import { withBase } from '../../application/url';
 
 interface Props {
   items: ShowcaseLink[];
@@ -16,7 +17,7 @@ const { items } = Astro.props;
     const Arrow = item.external ? ArrowUpRight : ArrowRight;
     return (
       <li>
-        <a class="card" href={item.href} {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}>
+        <a class="card" href={withBase(item.href)} {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}>
           {item.icon ? (
             <span class="card-icon"><item.icon size={48} stroke-width={1.75} aria-hidden="true" /></span>
           ) : (
