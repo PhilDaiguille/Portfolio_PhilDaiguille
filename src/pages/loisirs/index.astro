@@ -14,5 +14,19 @@ const { loisirs } = getSections();
   accent="loisir"
   schema={{ '@type': 'CollectionPage', name: 'Loisirs', hasPart: loisirs.map((l) => ({ '@type': 'WebPage', name: l.title, url: new URL(l.href, Astro.site).href })) }}
 >
+  <section class="page-text">
+    <p>
+      Le dessin et la photographie sont mes deux terrains de jeu en dehors du code. Ils m'apprennent à regarder une image avant de la juger : où l'œil se pose en premier, ce qui
+      attire, ce qui fatigue, ce qui guide le regard vers l'essentiel.
+    </p>
+    <p>
+      Ce sont exactement les questions qu'on se pose en concevant une interface. Composer une illustration, choisir un cadrage ou équilibrer des couleurs, c'est travailler la
+      hiérarchie visuelle, le contraste et le rythme, comme pour une page web. Ces pratiques nourrissent directement mon travail UX / UI, dans Figma comme dans le code.
+    </p>
+    <p>
+      Côté dessin, vous trouverez des illustrations réalisées sur papier puis retravaillées en numérique. Côté photographie, des paysages, des portraits et des scènes du quotidien,
+      développés avec soin pour garder leur lumière d'origine. Deux galeries courtes, choisies pour montrer ma façon de regarder plutôt que la quantité.
+    </p>
+  </section>
   <section><CardGrid items={loisirs} /></section>
 </BaseLayout>

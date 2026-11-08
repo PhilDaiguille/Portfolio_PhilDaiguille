@@ -14,5 +14,19 @@ const { veille } = getSections();
   accent="veille"
   schema={{ '@type': 'CollectionPage', name: 'Veille technologique', hasPart: veille.map((v) => ({ '@type': 'Article', headline: v.title, url: new URL(v.href, Astro.site).href })) }}
 >
+  <section class="page-text">
+    <p>
+      La veille technologique fait partie de mon métier de développeur : le web évolue vite, et les bonnes pratiques d'hier ne sont pas toujours celles d'aujourd'hui. Je suis de
+      près l'accessibilité numérique (WCAG, RGAA), l'expérience et l'interface utilisateur, le référencement naturel et la performance des sites.
+    </p>
+    <p>
+      Mes articles prennent le temps de poser les définitions, de comparer les approches et de s'appuyer sur des exemples concrets, comme l'étude de cas Ferpection sur l'expérience
+      des jeux vidéo. Ce travail de fond m'a conduit à créer des outils open source : un linter d'accessibilité pour les templates Twig et un crawler d'audit SEO.
+    </p>
+    <p>
+      Je m'appuie sur les sources de référence, comme les recommandations du W3C, la documentation MDN et les retours d'expérience d'équipes produit, que je confronte ensuite à
+      ma pratique quotidienne chez Les Echos Le Parisien Services.
+    </p>
+  </section>
   <section><CardGrid items={veille} /></section>
 </BaseLayout>
