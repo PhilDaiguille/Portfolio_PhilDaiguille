@@ -1,16 +1,18 @@
 // Application layer: orchestrates domain/infrastructure for the home page use case.
 import { experiences } from "../infrastructure/data/experiences";
-import { skillGroups } from "../infrastructure/data/skills";
+import { skillGroups, otherSkills } from "../infrastructure/data/skills";
 import { education } from "../infrastructure/data/education";
-import { travaux, loisirs, veille } from "../infrastructure/data/showcase";
+import { loisirs, veille } from "../infrastructure/data/showcase";
+import { projects } from "../infrastructure/data/projects";
 import { homeNavLinks } from "../infrastructure/data/nav-links";
 
 export function getHomeContent() {
   return {
     experiences,
     skillGroups,
+    otherSkills,
     education,
-    travaux,
+    featured: projects.slice(0, 4),
     loisirs,
     veille,
     navLinks: homeNavLinks,

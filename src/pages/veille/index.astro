@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CardGrid from '../../presentation/components/CardGrid.astro';
+import { getSections } from '../../application/getSections';
+
+const { veille } = getSections();
+---
+
+<BaseLayout
+  title="Veille technologique — Philippe Delente"
+  description="Articles de veille technologique de Philippe Delente sur l'UX, l'UI et l'accessibilité web."
+  heading="Veille technologique"
+  lead="Mes recherches et analyses sur les sujets qui font évoluer le web."
+  accent="veille"
+  schema={{ '@type': 'CollectionPage', name: 'Veille technologique', hasPart: veille.map((v) => ({ '@type': 'Article', headline: v.title, url: new URL(v.href, Astro.site).href })) }}
+>
+  <section><CardGrid items={veille} /></section>
+</BaseLayout>

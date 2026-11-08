@@ -1,22 +1,38 @@
 import type { ShowcaseLink } from "../../domain/portfolio";
-import travauxPersonnel from "../../assets/images/assetexp/web_development_coding_code_browse_browser_icon-icons.com_59980.webp";
-import travauxJava from "../../assets/images/assetexp/3709742-board-forum-information-text-web_108094.webp";
-import dessinIcon from "../../assets/images/assetexp/design.webp";
-import photoIcon from "../../assets/images/assetexp/photo.webp";
-import veilleIcon from "../../assets/images/assetexp/tech_icon_158131.webp";
+import Database from "@lucide/astro/icons/database";
+import Palette from "@lucide/astro/icons/palette";
+import Camera from "@lucide/astro/icons/camera";
+import MonitorSmartphone from "@lucide/astro/icons/monitor-smartphone";
 
 export const travaux: ShowcaseLink[] = [
-  { title: "Mes projets", href: "/projet/personnel/", image: travauxPersonnel },
   {
-    title: "Mes projets d'écoles - Atelier Professionel",
-    href: "/projet/bts-sio/java/",
-    image: travauxJava,
+    title: "BTS SIO - Ateliers professionnels",
+    description: "Application Java / JavaFX et site web PHP pour la Maison des Ligues.",
+    href: "/projets/bts-sio/",
+    icon: Database,
   },
 ];
 
 export const loisirs: ShowcaseLink[] = [
-  { title: "Arts plastiques / Arts numériques", href: "/loisirs/dessin/", image: dessinIcon },
-  { title: "Photographie", href: "/loisirs/photographie/", image: photoIcon },
+  {
+    title: "Arts plastiques / Arts numériques",
+    description: "Dessins et illustrations, du papier au numérique.",
+    href: "/loisirs/dessin/",
+    icon: Palette,
+  },
+  {
+    title: "Photographie",
+    description: "Paysages, portraits et scènes urbaines.",
+    href: "/loisirs/photographie/",
+    icon: Camera,
+  },
 ];
 
-export const veille: ShowcaseLink = { title: "UX UI", href: "/blog/", image: veilleIcon };
+export const veille: ShowcaseLink[] = [
+  {
+    title: "UX / UI",
+    description: "Pourquoi l'expérience et l'interface utilisateur sont devenues un enjeu crucial.",
+    href: "/veille/ux-ui/",
+    icon: MonitorSmartphone,
+  },
+];

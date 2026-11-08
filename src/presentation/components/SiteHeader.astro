@@ -1,0 +1,103 @@
+---
+import type { NavLink } from '../../domain/portfolio';
+import Menu from '@lucide/astro/icons/menu';
+import X from '@lucide/astro/icons/x';
+import FileText from '@lucide/astro/icons/file-text';
+import { siteNavLinks } from '../../infrastructure/data/nav-links';
+import { getContactInfo } from '../../application/getSiteInfo';
+
+interface Props {
+  links: NavLink[];
+  /** Sur l'accueil le nom est le h1 ; ailleurs le h1 est le titre de la page. */
+  isHome?: boolean;
+}
+
+const { links, isHome = false } = Astro.props;
+const Brand = isHome ? 'h1' : 'p';
+const current = (href: string) => (href === Astro.url.pathname ? 'page' : undefined);
+const tabs = links.slice(0, 3);
+// Sur l'accueil, le menu propose aussi les autres pages du site.
+const pages = isHome
+  ? siteNavLinks
+      .filter((l) => l.href.startsWith('/') && l.href !== '/')
+      .map((l) => (l.href === '/projets/' ? { ...l, label: 'Tous les projets' } : l))
+  : [];
+const { cvHref } = getContactInfo();
+---
+
+<header>
+  <div class="sticky">
+    <a href="/" class="brand">
+      <Brand class="brand-name">Philippe DELENTE</Brand>
+      <span class="brand-role">Développeur Web</span>
+    </a>
+    <nav aria-label="Navigation principale" class="nav-desktop">
+      <ul>
+        {links.map((link) => (
+          <li><a href={link.href} aria-current={current(link.href)}>{link.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile : onglets au pouce en bas + menu complet (Popover API, sans JS de framework). -->
+<nav aria-label="Navigation mobile" class="tabbar">
+  <ul>
+    {tabs.map((link) => (
+      <li>
+        <a href={link.href} aria-current={current(link.href)}>
+          <link.icon size={22} aria-hidden="true" />
+          <span>{link.label}</span>
+        </a>
+      </li>
+    ))}
+    <li>
+      <button type="button" popovertarget="menu-mobile">
+        <Menu size={22} aria-hidden="true" />
+        <span>Menu</span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<div id="menu-mobile" popover class="menu-sheet">
+  <div class="menu-sheet-head">
+    <p>Menu</p>
+    <button type="button" popovertarget="menu-mobile" popovertargetaction="hide" aria-label="Fermer le menu">
+      <X size={24} aria-hidden="true" />
+    </button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      {links.map((link) => (
+        <li>
+          <a href={link.href} aria-current={current(link.href)}><link.icon size={22} aria-hidden="true" />{link.label}</a>
+        </li>
+      ))}
+    </ul>
+    {pages.length > 0 && (
+      <>
+        <p class="menu-sheet-label">Autres pages</p>
+        <ul>
+          {pages.map((link) => (
+            <li>
+              <a href={link.href}><link.icon size={22} aria-hidden="true" />{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+    <a class="btn-contact menu-sheet-cv" href={cvHref} target="_blank" rel="noopener">
+      <FileText size={20} aria-hidden="true" /> Mon CV (PDF)<span class="sr-only"> (nouvel onglet)</span>
+    </a>
+  </nav>
+</div>
+
+<script>
+  // Un lien d'ancre ne ferme pas le popover tout seul.
+  const menu = document.getElementById('menu-mobile');
+  menu?.addEventListener('click', (e) => {
+    if ((e.target as Element).closest('a')) menu.hidePopover();
+  });
+</script>

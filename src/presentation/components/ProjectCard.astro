@@ -1,0 +1,50 @@
+---
+import type { Project } from '../../domain/portfolio';
+import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
+import Code from '@lucide/astro/icons/code';
+import ArrowRight from '@lucide/astro/icons/arrow-right';
+import SmartImage from './SmartImage.astro';
+
+interface Props {
+  project: Project;
+  featured?: boolean;
+}
+
+const { project: p, featured = false } = Astro.props;
+const blank = { target: '_blank', rel: 'noopener' };
+---
+
+<li class:list={['project', { featured }]}>
+  <article class="card">
+    {p.image && <SmartImage src={p.image} alt="" width={960} />}
+    <p class="project-meta">
+      {p.tag && <span class="project-tag">{p.tag}</span>}
+      <time datetime={p.year}>{p.year}</time>
+    </p>
+    <h3>{p.title}</h3>
+    <p>{p.summary}</p>
+    <ul class="stack" aria-label="Technologies">
+      {p.stack.map((s) => <li>{s}</li>)}
+    </ul>
+    {(p.demo || p.repo || p.caseStudy) && (
+      <p class="project-actions">
+        {p.caseStudy && (
+          <a class="btn-contact" href={`/projets/${p.caseStudy.slug}/`}>
+            Étude de cas <ArrowRight size={18} aria-hidden="true" /><span class="sr-only"> : {p.title}</span>
+          </a>
+        )}
+        {p.demo && (
+          <a class={p.caseStudy ? 'btn-ghost' : 'btn-contact'} href={p.demo} {...blank}>
+            <ArrowUpRight size={18} aria-hidden="true" /> Voir en ligne<span class="sr-only"> : {p.title} (nouvel onglet)</span>
+          </a>
+        )}
+        {p.repo && (
+          <a class="btn-ghost" href={p.repo} {...blank}>
+            <Code size={18} aria-hidden="true" /> Code<span class="sr-only"> de {p.title} sur GitHub (nouvel onglet)</span>
+          </a>
+        )}
+      </p>
+    )}
+    {!p.repo && <p class="project-private">Code privé</p>}
+  </article>
+</li>

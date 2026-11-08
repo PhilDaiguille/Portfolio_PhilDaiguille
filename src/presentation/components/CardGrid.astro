@@ -1,0 +1,35 @@
+---
+import type { ShowcaseLink } from '../../domain/portfolio';
+import ArrowRight from '@lucide/astro/icons/arrow-right';
+import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
+import SmartImage from './SmartImage.astro';
+
+interface Props {
+  items: ShowcaseLink[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="cards">
+  {items.map((item) => {
+    const Arrow = item.external ? ArrowUpRight : ArrowRight;
+    return (
+      <li>
+        <a class="card" href={item.href} {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}>
+          {item.icon ? (
+            <span class="card-icon"><item.icon size={48} stroke-width={1.75} aria-hidden="true" /></span>
+          ) : (
+            item.image && <SmartImage src={item.image} alt="" width={640} />
+          )}
+          <h2>
+            {item.title}
+            {item.external && <span class="sr-only"> (nouvel onglet)</span>}
+          </h2>
+          {item.description && <p>{item.description}</p>}
+          <Arrow class="card-arrow" size={28} aria-hidden="true" />
+        </a>
+      </li>
+    );
+  })}
+</ul>

@@ -1,0 +1,24 @@
+---
+import ChevronRight from '@lucide/astro/icons/chevron-right';
+import type { Crumb } from '../../application/getBreadcrumbs';
+
+interface Props {
+  title: string;
+  lead?: string;
+  crumbs: Crumb[];
+}
+
+const { title, lead, crumbs } = Astro.props;
+---
+
+<section class="page-intro">
+  <nav aria-label="Fil d'Ariane" class="breadcrumb">
+    <ol>
+      {crumbs.map((crumb, i) => (
+        <li>{i > 0 && <ChevronRight size={16} aria-hidden="true" />}{i === crumbs.length - 1 ? <span aria-current="page">{crumb.name}</span> : <a href={crumb.href}>{crumb.name}</a>}</li>
+      ))}
+    </ol>
+  </nav>
+  <h1 class="History">{title}</h1>
+  {lead && <p class="lead">{lead}</p>}
+</section>

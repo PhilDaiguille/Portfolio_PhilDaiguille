@@ -1,21 +1,24 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import SimpleHeader from '../../../presentation/components/SimpleHeader.astro';
-import photoIcon from '../../../assets/images/assetexp/photo.webp';
 
 const photoOrder = ['IMG_0645', 'IMG_0650', 'IMG_0651', 'IMG_1088', 'IMG_0436', 'IMG_0458', 'IMG_1421', 'IMG_1428'];
 const photoModules = import.meta.glob<{ default: ImageMetadata }>('../../../assets/images/assetphoto/*.webp', { eager: true });
 const photos = photoOrder.map((name) => photoModules[`../../../assets/images/assetphoto/${name}.webp`].default);
 ---
 
-<BaseLayout title="Photographie — Philippe Delente" description="Sélection de mes photographies : paysages, portraits et scènes urbaines." stylesheet="/css/loisirs.css">
-  <SimpleHeader slot="header" href="/#Loisirs" icon={photoIcon}>Portfolio - Photographie</SimpleHeader>
-
-  <ul>
+<BaseLayout
+  title="Photographie — Philippe Delente"
+  description="Sélection de photographies de Philippe Delente : paysages, portraits et scènes urbaines."
+  heading="Photographie"
+  lead="Paysages, portraits et scènes urbaines."
+  accent="loisir"
+  schema={{ '@type': 'ImageGallery', name: 'Photographies de Philippe Delente', creator: { '@type': 'Person', name: 'Philippe Delente' } }}
+>
+  <ul class="gallery">
     {photos.map((photo, i) => (
       <li>
-        <Image src={photo} alt={`Photographie ${i + 1} de Philippe Delente`} loading="lazy" />
+        <Picture src={photo} formats={['avif', 'webp']} width={900} alt={`Photographie ${i + 1} de Philippe Delente`} loading="lazy" />
       </li>
     ))}
   </ul>
