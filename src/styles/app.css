@@ -788,9 +788,33 @@ main.page > article {
 .cards {
   display: grid;
   gap: 3.2rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 32rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
   > li {
     padding: 0;
+  }
+}
+/* Carte seule : bento horizontal (visuel à gauche, texte à droite) */
+@media (min-width: 60rem) {
+  .cards:not(.projects) > li:only-child .card {
+    align-items: start;
+    column-gap: 3.2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-rows: auto auto 1fr;
+    > .card-icon,
+    > img {
+      grid-row: 1 / -1;
+    }
+    > :not(.card-icon, img) {
+      grid-column: 2;
+    }
+    > h2 {
+      margin-top: 1.6rem;
+    }
+    > .card-arrow {
+      align-self: end;
+      justify-self: end;
+    }
   }
 }
 .card {
